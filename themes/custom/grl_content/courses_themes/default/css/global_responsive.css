@@ -1,0 +1,354 @@
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------
+Global responsive: this stylesheet is used to globally set course UI framework responsiveness that will be applied to all courses
+------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+.container{
+	width:100%;
+}
+
+/* set rows to use full width */
+.container #page .row{
+  margin-right: 0;
+  margin-left: 0;
+  width: 100%;
+}
+
+
+/* .container #page  .col-xs-12, .container #page .col-sm-12, .container #page .col-lg-12{
+	padding-right: 0;
+	padding-left: 0;
+} */
+
+.container #page .row{
+  margin-right: 0;
+  margin-left: 0;
+}
+
+
+@media only screen and (min-width: 767px){
+  #system_btn_switch {
+    display: none;
+  }
+  #menu_btn_switch {
+    display: block;
+  }
+  /* #bs-example-navbar-collapse-1 .navbar-nav .course_hide {
+    display: none;
+  } */
+  #course_search_wrapper{
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  /* only display search button for mobile dropdown */
+  #course_search_wrapper #course-search-submit{
+    display: none;
+  }
+
+  /* removing for consistant wc2 to wc3 course theme designs RE#2819 issue #3  */
+  /* #course_search_wrapper input#search {
+    border-right: #525252 1px solid;
+  } */
+
+
+}
+
+@media only screen and (min-width: 481px){
+  .page_layout_vertical ul.root_nav_items {
+    flex-wrap: nowrap;
+}
+}
+
+
+@media screen and (max-width: 767px){
+  nav.navbar.navbar-default#navigation {
+    display: none;
+  }
+  .navbar-toggle>span {
+    border: #000000 solid 1px;;
+    background-color: #fff;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 8px 25px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  #bs-example-navbar-collapse-1{
+    /* background-color: #fff; */
+  }
+  #bs-example-navbar-collapse-1 ul li a:focus,
+  #bs-example-navbar-collapse-1 ul li a:hover{
+  background-color: #eee;
+  color: #000000;
+  font-weight: 600;
+  outline: none;
+}
+  .container {
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  #page{
+    margin: 0;
+    width: 100%;
+  }
+  #menu_btn_switch {
+    display: none;
+  }
+  /* override bootstrap default text color */
+  .navbar-default .navbar-nav .open .dropdown-menu>li>a {
+    color: #fff;
+  }
+  /* turn all inlineLabels to block labels */
+  .inlineLabels h2{
+    display:block;
+  }
+  .inlineLabels div.form-item.form-type-textarea,
+  .inlineLabels select.form-select
+  {
+    width: 100%;
+    display: block;
+  }
+  /* give main description labels full width */
+  .uniForm .ctrlHolder .form-item.form-type-checkboxes label:not(.option),
+  .uniForm .ctrlHolder .form-item.form-type-radios label:not(.option),
+  .uniForm .ctrlHolder .form-item.form-type-textarea label:not(.option),
+  .uniForm .ctrlHolder .form-item.form-type-textfield label:not(.option){
+    width:100%;
+  }
+  .sequence_question select.sequence_answer{
+    width: auto !important;
+  }
+  .questionpool_question_calculated_answer .calculated_quesiton_answer input.calculated_answer {
+    width: 85%;
+  }
+
+  input.fill_in_the_blanks.fillblank_answer {
+    width: 85%;
+  }
+
+  #breadcrumbs .sub_page_list{
+    width:50%;
+  }
+  input.form-submit{
+    margin: 11px 5px;
+  }
+  input.formbite_submit_button {
+    margin-top: 20px;
+  }
+
+  .JmolWrapper #Viewer_and_Widgets.JmolPane{
+    width: 100%;
+    display:block;
+  }
+
+  .JmolWrapper .JmolTextPane{
+    width: 100%;
+    display: block;
+    margin-top: 10%;
+  }
+  .grid-sec .JmolButtonDiv .JmolBtn {
+    margin: 0 2px 15px 0;
+    width: 91%;
+    font-size: 12px;
+  }
+  #course-search-input{
+    padding: 10px 0 10px 25px;
+  }
+/* Reduce page component header font size */
+  h1.page_component_title{
+    font-size: 1em;
+  }
+  /* ******* Gradebook Responsive  ******* */
+  #compdata input[name='endGrade'].grade_book_marks{
+    width: 50%;
+  }
+  /* horizontal scroll for component table */
+  #compdata{
+    overflow-x:auto;
+
+  }
+  #user_list_container ul{
+    padding-left: 20px;
+  }
+
+  /* ******* Mobile dropdown menu ******* */
+  #course-search-input input#search{
+    text-indent: 5px;
+    display: inline-block;
+    padding-top: 0;
+    padding-bottom: 0;
+    border: #fff 1px solid;
+    border-right: none;
+    background-color: #f4f4f4;
+    height: 28px;
+  }
+  #course-search-block #course-search-submit input{
+    padding: 0;
+    margin: 0;
+    background-image: url("../images/search-button.png");
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-color: #f4f4f4;
+    width: 33px;
+    height: 28px;
+    color: transparent;
+    font-size: 13px;
+    border: #fff 1px solid;
+    border-left: none;
+  }
+  #course_search_wrapper{
+    color: #525252;
+    background-color: #eeeeee;
+  }
+  #bs-example-navbar-collapse-1{
+    /* -moz-box-shadow:    0 0 8px 0 #ccc;
+    -webkit-box-shadow: 0 0 8px 0  #ccc;
+    box-shadow:         0 0 8px 0  #ccc; */
+  }
+  #course-search-block #course-search-input{
+    display: inline-block;
+    width: 85%;
+  }
+  /* removed for mobile responsive of navigation  */
+  /* #bs-example-navbar-collapse-1 ul a{
+    color: #525252;
+  } */
+
+
+  /* ****** Forum Topic List Table ****** */
+  .forum #webcom_forum_wrapper .page_component {padding: 5px 0px;}
+  #forum_topic_list .forum_table_display table,
+  #forum_topic_list .forum_table_display thead,
+  #forum_topic_list .forum_table_display tbody,
+  #forum_topic_list .forum_table_display th,
+  #forum_topic_list .forum_table_display td,
+  #forum_topic_list .forum_table_display tr {
+    display: block;
+  }
+  #forum_topic_list .forum_table_display thead tr {display:none;}
+  #forum_topic_list .forum_table_display tr { border: 1px solid #ccc; }
+  #forum_topic_list .forum_table_display td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    padding-top: 3px;
+    padding-left: 7px;
+  }
+  #forum_topic_list .forum_table_display td:before {
+    font-weight: bold;
+    white-space: nowrap;
+    padding-right: 7px;
+  }
+  #forum_topic_list .forum_table_display td:nth-of-type(1):before { content: "Topic:"; }
+  #forum_topic_list .forum_table_display td:nth-of-type(2):before { content: "Description:"; }
+  #forum_topic_list .forum_table_display td:nth-of-type(3):before { content: "Created On:"; }
+
+
+  /* ****** Forum Subject List Table ****** */
+  #forum_subject_list {margin: 0 10px;}
+  #forum_subject_list .nav a{padding: 10px 10px;}
+  #forum_subject_list .forum_table_display table,
+  #forum_subject_list .forum_table_display thead,
+  #forum_subject_list .forum_table_display tbody,
+  #forum_subject_list .forum_table_display th,
+  #forum_subject_list .forum_table_display td,
+  #forum_subject_list .forum_table_display tr {
+    display: block;
+  }
+  #forum_subject_list .forum_table_display thead tr {display:none;}
+  #forum_subject_list .forum_table_display tr { border: 1px solid #ccc; }
+  #forum_subject_list .forum_table_display td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    padding-top: 3px;
+    padding-left: 7px;
+  }
+  #forum_subject_list .forum_table_display td:before {
+    font-weight: bold;
+    white-space: nowrap;
+    padding-right: 7px;
+  }
+  #forum_subject_list .forum_table_display td:nth-of-type(1):before { content: "Subject:"; }
+  #forum_subject_list .forum_table_display td:nth-of-type(2):before { content: "Created On:"; }
+  #forum_subject_list .forum_table_display td:nth-of-type(3):before { content: "Created By:"; }
+  #forum_subject_list .forum_table_display td:nth-of-type(4):before { content: "Replies:";}
+  #forum_subject_list .forum_table_display td:nth-of-type(5):before { content: "Last Posted:";}
+
+
+  /* ****** Forum Subject Message List Table ****** */
+  #forum_subject_message_list {margin: 0 10px;}
+  #forum_subject_message_list .nav a{padding: 10px 10px;}
+  #forum_subject_message_list .forum_table_display table,
+  #forum_subject_message_list .forum_table_display thead,
+  #forum_subject_message_list .forum_table_display tbody,
+  #forum_subject_message_list .forum_table_display th,
+  #forum_subject_message_list .forum_table_display td,
+  #forum_subject_message_list .forum_table_display tr {
+    display: block;
+  }
+  #forum_subject_message_list .forum_table_display thead tr {display:none;}
+  #forum_subject_message_list .forum_table_display tr { border: 1px solid #ccc; }
+  #forum_subject_message_list .forum_table_display td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    padding-top: 3px;
+    padding-left: 7px;
+  }
+  #forum_subject_message_list .forum_table_display td:before {
+    font-weight: bold;
+    white-space: nowrap;
+    padding-right: 7px;
+  }
+  #forum_subject_message_list .forum_table_display td.forum_message_list_view:before { content: "View:"; }
+  #forum_subject_message_list .forum_table_display td.forum_message_list_reply:before { content: "Reply:"; }
+  #forum_subject_message_list .forum_table_display td.forum_message_list_delete:before { content: "Delete:"; }
+  #forum_subject_message_list .forum_table_display td.forum_message_list_owner:before { content: "Created By:";}
+  #forum_subject_message_list .forum_table_display td.forum_message_list_creation_date:before { content: "Created Date:";}
+  #forum_subject_message_list .forum_table_display td.forum_message_list_subject:before { content: "Subject:";}
+  #forum_subject_message_list .forum_table_display td.forum_message_list_message:before { content: "Message:";}
+  #forum_subject_message_list .forum_table_display td.forum_message_list_attachment:before { content: "Attachment:";}
+  #forum_subject_message_list .forum_table_display td.forum_message_list_reply,
+  #forum_subject_message_list .forum_table_display td.forum_message_list_delete{
+    display:inline-flex;
+    border: none;
+    padding-left: 6%;
+    padding-top: 12px;
+    padding-bottom: 5px;
+  }
+  #forum_subject_message_list .forum_table_display td.forum_message_list_view{
+    display:inline-flex;
+    border: none;
+    padding-left: 2%;
+    padding-top: 12px;
+    padding-bottom: 5px;
+  }
+  #forum_subject_message_list .forum_icon.forum_icon_attachment{display:none;}
+  #forum_subject_message_list .forum_table_display td.forum_message_list_attachment .attachment_file_name{display: inline;}
+
+  #webcom_forum_wrapper #forum-view-add-subject #edit-message-title{width: 100%;}
+
+}
+
+@media only screen and (max-width: 600px){
+
+  /* matching question */
+  .questionpool_question_matching_answer_text {
+    width: 40%;
+  }
+  .questionpool_question_matching_answer select{
+    width: auto !important;
+  }
+}
+
+/* Smallest devices */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+
+  div.blockUI.blockMsg.blockElement{
+    width: auto !important;
+  }
+  .questionpool_question_matching_answer_text {
+    padding: 0px 0 0 22px;
+  }
+}

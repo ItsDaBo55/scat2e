@@ -1,0 +1,348 @@
+#element_component_select_chosen {
+    width: 80% !important;
+}
+
+#user_select_chosen {
+    width: 85% !important;
+}
+
+#search-tab-container {
+    display: flex;
+    align-items: flex-start;
+    padding: 5px;
+}
+
+#search-tab-container .compo {
+    padding: 4px;
+}
+
+.flex-column {
+    width: 50%;
+}
+
+.compo.user_select_div,
+.compo.element_component_select_div {
+    width: 100%;
+}
+
+#setup_retakes_button {
+    float: right;
+    margin-right: 6em;
+    margin-top: 3%;
+    border: 1px solid #aaa;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: .8em;
+    background-color: white;
+}
+
+#setup_retakes_button:hover,
+#setup_retakes_button:focus {
+    color: #5e5e5e;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.compo.select_display {
+    width: 50%;
+    margin-top: 3%;
+}
+
+#search-tab-table-div {
+    margin: 20px 5px;
+    overflow: auto;
+    font-size: .65em;
+}
+
+#search-tab-table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid #c7cdd1;
+    table-layout: fixed;
+}
+
+#search-tab-table thead th {
+    background: #f5f5f5;
+    min-width: 200px;
+}
+
+#search-tab-table td,
+#search-tab-table th {
+    border: 1px solid #c7cdd1;
+    padding: 0.5rem 1rem;
+    text-align: center;
+}
+
+#search-tab-table td.component-column,
+#search-tab-table th.component-column {
+    padding: 0.5rem 0.2rem 0.5rem 1rem;
+}
+
+#search-tab-table td {
+    background-color: white;
+}
+
+#search-tab-table td div {
+    display: inline;
+}
+
+.column-header-container {
+    float: left;
+    width: 90%;
+}
+
+.column-header-title {
+    font-size: 1.01em;
+}
+
+.column-header-score {
+    font-size: .95em;
+    margin-top: 4px;
+}
+
+.grade-input-post-text {
+    padding-left: 3px;
+    display: inline;
+}
+
+.grade-input {
+    width: 35%;
+}
+
+.grade-save-success {
+    color:green;
+    padding-left: 5px;
+}
+
+.grade-save-fail {
+    color:red;
+    padding-left: 5px;
+}
+
+.menu-button {
+    float: right;
+    cursor: pointer;
+    position: relative;
+}
+
+.menu-options a:hover,
+.menu-options a:focus {
+    color: #888888;
+}
+
+.menu-options a.dropdown-item {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-bottom: none;
+}
+
+.header-options-menu-button {
+    position: relative;
+    top: 10px;    
+}
+
+#gradetodate-header-options-menu {
+    top: 0px;
+}
+
+.menu-options {
+    position: absolute;
+    z-index: 1000;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 4px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+}
+
+.header-options-menu {
+    transform: translateY(20px);
+}
+
+.header-options-menu li:not(:last-child),
+.attempt-menu li:not(:last-child) {
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.attempt-menu {
+    transform: translateY(-15px);
+}
+
+.sticky-column {
+    position: sticky;
+    left: 0px;
+    z-index: 10;
+}
+
+.attempt-menu:has(.dropdown-item) .grade_synced_display {
+    border-bottom: 1px solid #d5d5d5;
+}
+
+.grade_synced_display {
+    font-size: .9em;
+}
+
+.setup-retake-modal {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.setup-retake-modal.ui-dialog .ui-dialog-titlebar {
+    border-radius: 10px 10px 0px 0px;
+    padding: 0px;
+}
+
+.setup-retake-modal.ui-dialog .ui-dialog-title {
+    margin: 0.3em 1em;
+}
+
+.setup-retake-modal #status-message-wrapper.alert {
+    margin-bottom: 0px;
+    margin-top: 5px;
+    padding: 10px 15px;
+}
+
+#retake_dates_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#retake_dates_container .form-item {
+    flex: 1;
+}
+
+#retake_dates_container .form-item input {
+    width: 60%;
+    margin-right: 7px;
+}
+
+.setup-retakes-form .form-item {
+    margin: 1em 0em;
+    font-size: 0.8em;
+}
+
+.form-item-user-role-ids label,
+.form-item-page-component-ids label,
+.form-item-time-limit label,
+.form-item-user-name label,
+.form-item-page-component-title label {
+    width: 25%;
+    margin-right: 7px;
+}
+
+.form-item-user-name input,
+.form-item-page-component-title input {
+    width: 65%;
+}
+
+.form-item-time-limit .description {
+    margin-left: 27%;
+}
+
+.form-item-send-email .description,
+.form-item-remove-retake .description {
+    margin-left: 40%;
+}
+
+.form-item-retake-message textarea.form-textarea {
+    font-size: 0.95em;
+    width: 70%;
+    margin-left: 27%;
+}
+
+.form-item-retake-message label {
+    float: left;
+}
+
+.form-item-user-role-ids .chosen-container,
+.form-item-page-component-ids .chosen-container,
+.form-item-time-limit input {
+    min-width: 70%;
+}
+
+.setup-retake-modal .setup-retakes-form {
+    padding: 0em 1.5em;
+}
+
+.setup-retake-modal .chosen-container .chosen-drop {
+    position: absolute !important;
+}
+
+.setup-retakes-form .description {
+    font-size: 0.85em;
+}
+
+.setup-retakes-form .form-type-checkbox label {
+    margin-left: 40%;
+}
+
+.setup-retakes-form .form-type-checkbox label input {
+    margin-right: 0.4em;
+}
+
+.setup-retakes-form .form-submit {
+    float: right;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1.5em;
+    margin-top: 0.5em;
+    border: 1px solid #c8c8c8;
+}
+
+.setup-retakes-form .ui-datepicker-trigger {
+    vertical-align: inherit;
+    cursor: pointer;
+    max-width: 7%;
+}
+
+#change_section_dropdown_div {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    gap: 0.5em;
+    height: 2em;
+}
+
+#change_section_label_text {
+    align-content: center;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+#change_grade_book_section_button {
+    color: white;
+    background-color: #6c6c6c;
+    border-radius: 7px;
+    border: none;
+    font-size: .9em;
+    min-width: 3em;
+    height: 90%;
+}
+
+#change_section_dropdown {
+    max-width: 30%;
+}
+
+.component-cell .retake-img-notification {
+    display: none !important;
+}
+
+.component-cell:has(.view-retake) .retake-notif {
+    display: inline !important;
+    font-size: 1.7em;
+    float: left;
+}
+
+#user_email_copy_search {
+    float: right;
+    top: unset;
+    left: unset;
+    margin-top: unset;
+    vertical-align: center;
+    } 

@@ -1,0 +1,456 @@
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------
+Global Negation: this stylesheet is used to globally negate default bootstrap css
+------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+/* remove default white background color */
+html body{
+	background-color: transparent;
+}
+
+/* Uncomment to temporarily remove display of admin menu */
+#admin-menu,
+#toolbar-administration{
+    display:none !important;
+}
+/*body.toolbar-tray-open{
+  padding: 0 !important;
+}*/
+html body.admin-menu {
+    margin-top: 0 !important;
+}
+body.admin-menu {
+     margin-top: 0 !important;
+}
+
+/* Override font size to match WC2 */
+html body{
+    font-size:initial;
+}
+/* bootstrap paragraph margin */
+p {
+  margin: 0;
+}
+
+/* remove bootstrap default left/right padding from the main container */
+#content_holder.container{
+  padding: 0;
+}
+
+.col-xs-12, .col-sm-12, .col-lg-12{
+    padding-right: 0;
+    padding-left: 0;
+}
+
+/* overide top margin being added to a div inside block-alert-alert (original css is located in main style.css) */
+.content {
+    margin-top: 0;
+}
+
+/* remove default text underline for all links */
+a:focus,
+a:hover{
+    text-decoration: none;
+}
+
+/* Remove bootstrap default white background and border */
+.navbar-default{
+    border-color:transparent;
+    background-color: transparent;
+    border:none;
+}
+
+
+/* remove extra bottom margin being added to top navigation */
+.navbar {
+    margin-bottom: 0;
+    z-index:1;
+}
+
+/* override bootstrap font size back to default */
+h3{
+  font-size: 1.17em;
+}
+/* remove bootstrap h4 margin */
+h4{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.navbar {
+  border-radius: 0;
+}
+
+/* overide default float right for mobile menu button */
+.navbar-toggle {
+float: none;
+}
+
+/*Override bootstrap hover background for menu button  */
+.system_bar .navbar-toggle:hover{
+    background-color: #f8f8f8;
+}
+
+/* remove bootstrap padding on nav */
+.navbar-collapse{padding-left:0; padding-right:0;}
+
+/* override a 95% width */
+.inlineLabels {
+  width: 100%;
+  float: none;
+}
+
+/* remove background color from mobile menu button */
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: transparent;
+}
+.navbar-default .navbar-toggle {
+  border:none;
+}
+
+/* remove bootstrap top margin from radio and checkbox  */
+input[type=radio], input[type=checkbox] {
+  margin: 0 0 0;
+  margin-top: 1px \9;
+  line-height: normal;
+}
+
+/*Remove styling put into formbite grid headers*/
+.form-item input.header{
+	background:none;
+	border:none;
+}
+
+/* override bootstrap and system.theme */
+.question_begin label {
+  display: inline;
+}
+
+label {
+  font-weight: normal;
+}
+
+
+/* revert bootstrap th style back to user agent stylesheet  */
+th {
+  display: table-cell;
+  vertical-align: inherit;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+/* ------------------ Negate Table Styles START ------------------ */
+table {
+    border: 0;
+    border-spacing: 0;
+    font-size: 1em;
+    margin: 0;
+
+  }
+  table table {
+    font-size: 1em;
+  }
+  #footer-wrapper table {
+    font-size: 1em;
+  }
+  table tr th {
+    background: none;
+    background: none;
+    line-height: normal;
+    font-size: 1em;
+    /*color: #333;*/
+  }
+  table tr th,
+  table tr th a,
+  table tr th a:hover {
+    font-weight: normal;
+  }
+  table tbody tr th {
+    vertical-align: baseline;
+  }
+  tr td,
+  tr th {
+    padding: 0;
+    border: none;
+  }
+  #footer-wrapper tr td,
+  #footer-wrapper tr th {
+    border-color: none;
+    border-color: none;
+  }
+  tr.odd {
+    background: none;
+  }
+  tr,
+  tr.even {
+    background: none;
+    background: none;
+  }
+  table ul.links {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+  }
+  table ul.links li {
+    padding: 0;
+  }
+  dl {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  dt {
+  	font-weight: normal;
+  }
+  dt, dd {
+  	line-height: normal;
+  }
+  dd {
+  	margin-left: 0;
+  }
+  /*added for ticket #2738*/
+  legend {
+  	margin-bottom: 0;
+  	font-size: 1em;
+  }
+/* ------------------ Negate Table Styles END ------------------ */
+
+
+/* remove float left on main navigation */
+@media (min-width: 768px){
+    .navbar-nav {
+        float: none;
+    }
+}
+
+/*Negate Chrome Styling for Lists*/
+ol, ul{
+	padding-inline-start:0;
+	margin: 1.12em 0 1.12em 40px;
+}
+
+.form-required {
+  color: #d90d0d;
+}
+
+.component_gbcomponent input#filePath,
+.component_gbcomponent input#submitfile {
+    visibility: hidden;
+}
+/* added css as suggested in CON4-1467*/
+.data th.highlight {
+  background-color: yellow;
+  color: black;
+}
+
+.overflowwrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+.flash_card_nav button {
+    color: black;
+}
+
+.password-form-preloaded {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding-left: 10px;
+}
+
+.password-form-preloaded .password-label {
+  padding-top: 20px;
+  height: 60px;
+  width: 85px;
+}
+
+.password-form-preloaded #choose_section_dialog {
+  width: 105% !important;
+}
+
+.password-form-preloaded .ctrlHolder,
+.password-form-preloaded input {
+  margin-left: 0px !important;
+}
+.password-form-preloaded .ui-dialog-titlebar,
+.password-form-preloaded form .control-label, 
+.password-form-preloaded > form > p,
+.password-form-preloaded  .form-submit {
+  display: none;
+}
+
+.password-form-preloaded #webcom-view-password-form-submit,
+.password-form-preloaded #assessment-view-password-form-submit {
+  display: block;
+}
+
+.password-form-preloaded #choose_section_dialog {
+  border:  none;
+  background: transparent;
+}
+
+.password-form-preloaded  .ctrlHolder{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.password-form-preloaded form input {
+  margin: 4px 20px;
+}
+.password-form-preloaded  form .buttonHolder,
+.password-form-preloaded form .ctrlHolder,
+.password-form-preloaded .ctrlHolder form,
+.password-form-preloaded #choose_section_dialog,
+.password-form-preloaded  form .form-submit {
+  margin: 0 !important;
+  border-bottom: none;
+}
+
+.page_component_restricted_textbox {
+  text-align: left;
+}
+
+.password-form-preloaded form .form-text::before {
+  margin-right: 6px;
+  font-weight: 500;
+}
+
+.password-form-preloaded .ui-dialog-content {
+  overflow: unset !important;
+}
+
+.password-form-preloaded  form .form-submit {
+  position: relative;
+  transform: translateX(-105px);
+}
+
+.password-form-preloaded form .ctrlHolder,
+.password-form-preloaded .ctrlHolder form{
+  padding-left: 10px !important;
+  padding-top: 10px !important;
+}
+
+.password-form-preloaded div {
+  border: none !important;
+  outline: none !important;
+}
+
+.password-form-preloaded .buttonHolder {
+  padding: 0 !important;
+}
+
+.password-form-preloaded #pswd-status {
+  display: flex;
+  flex-direction: row;
+}
+
+.password-form-preloaded input[name="password_text"],
+.password-form-preloaded #pswd-status,
+.password-form-preloaded #pswd-status .messages.error{
+  min-width: 800px;
+}
+
+/* Container wrapper */
+div[class*="public_view_"]:has(.page_component_restricted),
+div.public_view_assessment:not(:has(#assessment_question_area)):has(.page_component_restricted) {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: repeating-linear-gradient(135deg, #f9f9f9 0px, #f9f9f9 6px, #f4f4f4 6px, #f4f4f4 12px);
+}
+
+/* Restricted component card */
+.page_component_restricted{
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 1vw;
+    justify-self: center;
+    margin: min(40px, 2vw);
+    padding: min(40px, 2vw);
+    background: #ffffff;
+    border-radius: 10px;
+    position: relative;
+    color: black;
+    box-shadow: 0 10px 20px -10px #ccc;
+}
+
+/* Restricted component art */
+div.page_component_restricted::before {
+    content: "";
+    width: 200px;
+    height: 190px;
+    background: url(https://s3.amazonaws.com/streaming.greatrivertech.net/design/lock-password.png) no-repeat left center,
+                radial-gradient(#dcdcdc 0%, transparent 30%) no-repeat bottom -30px left -60px;
+    background-size: 120px, 200px;
+    position: relative;
+    grid-row: span 2;
+    z-index: 0;
+    rotate: -8deg;
+}
+
+/* Form wrapper inside restricted component */
+.page_component_restricted form.uniForm {
+    background: transparent;
+    padding: 5px 10px;
+}
+
+/* Password form layout */
+.password-form-preloaded {
+    display: flex;
+    align-items: baseline;
+    padding: 0;
+    border-top: 1px dashed #ccc;
+    font-size: 1rem;
+}
+
+/* Password label */
+.password-form-preloaded .password-label {
+    font-weight: 700;
+    font-variation-settings: 'wght' 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+    padding: 0;
+    height: 100%;
+}
+
+/* Inputs */
+.password-form-preloaded form.uniForm input {
+    margin-block-end: 1vw;
+    box-shadow: 0 4px 10px -8px #444;
+    border-radius: 5px;
+    padding: 8px;
+    border: 1px solid currentColor;
+}
+
+/* Inputs (active/focus state) */
+.password-form-preloaded form input:active,
+.password-form-preloaded form input:focus-within {
+    background: #ffffc3;
+}
+
+/* Submit button */
+div.password-form-preloaded form input.form-submit {
+    font-size: .9rem;
+    padding: 6px 12px;
+    transform: none;
+    border-bottom: 1px solid;
+    transition: all 180ms linear;
+}
+
+/* Submit button hover/focus */
+div.password-form-preloaded form input.form-submit:focus,
+div.password-form-preloaded form input.form-submit:hover {
+    background: black;
+    border-color: black;
+    color: white;
+}
+
+
+.page_component_restricted_ form input {
+    border-radius: 10px;
+}

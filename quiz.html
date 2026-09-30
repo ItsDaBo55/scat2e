@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiz builder — Sterile Compounding 2e</title>
+<style>
+:root{--ink:#12263a;--paper:#f6f9fa;--line:#d5dee5;--mut:#5a6b7b;--teal:#0e6e7e;--serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:22px 20px 60px}
+a{color:var(--teal)}
+h1{font:600 30px/1.15 var(--serif);margin:6px 0 2px}
+p.lead{color:var(--mut);margin:0 0 6px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a href="index.html">&larr; Course index</a>
+  <h1>Quiz builder</h1>
+  <p class="lead">Mix chapters, choose practice or a timed exam. Questions come from the course glossary and chapter summaries.</p>
+  <div id="quiz"></div>
+</div>
+<script src="offline/data.js"></script>
+<script src="offline/offline.js"></script>
+<script>
+(function(){
+  var p=new URLSearchParams(location.search);
+  window.SCATLIB.chooser(document.getElementById('quiz'),{ch:p.get('ch')||'all',mode:p.get('mode')||'practice',n:p.get('n'),go:p.get('go')});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,270 @@
+.uniForm {
+	padding: 5px 10px;
+	margin: 10px;
+}
+.uniForm legend {
+	font-weight: bold;
+	font-size: 1.1em;
+	margin: 0;
+	padding: 1.1em 0;
+	border-bottom: #555 solid 1px;
+	color: #555;
+	width: 100%;
+}
+.uniForm fieldset {
+	margin-top: 25px;
+}
+.uniForm fieldset:first-child {
+	margin-top: 0;
+}
+.uniForm .ctrlHolder {
+	padding: 1em;
+	border-bottom: 1px solid #ddd;
+}
+.page-webcom-component-glossary-list-accordian .inlineLabels div:last-of-type {
+	border: none;
+}
+.uniForm .ctrlHolder.focused {
+	background: #fffcdf url('../images/uf_focused.png');
+}
+.chkbox-center {
+	margin-left: 34%;
+}
+.chkbox-center .form-item label.option {
+	width: 60%;
+	padding-left: 7px;
+}
+.chkbox-center .form-item input {
+	margin: 0;
+}
+.uniForm .requiredFieldText {
+	text-align: right;
+	font-size: .8em;
+	color: #666;
+	padding-right: .3em;
+}
+.uniForm .linksSupplement {
+	text-align: right;
+	padding-right: .5em;
+}
+.uniForm .buttonHolder {
+	text-align: right;
+	margin: 1.5em 0 0 0;
+	padding: 1.5em;
+}
+.uniForm .buttonHolder .primaryAction {
+	padding: 10px 22px;
+	line-height: 1;
+	background: #d04a06;
+	border: 1px solid #999;
+	font-size: 12px;
+	font-weight: bold;
+	color: #fff;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-o-border-radius: 4px;
+	-khtml-border-radius: 4px;
+	border-radius: 4px;
+}
+.uniForm .buttonHolder .primaryAction:active {
+	position: relative;
+	top: 1px;
+}
+.uniForm .secondaryAction {
+	text-align: left;
+}
+.uniForm button.secondaryAction {
+	background: transparent;
+	border: none;
+	color: #777;
+	margin: 1.25em 0 0 0;
+	padding: 0;
+}
+.uniForm .inlineLabels label em.required,
+.uniForm .inlineLabels .label em.required {
+	font-style: normal;
+	font-weight: bold;
+	color: #d04a06;
+	font-size: 1em;
+}
+.uniForm label small {
+	font-size: .75em;
+	color: #777;
+}
+.uniForm input.hasDatePicker,
+.uniForm input.hasTimePicker {
+	padding: 4px 2px;
+	border: 2px solid #dfdfdf;
+	background: #fff;
+	width: 12em !important;
+}
+.uniForm textarea {
+	height: 12em;
+	padding: 4px 0 4px 3px;
+	border: 2px solid #dfdfdf;
+}
+.uniForm select {
+	padding: 4px 2px 4px 0;
+	border: 2px solid #dfdfdf;
+	background: #fff;
+}
+.uniForm ul li label,
+.uniForm ul li {
+	color: #000;
+}
+.uniForm .ctrlHolder.inlineFields li {
+	float: left;
+	width: 30%;
+	margin-right: 3%;
+}
+.uniForm .ctrlHolder.inlineFields li label {
+	float: none;
+	display: block;
+	width: 98%;
+}
+.uniForm .formHint {
+	font-size: .85em;
+	color: #777;
+}
+.uniForm .inlineLabels .formHint {
+	padding-top: .5em;
+}
+.uniForm .ctrlHolder.focused .formHint {
+	color: #333;
+}
+#con4-entity-formbite-component-form .description,
+#con4-entity-formbite-component-form .formHint,
+#con4-entity-formbite-component-edit-form .description,
+#con4-entity-formbite-component-edit-form .formHint {
+	font-size: .96em;
+}
+.uniForm #errorMsg {
+	background: #ffdfdf url('../images/uf_error.png') !important;
+	border: 1px solid #df7d7d;
+	border-width: 1px 0;
+	margin: 0 0 1.5em 0;
+	padding: 7px;
+}
+ .uniForm .error {
+	background: #ffdfdf url('../images/uf_error.png') !important;
+	border: 1px solid #df7d7d;
+	border-width: 1px 0;
+}
+.uniForm #errorMsg dt,
+.uniForm #errorMsg h3 {
+	margin: 0 0 .5em 0;
+	font-size: 100%;
+	line-height: 100%;
+	font-weight: bold;
+	padding: 2px 0 2px 18px;
+	background: url('../images/uf_error.png') 0 0 no-repeat;
+}
+.uniForm #errorMsg dd {
+	margin: 0;
+	padding: 0;
+}
+.uniForm #errorMsg ol {
+	margin: 0;
+	padding: 0;
+}
+.uniForm #errorMsg ol li {
+	margin: 0;
+	padding: 2px;
+	list-style-position: inside;
+	border-bottom: 1px dotted #df7d7d;
+	position: relative;
+}
+.uniForm .errorField, .form-item--error-message.alert.alert-danger.alert-sm {
+	color: #af4c4c;
+	margin: 0 0 6px 0;
+	padding: 4px;
+	background: #ffbfbf;
+}
+.uniForm #OKMsg {
+	background: #c8ffbf;
+	border: 1px solid #a2ef95;
+	border-width: 1px 0;
+	margin: 0 0 1.5em 0;
+	padding: 7px;
+}
+.uniForm #OKMsg p {
+	margin: 0;
+	padding-left: 20px;
+	background: #c8ffbf url('../images/icon-success.gif') no-repeat;
+}
+.uniForm .col {
+	margin-bottom: 1.5em;
+}
+.uniForm .col.first {
+	width: 49%;
+	float: left;
+	clear: none;
+}
+.uniForm .col.last {
+	width: 49%;
+	float: right;
+	clear: none;
+	margin-right: 0;
+}
+.datepick-popup .datepick .datepick-nav {
+	height: 20px;
+}
+.datepick-popup .datepick .datepick-nav .datepick-cmd:hover {
+	background-color: #000;
+	line-height: 1.75em;
+}
+.datepick-popup .datepick .datepick-month-header {
+	height: 20px;
+}
+.datepick-popup .datepick .datepick-ctrl {
+	display: none;
+	background-color: #ccc;
+	height: 20px;
+}
+.datepick-popup .datepick .datepick-ctrl .datepick-cmd:hover {
+	background-color: #ccc;
+	line-height: 1.75em;
+}
+.datepick-popup .datepick .datepick-today {
+	background-color: #ffff99;
+}
+.datepick-popup .datepick .datepick-highlight {
+	background-color: #d04a06;
+}
+.datepick-trigger {
+	padding: 0 8px 0 4px;
+	margin: 0;
+	background-color: transparent;
+	border-color: transparent;
+	position: relative;
+	top: 4px;
+}
+.uniFormPageLayout li,
+.uniFormContentLayout li {
+	float: left;
+	padding-right: 30px;
+}
+.uniFormPageLayout li img,
+.uniFormContentLayout li img {
+	width: 100px;
+}
+.uniForm .question_pool_grid,
+.uniForm .question_pool_grid .grid-text {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+.uniForm .question_pool_grid .multiField table {
+	width: 69.2%;
+}
+.form-item-field-question-categories-und select {
+	width: 66% !important;
+}
+.form-item-test-user #edit-test-user {
+	width: 5%;
+	margin-left: 23%;
+}
+
+/*Align submit button and view result link in poll component*/
+.component_poll_display .ajax-loader-poll {
+  margin: 0 5px !important;
+}

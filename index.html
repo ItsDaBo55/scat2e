@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sterile Compounding &amp; Aseptic Technique 2e — Course index</title>
+<style>
+:root{
+  --ink:#12263a; --mut:#5a6b7b; --paper:#f6f9fa; --card:#ffffff; --line:#d5dee5;
+  --teal:#0e6e7e; --teal-d:#0a5563; --vial:#7fd0d9; --amber:#e8a200; --ok:#1b7f45;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--ink:#e6eef4;--mut:#9fb0be;--paper:#0e1a25;--card:#152534;--line:#27394a;--teal:#4fc3d1;--teal-d:#7fd7e2;--vial:#1f7f8d;--ok:#5fd08d}
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:16px}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 var(--sans)}
+a{color:var(--teal-d);text-decoration-thickness:1px;text-underline-offset:2px}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+
+header.top{padding:34px 0 22px;border-bottom:1px solid var(--line)}
+.crumb{color:var(--mut);font-size:14px;margin:0 0 6px}
+h1{font:600 clamp(28px,4.4vw,44px)/1.1 var(--serif);margin:0 0 4px;letter-spacing:-.01em}
+.sub{color:var(--mut);margin:0 0 18px}
+.bar{display:flex;gap:12px;flex-wrap:wrap;align-items:stretch}
+.search{flex:1 1 320px;position:relative}
+.search input{width:100%;font:inherit;padding:12px 14px 12px 14px;border:1.5px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink)}
+.search input::placeholder{color:var(--mut)}
+.search kbd{position:absolute;right:10px;top:11px;font:12px var(--sans);color:var(--mut);border:1px solid var(--line);border-radius:5px;padding:1px 6px}
+.resume{flex:0 1 auto;display:flex;flex-direction:column;justify-content:center;background:var(--teal);color:#fff;text-decoration:none;border-radius:10px;padding:8px 16px;min-width:220px;max-width:100%}
+.resume small{opacity:.85;font-size:12.5px}
+.resume b{font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+@media (prefers-color-scheme:dark){.resume{background:#1f7f8d}}
+.resume:hover{background:var(--teal-d);color:#fff}
+
+nav.quick{display:flex;flex-wrap:wrap;gap:8px 18px;padding:14px 0;font-size:15px;border-bottom:1px solid var(--line)}
+nav.quick a{font-weight:600}
+.stats{margin-left:auto;color:var(--mut);font-size:14px}
+
+.unit{margin:34px 0 8px}
+.unit h2{font:600 24px/1.2 var(--serif);margin:0}
+.unit h2 a{color:inherit;text-decoration:none}
+.unit h2 a:hover{text-decoration:underline}
+.unit p{margin:2px 0 10px;color:var(--mut);font-size:14px}
+
+.chapters{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+details.ch{border-bottom:1px solid var(--line);background:transparent}
+details.ch[open]{background:var(--card)}
+details.ch>summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:64px 1fr auto;gap:6px 16px;align-items:center;padding:12px 10px}
+details.ch>summary::-webkit-details-marker{display:none}
+.tile{position:relative;width:52px;height:60px;border:1.5px solid var(--ink);border-radius:6px 6px 10px 10px;overflow:hidden;background:var(--card);display:grid;place-items:center;font:600 24px var(--serif);font-variant-numeric:lining-nums tabular-nums}
+.tile::before{content:"";position:absolute;left:0;right:0;bottom:0;height:var(--fill,0%);background:var(--vial);opacity:.55;transition:height .3s}
+.tile span{position:relative}
+.tile::after{content:"";position:absolute;left:0;right:0;top:-1.5px;height:6px;background:var(--ink);opacity:.9}
+.ttl{font-weight:600;font-size:17px;line-height:1.3}
+.meta{color:var(--mut);font-size:13.5px}
+.chips{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.chip{font-size:13.5px;font-weight:600;text-decoration:none;color:var(--ink);border:1.5px solid var(--line);border-radius:999px;padding:3px 11px;background:var(--card);white-space:nowrap}
+.chip:hover{border-color:var(--teal);color:var(--teal-d)}
+.chip .sc{color:var(--ok);margin-left:5px}
+@media (max-width:720px){
+  .search kbd{display:none}
+  details.ch>summary{grid-template-columns:52px 1fr}
+  .chips{grid-column:1 / -1;justify-content:flex-start}
+}
+.body{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:6px 30px;padding:2px 18px 18px 90px}
+@media (max-width:720px){.body{padding-left:18px}}
+.body h3{font:600 14px var(--sans);color:var(--mut);margin:12px 0 4px}
+.body ul{list-style:none;padding:0;margin:0}
+.body li{padding:2px 0}
+.body li a{display:inline-flex;gap:8px;align-items:baseline}
+.body li a::before{content:"";flex:0 0 9px;height:9px;border-radius:50%;border:1.5px solid var(--line);transform:translateY(0)}
+.body li a.seen::before{background:var(--teal);border-color:var(--teal)}
+.body li a.cur{font-weight:700}
+
+.results{margin:22px 0}
+.results h2{font:600 20px var(--serif);margin:18px 0 6px}
+.results ul{list-style:none;margin:0;padding:0}
+.results li{padding:8px 0;border-bottom:1px solid var(--line)}
+.results .d{color:var(--mut);font-size:14.5px;display:block}
+.empty{color:var(--mut)}
+mark{background:#ffe08a;color:#12263a;border-radius:2px;padding:0 1px}
+footer{margin:46px 0 40px;color:var(--mut);font-size:13.5px;border-top:1px solid var(--line);padding-top:14px}
+footer button{font:inherit;color:var(--teal-d);background:none;border:0;text-decoration:underline;cursor:pointer;padding:0}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <p class="crumb">New Brunswick Community College · St. John campus</p>
+    <h1>Sterile Compounding and Aseptic Technique, 2e</h1>
+    <p class="sub">16 chapters in two units, with flash cards, practice tests and exams for each. Works offline.</p>
+    <div class="bar">
+      <div class="search"><input id="q" type="search" placeholder="Search chapters, sections, terms" aria-label="Search the course" autocomplete="off"><kbd aria-hidden="true">/</kbd></div>
+      <a id="resume" class="resume" href="#"><small id="rs">Start here</small><b id="rt">Welcome</b></a>
+    </div>
+  </header>
+  <nav class="quick" aria-label="Course shortcuts">
+    <a href="webcom-view-page/7241/83265/83252__page-id_5380665.html">Welcome</a>
+    <a href="webcom-view-page/7241/83265/83252__page-id_5380667.html">Glossary</a>
+    <a href="scat2e/page/appendices.html">Appendices</a>
+    <a href="quiz.html?ch=all&amp;mode=exam&amp;go=0">Mixed exam / quiz builder</a>
+    <a href="webcom-view-page/7241/83265/83252__page-id_5380668.html">Grade book (saved copy)</a>
+    <span class="stats" id="stats"></span>
+  </nav>
+
+  <main id="main">
+    <div id="results" class="results" hidden aria-live="polite"></div>
+    <div id="toc"></div>
+  </main>
+
+  <footer>
+    Practice tests, exams and worksheet answers are stored in this browser only.
+    <button id="reset" type="button">Reset my progress and scores</button>
+  </footer>
+</div>
+<script src="offline/data.js"></script>
+<script src="offline/offline.js"></script>
+<script>
+(function(){
+  var D=window.SCAT, L=window.SCATLIB, PAGE='scat2e/page/';
+  function $(s,r){return (r||document).querySelector(s)}
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+  function db(){return L.readDB()}
+  var nums=Object.keys(D.chapters).map(Number).sort(function(a,b){return a-b});
+  var totalPages=0; nums.forEach(function(n){totalPages+=D.chapters[n].pages.length});
+  totalPages+=D.appendix.length;
+
+  function bestFor(n,kind){
+    var pre='ch'+n+':chapter'+n+kind+':', best=null;
+    db().attempts.forEach(function(a){ if(a.key.indexOf(pre)===0){var p=Math.round(100*a.score/a.total); if(best===null||p>best) best=p;} });
+    return best;
+  }
+  function label(k){return {menu:'Overview',obj:'Objectives',sec:'Sections',review:'Review',cards:'Flash cards',practice:'Practice test',exam:'Exam'}[k]}
+
+  function build(){
+    var d=db(), vis=d.visited, last=d.last, html='', seenTotal=0;
+    [1,2].forEach(function(u){
+      var ut=D.units[u];
+      html+='<section class="unit"><h2><a href="'+PAGE+ut.href+'">Unit '+u+': '+esc(ut.title)+'</a></h2></section><div class="chapters">';
+      nums.filter(function(n){return D.chapters[n].unit===u}).forEach(function(n){
+        var c=D.chapters[n], seen=0;
+        c.pages.forEach(function(p){ if(vis[p.f]) seen++ });
+        seenTotal+=seen;
+        var fill=Math.round(100*seen/c.pages.length);
+        var open=(last && c.pages.some(function(p){return p.f===last}))?' open':'';
+        var ex=bestFor(n,'exam'), pr=bestFor(n,'practice');
+        var pageOf=function(k){var p=c.pages.filter(function(x){return x.k===k})[0];return PAGE+p.f};
+        html+='<details class="ch" id="ch'+n+'"'+open+'><summary>'+
+          '<div class="tile" style="--fill:'+fill+'%" aria-hidden="true"><span>'+n+'</span></div>'+
+          '<div><div class="ttl">Chapter '+n+': '+esc(c.title)+'</div><div class="meta">'+c.pages.length+' pages · '+seen+' visited · '+D.gloss[n].length+' glossary terms</div></div>'+
+          '<div class="chips">'+
+            '<a class="chip" href="'+pageOf('menu')+'">Open</a>'+
+            '<a class="chip" href="'+pageOf('cards')+'">Flash cards</a>'+
+            '<a class="chip" href="'+pageOf('practice')+'">Practice'+(pr!==null?'<span class="sc">'+pr+'%</span>':'')+'</a>'+
+            '<a class="chip" href="'+pageOf('exam')+'">Exam'+(ex!==null?'<span class="sc">'+ex+'%</span>':'')+'</a>'+
+          '</div></summary><div class="body">';
+        var groups=[['Read',['menu','obj','sec']],['Review and study',['review','cards','practice','exam']]];
+        groups.forEach(function(g){
+          html+='<div><h3>'+g[0]+'</h3><ul>';
+          c.pages.filter(function(p){return g[1].indexOf(p.k)>=0}).forEach(function(p){
+            html+='<li><a href="'+PAGE+p.f+'" class="'+(vis[p.f]?'seen':'')+(p.f===last?' cur':'')+'">'+esc(p.t)+'</a></li>';
+          });
+          html+='</ul></div>';
+        });
+        html+='</div></details>';
+      });
+      html+='</div>';
+    });
+    html+='<section class="unit"><h2><a href="'+PAGE+'appendices.html">Appendices</a></h2></section><div class="chapters"><details class="ch"><summary><div class="tile" aria-hidden="true"><span>A</span></div><div><div class="ttl">Reference tables and lab checklists</div><div class="meta">'+(D.appendix.length+1)+' pages</div></div><div></div></summary><div class="body"><div><h3>Appendices</h3><ul>';
+    D.appendix.forEach(function(p){ html+='<li><a class="'+(vis[p.f]?'seen':'')+'" href="'+PAGE+p.f+'">'+esc(p.t)+'</a></li>' });
+    html+='<li><a href="'+D.extra[2].f.replace('../../','')+'">'+esc(D.extra[2].t)+'</a></li></ul></div></div></details></div>';
+    $('#toc').innerHTML=html;
+    $('#stats').textContent=seenTotal+' of '+totalPages+' pages visited';
+
+    // resume button
+    var r=$('#resume');
+    if(last){
+      var t=null,cn=null;
+      nums.forEach(function(n){D.chapters[n].pages.forEach(function(p){ if(p.f===last){t=p.t;cn=n} })});
+      if(t){ r.href=PAGE+last; $('#rs').textContent='Continue where you left off'; $('#rt').textContent=(cn?'Ch. '+cn+' · ':'')+t; return; }
+      var ap=D.appendix.filter(function(p){return p.f===last})[0];
+      if(ap){ r.href=PAGE+last; $('#rs').textContent='Continue where you left off'; $('#rt').textContent=ap.t; return; }
+    }
+    r.href=D.extra[0].f.replace('../../','');
+  }
+
+  function hi(text,q){
+    var i=text.toLowerCase().indexOf(q); if(i<0) return esc(text);
+    return esc(text.slice(0,i))+'<mark>'+esc(text.slice(i,i+q.length))+'</mark>'+esc(text.slice(i+q.length));
+  }
+  function search(q){
+    var box=$('#results'), toc=$('#toc');
+    q=(q||'').trim().toLowerCase();
+    if(!q){ box.hidden=true; toc.hidden=false; return; }
+    var pages=[], terms=[];
+    nums.forEach(function(n){
+      var c=D.chapters[n];
+      c.pages.forEach(function(p){
+        var full='Chapter '+n+' '+(p.k==='menu'?c.title:p.t);
+        if(full.toLowerCase().indexOf(q)>=0) pages.push({n:n,c:c,p:p});
+      });
+      D.gloss[n].forEach(function(g){
+        var ti=g[0].toLowerCase().indexOf(q), di=g[1].toLowerCase().indexOf(q);
+        if(ti>=0||di>=0) terms.push({n:n,t:g[0],d:g[1],rank:ti>=0?(ti===0?0:1):2});
+      });
+    });
+    terms.sort(function(a,b){return a.rank-b.rank});
+    var h='';
+    h+='<h2>Pages ('+pages.length+')</h2>';
+    h+=pages.length?'<ul>'+pages.slice(0,40).map(function(x){return '<li><a href="'+PAGE+x.p.f+'">'+hi('Chapter '+x.n+' · '+x.p.t,q)+'</a><span class="d">'+esc(x.c.title)+'</span></li>'}).join('')+'</ul>':'<p class="empty">No page titles match.</p>';
+    h+='<h2>Glossary terms ('+terms.length+')</h2>';
+    h+=terms.length?'<ul>'+terms.slice(0,40).map(function(x){return '<li><a href="'+PAGE+'chapter'+x.n+'flashcards.html">'+hi(x.t,q)+'</a> <span class="d">Chapter '+x.n+' — '+hi(x.d.length>200?x.d.slice(0,200)+'…':x.d,q)+'</span></li>'}).join('')+'</ul>':'<p class="empty">No glossary terms match. Search covers page titles and glossary terms, not the full chapter text.</p>';
+    if(terms.length>40) h+='<p class="empty">Showing the first 40 terms. Refine the search to narrow it down.</p>';
+    box.innerHTML=h; box.hidden=false; toc.hidden=true;
+  }
+
+  build();
+  var qi=$('#q'), params=new URLSearchParams(location.search);
+  qi.addEventListener('input',function(){search(qi.value)});
+  document.addEventListener('keydown',function(e){
+    if(e.key==='/' && document.activeElement!==qi && !e.ctrlKey && !e.metaKey){e.preventDefault();qi.focus();}
+    if(e.key==='Escape' && document.activeElement===qi){qi.value='';search('');qi.blur();}
+  });
+  if(params.get('q')){qi.value=params.get('q');search(qi.value);}
+  if(location.hash && /^#ch\d+$/.test(location.hash)){var t=document.querySelector(location.hash); if(t) t.open=true;}
+  $('#reset').addEventListener('click',function(){
+    if(confirm('Clear visited pages, quiz scores, flash-card progress and saved worksheet answers on this device?')){
+      try{localStorage.removeItem('scat2e:v1')}catch(e){}
+      location.reload();
+    }
+  });
+})();
+</script>
+</body>
+</html>

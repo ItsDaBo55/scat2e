@@ -1,0 +1,488 @@
+body:has(#manage_rubric_jqxgrid) #main-wrapper,
+.path-edit-rubric #main-wrapper {
+    max-width: 1600px;
+}
+
+body:has(#manage_rubric_jqxgrid) #main #content.column,
+.path-edit-rubric #main #content.column {
+    width: 85% !important;
+}
+
+body:has(#manage_rubric_jqxgrid) #secondary_navigation,
+.path-edit-rubric #secondary_navigation {
+    display: none;
+}
+
+#rubric_form_container label {
+	width: 20%;
+}
+
+#rubric_form_container .inlineLabels {
+    width: calc(100% - 5px);
+}
+
+#rubric_form_container #edit_rubric_courses_chosen {
+	width: 66% !important;
+}
+
+#submit_button_div input.button {
+    margin-right: 23px;
+}
+
+#rubric_form_container #cke_edit-description-value {
+	float: right;
+	width: 100%;
+}
+
+#rubric-criteria .criterion .ratings table {
+	table-layout: fixed;
+}
+
+.screenreader-only, .screenreader-only-tool {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	transform: translatez(0);
+}
+
+.rubric_container tr.criterion td.criterion_description .container {
+	margin-left: 0;
+	margin-right: 0;
+	width: auto;
+	position: relative;
+	font-size: .85rem;
+	display: table;
+	width: 100%;
+}
+
+#edit-rubric-grid .rubric_container {
+	border: 0px;
+}
+
+.criterion_description i {
+	color: #222222;
+}
+
+.criterion {
+	background-color: #f9f9f9;
+}
+
+.assessment_question_result .criterion {
+	background-color: #f9f9f9;
+}
+
+.assessment_question_result .rubric_container table[id$="ratings-table"] tr {
+	background: rgba(0, 0, 0, 0.063);
+}
+
+.assessment_question_result .rubric_container table {
+	margin: 10px 0;
+}
+
+.assessment_question_result .rubric_container table tr td,
+.assessment_question_result .rubric_container table tr th {
+	border: 1px solid #d1d1d1;
+}
+
+#rubric-heading-text {
+    width: 100% !important;
+	font-weight: bold !important;
+	font-size: 1.1em !important;
+	padding: 1.1em 0.5em 0.2em !important;
+	color: #555 !important;
+}
+
+.rubric_table th {
+	text-align: center;
+}
+
+.rubric_container .small_description {
+	font-weight: normal;
+	margin: .25rem 0;
+}
+
+.rubric_container .rubric_table {
+	border-collapse: collapse;
+	width: 99.9%;
+	height: 100%;
+	page-break-inside: avoid;
+}
+
+.rubric_container tr.criterion td.description {
+	width: 18%;
+}
+
+.rubric_container tr.criterion .links {
+	float: right;
+	text-align: right;
+}
+
+.gradingform_rubric.editor .criterion.first .controls .moveup input,
+.gradingform_rubric.editor .criterion.last .controls .movedown input {
+	display: none;
+}
+
+.gradingform_rubric.editor .criterion .controls i {
+	width: 12px;
+	height: 12px;
+	margin: .3em .3em 0 .3em;
+	cursor: pointer;
+}
+
+.gradingform_rubric.editor .criterion .controls {
+    width: 3%;
+}
+
+.gradingform_rubric.editor .criterion .addrating {
+    width: 10%;
+}
+
+.gradingform_rubric .plainvalue.empty {
+	font-style: italic;
+	color: #aaa;
+}
+
+.gradingform_rubric .criterion .description textarea {
+	margin-bottom: 0;
+	height: 115px;
+	scrollbar-width: thin;
+	width: 95%;
+}
+
+.gradingform_rubric .criterion .definition textarea {
+	height: 115px;
+    width: 92%;
+    min-width: 60px;
+	position: relative;
+	z-index: 2;
+	scrollbar-width: thin;
+}
+
+.gradingform_rubric .criterion .score.d-inline {
+    clear: both;
+	padding-top: 20px;
+	display: flex;
+	flex-direction: row;
+	white-space: nowrap;
+	align-items: center;
+}
+
+.gradingform_rubric .criterion .score .score-input {
+    width: 100%;
+    min-width: 30px;
+}
+
+.gradingform_rubric.editor .hiddenelement,
+.gradingform_rubric.evaluate .hiddenelement {
+	display: none;
+}
+
+#document-grader-form .grid-container { 
+	grid-template-columns: fit-content(40%);
+}
+
+.gradingform_rubric.editor .pseudotablink,
+.gradingform_rubric.evaluate .pseudotablink {
+	background-color: transparent;
+	border: 0 solid;
+	height: 1px;
+	width: 1px;
+	color: transparent;
+	padding: 0;
+	margin: 0;
+	position: relative;
+	float: right;
+}
+
+.gradingform_rubric.editor .ratings .rating .delete i {
+	width: 12px;
+	height: 16px;
+	cursor: pointer;
+}
+
+.gradingform_rubric .criterion .rating .delete {
+	position: relative;
+	height: 32px;
+	clear: both;
+	float: right;
+}
+
+.gradingform_rubric .criterion .ratings .rating .rating-wrapper {
+	display: flex;
+	flex-direction: row;
+}
+
+.gradingform_rubric .criterion .ratings .rating .rating-input-wrapper {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+}
+
+.gradingform_rubric .criterion .ratings td.rating {
+	vertical-align: top;
+}
+
+.gradingform_rubric table {
+	width: 100%;
+}
+
+.gradingform_rubric.editor .addcriterion input,
+.gradingform_rubric.editor .addrating input {
+	display: block;
+	color: #555;
+	font-weight: 700;
+	text-decoration: none;
+    background: #FFF;
+}
+
+.gradingform_rubric.editor .addrating .btn,
+.gradingform_rubric.editor .addcriterion .btn {
+	border-width: 1.136px;
+	border-radius: 5px;
+	letter-spacing: 0rem;
+	padding-top: .375rem;
+	padding-right: .75rem;
+	padding-bottom: .375rem;
+	padding-left: .75rem;
+	cursor: pointer;
+}
+
+.gradingform_rubric .add-criterion {
+	margin-left: 5px;
+	padding: 0;
+	margin-bottom: 1em;
+}
+
+.gradingform_rubric.editor .add-criterion input {
+	height: 30px;
+	line-height: 29px;
+	margin-bottom: 14px;
+	padding-left: 20px;
+	padding-right: 10px;
+}
+
+.gradingform_rubric.editor .criterion.first .controls .moveup,
+.gradingform_rubric.editor .criterion.last .controls .movedown {
+	display: none;
+}
+
+#searchformdialog input#rubric-name-jqxgrid,
+#searchformdialog input#institution-name-jqxgrid,
+#searchformdialog input#course-name-jqxgrid {
+	margin-top: 8px;
+}
+
+#rubric-name {
+	font-family: 'Libre Franklin';
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.rubric .ratings table {
+	margin-top: 1px;
+	margin-bottom: 1px;
+}
+
+.rubric.evaluate .criterion .ratings .rating:hover {
+	cursor: pointer;
+}
+
+.assessment_question_result:not(:has(.assessment_essay_student_rubric)) .criterion .ratings .rating:hover {
+	cursor: pointer;
+}
+
+.rubric.display .criterion .ratings .rating.checked {
+	background: #BCE8BC;
+}
+
+.rubric.evaluate.color_orange .criterion .ratings .rating:hover, 
+.rubric.evaluate.color_orange .criterion .ratings .rating.checked,
+.rubric.display.color_orange .criterion .ratings .rating.checked {
+    background: #E83732;
+	color: white;
+}
+
+.assessment_question_result:not(:has(.assessment_essay_student_rubric)) .criterion .ratings .rating:hover, 
+.assessment_question_result .criterion .ratings .rating.checked {
+	background: 
+	#555 !important;
+	color: white;
+}
+
+.rubric.evaluate.color_d_blue .criterion .ratings .rating:hover, 
+.rubric.evaluate.color_d_blue .criterion .ratings .rating.checked,
+.rubric.display.color_d_blue .criterion .ratings .rating.checked {
+    background: #1154A3;
+	color: white;
+}
+
+.rubric.evaluate.color_l_blue .criterion .ratings .rating:hover, 
+.rubric.evaluate.color_l_blue .criterion .ratings .rating.checked,
+.rubric.display.color_l_blue .criterion .ratings .rating.checked {
+    background: #244FA0;
+	color: white;
+}
+
+.rubric.display tr td,
+.rubric.display tr th {
+	padding: 4px 9px;
+	border: 1px solid #D1D1D1;
+}
+
+.rubric.display,
+.rubric.display .rubric_description,
+.rubric.display .rubric_container {
+	padding-top: 10px;
+}
+
+.essay_submit_button {
+	display: block;
+  	margin-right: 0;
+	margin-top: 2em;
+}
+
+.essay_rubric_summary {
+	display: block;
+	width: 100%;
+	max-width: 100%;
+	box-sizing: border-box;
+	height: 8rem;
+	padding-top: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 5px;
+	border-radius: 10px;
+	resize: vertical;
+}
+
+.assessment_essay_student_rubric  {
+	display: block;
+	width: 100%;
+	max-width: 100%;
+	box-sizing: border-box;
+	padding-top: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 5px;
+}
+
+.essay_summary_container_student {
+	display: block;
+	  width: 100%;
+	  max-width: 100%;
+	  box-sizing: border-box;
+	  padding-top: 20px;
+	  padding-left: 10px;
+	  padding-right: 10px;
+	  padding-bottom: 5px;
+  }
+
+.essay_summary_container {
+	padding-top: 5px;
+}
+
+.assessment_essay_rubric_graded .student_essay_answer,
+.assessment_essay_rubric_graded .essay_grade_master {
+	font-size: 0.8rem;
+}
+
+.assessment_question_result .ratings-group {
+	table-layout: fixed;
+}
+
+.assessment_question_result .criteria-table th {
+	min-width: 220px;
+}
+
+#edit-rubric-grid .criteria-table-body th {
+	color: #777;
+	width: 18%;
+}
+
+.criteria-table-body th {
+	background-color: transparent;
+	color: #000000;
+	word-wrap: normal;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+
+.assessment_question_result .criteria-table-body label,
+.rubric.evaluate .criteria-table-body th {
+	font-weight: normal !important;
+}
+
+.rubric.evaluate .criteria-table-body th {
+	width: 18%;
+	white-space: normal !important;
+	font-size: 1em;
+}
+
+#rubric_form_container #rubric-criteria label {
+	width: 70% !important;
+}
+
+.ratings-group label {
+	word-wrap: normal;
+}
+
+.ai_essay_grader_button,
+.essay_submit_button {
+	border-radius: 14px;
+	padding: 0.3em 1em;
+	cursor: pointer;
+	background-color: #555;
+	box-shadow: 0px 2px 5px #8c8c8c;
+	border: 1px solid #5b5b5b;
+	font-family: 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, Sans-Serif;
+	color: white;
+	font-size: 0.8rem;
+}
+
+.ai_essay_grader_button:hover,
+.essay_submit_button:hover {
+	background-color: #757575;
+	box-shadow: 0px 4px 8px #8c8c8c;
+	border: 1px solid #9e9e9e;
+}
+
+.essay_score_input {
+	border-radius: 12px;
+	width: 4rem;
+	text-align: center;
+	padding: 0.2em 0em;
+}
+
+.essay_rubric_feedback_label {
+	font-weight: bold;
+	margin-bottom: 0.5em;
+}
+
+.essay_submit_button .loading_icon,
+.essay_submit_button .success_icon {
+	margin-right: 0.5em;
+}
+
+.essay_submit_button.disabled_submit_button {
+	cursor: auto;
+	background-color: #7b7b7b;
+	box-shadow: none;
+	border: 1px solid #aaa;
+}
+
+#rubric_form_container .js-form-type-checkbox {
+	margin-left: 22%;
+}
+
+#rubric_form_container .js-form-type-checkbox label {
+	width: 30%;
+}
+
+#rubric_form_container .description {
+	width: 84%;
+}

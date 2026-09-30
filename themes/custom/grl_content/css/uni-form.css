@@ -1,0 +1,133 @@
+/* ------------------------------------------------------------------------------
+
+   Copyright (c) 2010, Dragan Babic
+
+   Permission is hereby granted, free of charge, to any person
+   obtaining a copy of this software and associated documentation
+   files (the "Software"), to deal in the Software without
+   restriction, including without limitation the rights to use,
+   copy, modify, merge, publish, distribute, sublicense, and/or sell
+   copies of the Software, and to permit persons to whom the
+   Software is furnished to do so, subject to the following
+   conditions:
+
+   The above copyright notice and this permission notice shall be
+   included in all copies or substantial portions of the Software.
+
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+   EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+   OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+   NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+   HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+   WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+   FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+   OTHER DEALINGS IN THE SOFTWARE.
+
+   ------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------
+	IMPORTANT!!  THIS FILE HAS BEEN ALTERED FROM THE Uni-Form 1.4 CSS.  IT IS
+	A SPECIFIC IMPLEMENTATION OF Uni-Form CSS FOR USE WITH cfUniForm.
+
+	http://www.quackfuzed.com/demos/cfUniForm/
+   ------------------------------------------------------------------------------ */
+
+  /* #############################   GENERALS   ################################### */
+  /* ------------------------------------------------------------------------------ */
+
+.uniForm{ margin: 0; padding: 0; position: relative; z-index: 1; } /* reset stuff */
+.uniForm fieldset{ border: none; margin: 0; padding: 0; }
+.uniForm fieldset legend{ margin: 0; padding: 0; }
+.uniForm .ctrlHolder,
+.uniForm .buttonHolder{padding: 0; clear: both;}
+.uniForm:after,
+.uniForm .buttonHolder:after,
+.uniForm .ctrlHolder:after,
+.uniForm .ctrlHolder .multiField:after,
+.uniForm .inlineLabel:after{ content: "."; display: block; height: 0; line-height: 0; font-size: 0; clear: both; min-height: 0; visibility: hidden; }
+.uniForm label, .uniForm button{ cursor: pointer; }
+
+/* ------------------------------------------------------------------------------ */
+/* ##########################   DEFAULT LAYOUT   ################################ */
+/* ------------------------------------------------------------------------------ */
+/*       Styles for form controls where labels are above the input elements       */
+/* ------------------------------------------------------------------------------ */
+
+.uniForm label,
+.uniForm .label{ display: block; float: none; margin: 0 0 .5em 0; padding: 0; line-height: 100%; width: auto; }
+.uniForm .textInput,
+.uniForm .fileUpload,
+.uniForm .selectInput,
+.uniForm select,
+.uniForm textarea{ float: left; width: 53%; margin: 0; }
+.uniForm .formHint{ float: right; width: 43%; margin: 0; clear: none; }
+.uniForm .ctrlHolder ul{ float: left; width: 53%; margin: 0; padding: 0; }
+.uniForm .ctrlHolder ul li{ margin: 0 0 .5em 0; list-style: none; }
+.uniForm .ctrlHolder ul li label{ margin: 0; float: none; display: block; overflow: visible; }
+.uniForm .ctrlHolder ul.alternate li{ float: left; width: 30%; margin-right: 3%; }
+.uniForm .ctrlHolder ul.alternate li label{ float: none; display: block; width: 98%; }
+.uniForm .ctrlHolder ul .textInput,
+.uniForm .ctrlHolder ul .selectInput,
+.uniForm .ctrlHolder ul select,
+.uniForm .ctrlHolder ul.alternate .textInput,
+.uniForm .ctrlHolder ul.alternate .selectInput,
+.uniForm .ctrlHolder ul.alternate select{ width: 98%; margin-top: .5em; display: block; float: none; }
+.uniForm label em.required,
+.uniForm .label em.required{ float: left; width: 1em; margin: 0 0 0 -1em; }
+.uniForm .inlineLabels label,
+.uniForm .inlineLabels .label{ float: left; margin: .3em 2% 0 0; padding: 0; line-height: 1; position: relative; width: 32%;}
+.uniForm .question-narrative-div .form-item label{ padding: .35em 0 .3em .8em; width: 100%;}
+.uniForm .inlineLabels .form-textarea-wrapper{
+  float: left; width: 66%;
+}
+.uniForm .inlineLabels .ctrlHolder-FullTextarea .form-textarea-wrapper{
+  float: left; width: 100%;
+}
+.uniForm .inlineLabels .form-textarea-wrapper textarea{
+  float: none; width: 100%;
+  box-sizing: border-box;
+}
+.uniForm .inlineLabels .chosen-container,
+.uniForm .inlineLabels .chosen-container input{ float: left; width: 64%; }
+.uniForm .inlineLabels .formHint{ clear: both; float: none; width: auto; margin-left: 34%; position: static; }
+.uniForm .inlineLabels ul,
+.uniForm .inlineLabels .field--name-page-layout .fieldset-wrapper { float: left; width: 81%; }
+.uniForm .inlineLabels ul li,
+.uniForm .inlineLabels .field--name-page-layout .fieldset-wrapper .form-item{ margin: .5em 0; }
+.uniForm .inlineLabels ul.chosen-choices{width: 100%;}
+.uniForm .inlineLabels ul li label{ float: none; display: block; width: 100%; }
+.uniForm .inlineLabels ul.alternate li{ margin-right: 3%; margin-top: .25em; }
+.uniForm .inlineLabels .uniForm .inlineLabels .field--name-page-layout .fieldset-wrapper .form-item label input,
+.uniForm .inlineLabels .uniForm .inlineLabels .field--name-page-layout .fieldset-wrapper .form-item label select,
+.uniForm .inlineLabels .uniForm .inlineLabels .field--name-page-layout .fieldset-wrapper .form-item label textarea,
+.uniForm .inlineLabels ul li label .textInput,
+.uniForm .inlineLabels ul li label textarea,
+.uniForm .inlineLabels ul li label select{ float: none; display: block; width: 98%;  }
+.uniForm .inlineLabels label em.required,
+.uniForm .inlineLabels .label em.required{ display: block; float: none; margin: 0; position: absolute; right: 0; }
+.uniForm legend{ color: inherit; }
+.uniForm .secondaryAction{ float: left; }
+.uniForm .inlineLabel input,
+.uniForm .inlineLabels .inlineLabel input,
+.uniForm .blockLabels .inlineLabel input,
+.uniForm label input{ float: none; display: inline; margin: 0; padding: 0; border: none; }
+
+.uniForm .buttonHolder .inlineLabel,
+.uniForm .buttonHolder label{ float: left; margin: .5em 0 0 0; width: auto; max-width: 60%; text-align: left; }
+
+.uniForm .inlineLabels .noLabel ul{ margin-left: 34%;}
+.uniForm .small { width: 30% !important; }
+.uniForm .medium{ width: 45% !important; }
+.uniForm .auto  { width: auto !important; }
+.uniForm .small,
+.uniForm .medium,
+.uniForm .auto{ margin-right: 4px; }
+
+.uniForm .col{ float: left; }
+.uniForm .col{ width: 50%; }
+.uniForm input.hasDatePicker, .uniForm input.hasTimePicker { width: 9em !important; }
+.uniForm .inlineLabels label.checkboxLabel em.required { float: none; position: absolute; left: -2em; top: 0; }
+
+.uniForm .form-type-managed-file span.form-required { display: block !important; }
+
+.showOnAboveBelow .form-item label { padding: 0; background: none; color: #222222; right: 0; }
+.showOnAboveBelow .form-item label::after { content: " *"; color: #ff0000; font-weight: bold; }

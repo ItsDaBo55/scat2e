@@ -1,0 +1,135 @@
+@media print {
+    html,
+    body,
+    #main,
+    #page {
+        border: none;
+        font-size:1em;
+    }
+
+    body {
+        margin:0 auto;
+    }
+
+    #body_extra_1,
+    #body_extra_2,
+    #body_extra_3 {
+        display: none;
+    }
+
+    a {
+        position: static;
+        word-break: break-all;
+    }
+
+    a::after {
+        position: relative;
+        top:unset;
+        left:unset;
+    }
+
+    /*System Bar*/
+    nav#top_menu_navigation {
+        display: none;
+    }    
+
+    /*Page*/
+    #page_extra_1,
+    #page_extra_2,
+    #page_extra_3 {
+        display: none;
+    }
+
+    /*Branding*/
+    div#branding {
+        display: block;
+        height: auto;
+        position: relative;
+        top: unset;
+        left: unset;
+    }
+
+    #branding h1, 
+    #branding h2, 
+    #branding_grt h3 {
+        display: block;
+        position: relative;
+        margin: 5px;
+        padding:0;
+        border: none;
+        text-indent: 0;
+        font-size:14pt;
+    }
+
+    #branding_extra_1,
+    #branding_extra_2,
+    #branding_extra_3 {
+        display:none;
+    }
+
+    /*Navigation*/
+    #navigation_extra_1,
+    #navigation_extra_2,
+    #navigation_extra_3 {
+        display:none;
+    }
+
+    /*Breadcrumbs*/
+    div#secondary_navigation {
+        padding: 8px 0;
+        border: none;
+    }
+
+    #breadcrumbs ul li {
+        display: block;
+    }
+
+    #breadcrumbs ul li#context_navigation {
+        display: none;
+    }
+
+    /*Supplement/Footer*/
+    div#supplement {
+        padding: 10px 0 0;
+        margin: 0;
+    }
+
+    #supplement p {
+        padding: 5px 0;
+        display:block;
+        width:100%;
+        margin:0;
+    }
+
+    /* Assessment Component*/
+    #assessment_question_bubbles li a {
+        border: 1px solid #ccc;
+    }
+
+    div#buttons, 
+    #button_note,
+    div#return_to_site {
+        display: none;
+    }
+
+    /* Form component */
+    .uniForm div.buttonHolder {
+        display: none;
+    }
+
+    /* Formbite component */
+    input.form-submit,
+    .component_formbite input[type="submit"] {
+        display: none;
+    }
+
+    /* Videos */
+    video::-webkit-media-controls {
+        display: none;
+    }
+
+    /* Common floating menu */
+    .is-sticky #sidemenu-wrapper {
+        position: relative !important;
+    }
+}

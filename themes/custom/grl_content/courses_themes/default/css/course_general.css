@@ -1,0 +1,3527 @@
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------
+course general: this stylesheet is used for any general styling on the course UI
+All general front-end course styling should be done within the css files located at the course_theme/default/css folder (including this main course stylesheet)
+------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+
+/* override admin button stlying */
+input.form-submit,
+a.button,
+.component_poll_display .view_result_link button {
+  padding: 10px 22px;
+  line-height: normal;
+  background: #e1e1e1;
+  border: none;
+  font-weight: normal;
+  color: #333333;
+  float: none;
+  margin: 35px 5px;
+}
+.component_poll_display .view_result_link button {
+  margin: 0;
+}
+/* carrot dropdown for instructions */
+.ui-icon {
+  display: inline-block;
+  position: relative;
+  top: 4px;
+  left: -1px;
+}
+
+#course_search_container .course_nav_search_label {
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+/* sets all course columns in a row to the same height (currently disabled) */
+/* .equal-height {
+  display: flex;
+} */
+
+
+/* dialog confirmation box */
+.ui-resizable-handle.ui-resizable-se.ui-icon-gripsmall-diagonal-se {
+  float: right;
+}
+
+/* Copied from WC2 */
+.uniForm .buttonHolder .primaryAction {
+  padding: 10px 22px;
+  line-height: 1;
+  background: #eea337;
+  border: 1px solid #999;
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.tooltip-click,
+.tooltip-default {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+#breadcrumbs .sub_page_list {
+  width: auto;
+  background-color: #fff;
+}
+
+.a11y_hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.uniForm .ctrlHolder {
+  padding: 1em;
+  border-bottom: 1px solid #ddd;
+}
+
+.component_assignment_form_response {
+  font-size: 1.1em;
+  font-style: italic;
+}
+
+#supplement_print {
+  display: none;
+}
+
+/* WC2 global css */
+.scroll_auto {
+  overflow: visible;
+}
+
+.page_component {
+  position: relative;
+}
+
+/* remove ckeditor toggle display (override)*/
+/* This could not be acheived in code or GUI configuration, appears to be a bug with Drupal 7 CKedtior module */
+.text-format-wrapper a.ckeditor_links {
+  display: none !important;
+}
+
+/* remove browser and bootstrap default button stlying  */
+.clean_button {
+  display: inline-block;
+  border: none;
+  padding: inherit;
+  margin: inherit;
+  text-decoration: none;
+  background-color: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  text-align: inherit;
+  transition: background 250ms ease-in-out,
+    transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/*WC2 Allows for the whole area to be clickable on faqs, lets have the button fill in more space to make a larger clickable area*/
+.component_faq .clean_button {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.grid-sec .JmolButtonDiv .JmolBtn {
+  margin: 0 0 15px 0;
+  width: 93%;
+}
+
+/* autologout dialog box */
+.autologout-dialog {
+  margin: 0 auto !important;
+  width: calc(20vw) !important;
+}
+
+.controlPlay .play-button {
+  background-image: url("../images/ui-icons_222222_256x240_expanded.png");
+  background-position: 0 -160px;
+  background-repeat: no-repeat;
+  height: 16px;
+  width: 16px;
+  color: transparent;
+}
+
+/* ************* Assignment Design START  ************* */
+/* make instruction label inline to display carrot correctly */
+.component_assignment_instructions_label {
+  display: inline;
+  font-size: 1.17em;
+}
+
+.component_assignment_instructions {
+  margin-bottom: 10px;
+  border: #ccc solid 1px;
+}
+
+.component_assignment_instructions button.clean_button {
+  width: 100%;
+  background-color: #ddd;
+  padding: 0 5px;
+  margin: 0;
+}
+
+.component_assignment_instructions p {
+  padding: 3px 5px;
+  font-size: .9em;
+}
+
+.component_assignment_field {
+  margin-bottom: 1%;
+}
+
+.component_assignment_instructions button:hover,
+.component_assignment_instructions button:focus {
+  text-decoration: underline;
+}
+
+/* ************* Assignment Deisng END  ************* */
+
+/************* Bottom Navigation START *************/
+#next_prev_nav ul li {
+  display: inline;
+  list-style-type: none;
+}
+
+#next_prev_nav {
+  overflow: hidden;
+}
+
+#next_prev_nav ul {
+  margin: 0;
+  display: inline;
+}
+
+#next_prev_nav_prev {
+  float: left;
+  background: url(../images/arrow_left.png) no-repeat left;
+  padding-left: 20px;
+}
+
+#next_prev_nav_next {
+  float: right;
+  background: url(../images/arrow_right.png) no-repeat right;
+  padding-right: 20px;
+}
+
+/************* Bottom Navigation END *************/
+
+
+/************* Secondary Navigation START *************/
+#secondary_navigation {
+  overflow: hidden;
+  padding: 8px;
+  background-color: #f0f0f0;
+}
+
+#breadcrumbs ul {
+  margin: 0;
+  padding: 0;
+}
+
+#breadcrumbs ul li {
+  display: inline;
+  background-image: url(../images/breadcrumb.png);
+  background-repeat: no-repeat;
+  background-position: 0 6px;
+  margin-left: 7px;
+  padding-left: 15px;
+}
+
+/************* Secondary Navigation END *************/
+
+
+/************ Survey Table START ************/
+.survey_instructions {
+  margin-bottom: 10px;
+  border: #ccc solid 1px;
+}
+
+/* remove default margin on h3 tag */
+.survey_instructions_label {
+  margin: 0;
+}
+
+.survey {
+  font-size: .8em;
+  overflow: hidden;
+  clear: both;
+  position: relative;
+}
+
+td.survey_likert_dynamics,
+th.survey_likert_dynamics {
+  text-align: center;
+  padding: 3px 5px;
+  min-width: 40px;
+}
+
+.survey_table td,
+.survey_table th {
+  border-bottom: 1px solid #ccc;
+  padding: 3px 0;
+}
+
+td.survey_likert_dynamics,
+th.survey_likert_dynamics {
+  text-align: center;
+  padding: 3px 5px;
+  min-width: 40px;
+}
+
+.survey_question_order {
+  padding: 3px 5px !important;
+  text-align: right;
+  vertical-align: top;
+}
+
+.form-item,
+.form-actions {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* WC2 default h3 background */
+.survey h3 {
+  background-color: #ddd;
+}
+
+.survey_results_response {
+  border: 1px solid #ccc;
+}
+
+.survey_results_outcome,
+.survey_results_score,
+.survey_results_questions {
+  margin-top: 10px;
+  border: 1px solid #ccc;
+}
+
+/* remove bootstrap margin */
+.survey h3 {
+  margin: 0;
+}
+
+.survey_result_message {
+  padding: 3px 5px;
+}
+
+.survey .scoredisplay {
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  display: none;
+}
+
+.survey_results_question_narrative,
+.survey_results_question_answers {
+  margin: 0 0 10px 5px;
+}
+
+.survey_results_questions h4 {
+  border-bottom: #ccc solid 1px;
+}
+
+.survey table[class^="graph_indent"] td,
+.survey table[class^="graph_indent"] th {
+  padding-left: 10px;
+}
+
+.displaygraphall table th {
+  font-weight: bold;
+  text-align: left
+}
+
+/************ Survey Table END ************/
+
+
+/************ Course View Grade Book START ************/
+/* override another important */
+.grade_book{
+  position: relative;
+  z-index: 1;
+}
+.grade_book::before {
+  z-index: -1;
+}
+.grade-book-tab {
+  padding: 2% !important;
+}
+
+div.grade_book .ui-tabs .ui-widget-header {
+  border-left: medium none;
+  border-right: medium none;
+  border-top: medium none;
+  /* padding: .30em 0 .2em .8em; */
+  padding: 1%;
+}
+
+.userlist {
+  margin-top: 20px;
+}
+
+ul#userlist_tab .plusimageapply {
+  background-image: url(../images/plus.png);
+}
+
+/* If both classes are preset, show plus icon */
+ul#userlist_tab .plusimageapply.minusimageapply {
+  background-image: url(../images/plus.png);
+}
+
+ul#userlist_tab .minusimageapply {
+  background-image: url(../images/minus.png);
+}
+
+ul#userlist_tab li {
+  list-style-type: none;
+  background-size: 13px 11px;
+  background-repeat: no-repeat;
+  padding-left: 30px !important;
+  background-position: top left;
+  background-position-x: 10px;
+  background-position-y: 16px;
+}
+
+ul#userlist_tab .access_retake_link {
+  font-weight: bold;
+  border-bottom: 1px solid black;
+}
+
+#compdata tr:nth-child(even) {
+  background: #eeeeee;
+}
+
+#compdata th {
+  text-align: center
+}
+
+.grade_book #tabs-0 li {
+  padding: 0;
+}
+
+.grade_book #tabs-0 ul {
+  margin: 1% 0 2% 3%;
+}
+
+.grade_book .inside_comp_details {
+  padding-left: 2%;
+}
+
+.grade_book .inside_comp_details li {
+  list-style-image: none;
+  list-style: none;
+  padding: 0;
+}
+
+.grade_book li {
+  padding: .7em;
+}
+
+.grade_book ul#userlist_tab>li:nth-child(odd) {
+  background-color: #eee;
+}
+
+.grade_book .divu {
+  padding: .3em 1em .3em 1em;
+}
+
+.grade_book .dive {
+  padding: .3em 1em .3em 1em;
+}
+
+.grade_book .divc {
+  padding: .3em 1em .3em 1em;
+}
+
+.grade_book .diva {
+  padding: .8em 1em .3em 0em;
+}
+
+.grade_book .inside_comp_details {
+  font-size: .8em;
+}
+.grade_book .inside_comp_details .grade_book_marks{
+  width: auto;
+  padding: 0;
+  line-height: 18px;
+}
+
+.grid-buttons .export-pdf.ui-icon.ui-icon-pdf,
+.grid-buttons .export-csv.ui-icon.ui-icon-pdf,
+.grid-buttons .export-other.ui-icon.ui-icon-pdf {
+  overflow: visible;
+  top: 0;
+  height: 26px;
+  background: none;
+}
+
+.grid-buttons .export-pdf.ui-icon.ui-icon-pdf a,
+.grid-buttons .export-csv.ui-icon.ui-icon-pdf a,
+.grid-buttons .export-other.ui-icon.ui-icon-pdf a {
+  font-size: 11px;
+  border-bottom: none;
+}
+
+.grid-buttons .export-pdf.ui-icon.ui-icon-pdf a::before,
+.grid-buttons .export-csv.ui-icon.ui-icon-pdf a::before,
+.grid-buttons .export-other.ui-icon.ui-icon-pdf a::before {
+  top: 0px;
+}
+
+#prerequisite_submissions_grid {
+  overflow: auto;
+}
+
+#user_prereq_status_table {
+  margin: 1.5rem auto;
+  font-size: 0.8rem;
+  min-width: 800px;
+}
+
+#user_prereq_status_table tr {
+  border-bottom: 1px solid #ccc;
+}
+
+#user_prereq_status_table th {
+  padding: 5px;
+  font-weight: bold;
+  text-align: left;
+}
+
+#user_prereq_status_table td {
+  padding: 5px;
+}
+
+@media only screen and (min-width: 1200px) {
+  #user_prereq_status_table {
+    min-width: 900px;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  #user_prereq_status_table {
+    min-width: 1050px;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  #user_prereq_status_table {
+    min-width: 1200px;
+  }
+}
+
+/************ Course View Grade Book END ************/
+
+/************ Course View Form START ************/
+/* .component_form .uniForm .form-item label p {
+  display: inline;
+} */
+
+#content .form-required,
+form#component-entityform-edit-form div.field-type-taxonomy-term-reference {
+  font-family: Verdana, Arial, sans-serif;
+}
+
+.fieldset-legend {
+  display: none;
+}
+
+.form-required.fieldset-legend {
+  display: inline-block;
+}
+
+.radio-vertical {
+  width: 70%;
+  float: left;
+}
+
+.radio-vertical .form-item {
+  width: 100%;
+  float: left;
+}
+
+.public_view_form .form-type-checkbox input {
+  width: auto;
+}
+
+.uniForm .inlineLabels label.option {
+  margin-top: 0;
+}
+
+/* Hide grippie */
+.grippie {
+  display: none;
+}
+
+/* Radios */
+#registration-count-search-form .form-checkboxes,
+.form-radios {
+  padding-top: 0px;
+}
+
+#poll-view-student-form .form-checkboxes,
+.component_form_display .form-radios {
+  width: 100%;
+  padding-top: 15px;
+}
+
+.component_form_display .radio-horizontal.form-radios {
+  margin-left: 33%;
+}
+
+#formbite_wrapper .form-checkboxes .form-item,
+.form-radios .form-item {
+  margin-top: 0rem;
+  margin-bottom: 0.2rem;
+}
+
+#formbite_wrapper .form-item-fb-answer select.fb_answer_class {
+  margin-top: 10px;
+}
+
+#formbite_wrapper .fb_answer_class img,
+.component_form_display label[for^="edit-form-element"] img {
+  max-width: 400px;
+  width: 100%;
+}
+
+.component_form_display input.form-checkbox {
+  margin: 3px 5px 0 0;
+}
+
+.component_form_display input.form-radio {
+  /*margin: 0;*/
+  width: 25px;
+  margin-top: 0.5em;
+}
+
+/* form radio button labels */
+.component_form .uniForm .inlineLabels .form-type-radios label:not(.component_form .uniForm .inlineLabels .form-type-radios .radio-horizontal label) {
+  display: inline;
+  float: none;
+}
+
+/* WYSIWYG text box label  */
+.uniForm .inlineLabels .form-type-textarea label[for*='wysiwyg'] {
+  float: none;
+  margin: .3em 2% 0 0;
+  /* padding: 0; */
+  line-height: 1;
+  position: relative;
+  width: 32%;
+}
+
+.ctrlHolder .form-type-radios .description {
+  clear: both;
+  padding: 5px 0 0;
+}
+
+.ctrlHolder .form-type-checkboxes .description {
+  clear: both;
+  padding: 5px 0 0;
+}
+
+.blockLabels .ctrlHolder .form-type-select .description {
+  clear: both;
+}
+
+.uniForm .ctrlHolder.focus {
+  background: #fffcdf url(../images/uf_focused.png);
+}
+
+/************ Course View Form END ************/
+
+
+/* inlineLabels stlying START */
+.inlineLabels h2 {
+  display: inline;
+}
+
+/* inline labels text area plain text  */
+.inlineLabels div.form-item.form-type-textarea {
+  width: auto;
+  display: flex;
+}
+
+/*Used to fix an issue with #3101*/
+.uniForm div.component_form_questions div.form-type-textarea {
+  display: inline;
+}
+
+/* blockLabels */
+.blockLabels select.form-select,
+.blockLabels input.datepicker.form-text {
+  clear: both;
+}
+
+.inlineLabels .special_char_field_wrapper,
+.blockLabels .special_char_field_wrapper {
+  display: flex;
+}
+
+.inlineLabels .special_char_field_wrapper p.label,
+.blockLabels .special_char_field_wrapper p.label {
+  width: auto;
+}
+
+@media screen and (max-width: 767px) {
+
+  .inlineLabels div.special_char_field_wrapper,
+  .blockLabels div.special_char_field_wrapper {
+    display: block;
+  }
+}
+
+
+/********* Question Pool START *********/
+.questionpool_question_answers {
+  margin: 10px 0 0 27px;
+}
+
+.questionpool_question_answer {
+  margin: 5px 0;
+}
+
+.questionpool_question_answer .special_char_field_wrapper .special_char_btn {
+  margin-right: 8px;
+}
+
+/* *********Matching question********* */
+.questionpool_question_matching_answer {
+  width: 100%;
+  float: left;
+}
+
+.questionpool_question_matching_answer_select {
+  float: left;
+  width: 7%;
+}
+
+.questionpool_question_matching_answer_text {
+  float: left;
+  width: 30%;
+  padding: 0 0 0 10px;
+}
+
+.questionpool_question_matching_answer_match {
+  float: left;
+  width: 50%;
+  text-align: left;
+}
+
+.form-item.form-type-checkboxes label:not(.option) {
+  display: block;
+}
+
+/********* fill-in paragraph question *******/
+/*.questionpool_question_narrative .fill-in-paragraph-field {display: inline-block;}*/
+.questionpool_question_fillinparagraph_answer_instructions .questionpool_question_narrative{display: inline-block;}
+.questionpool_question_fillinparagraph_answer_instructions {width: calc(100% - 60px); display: inline-block;text-align: justify;}
+.questionpool_question_fillinparagraph_answer_instructions .question_pool {display: inline-block;}
+.questionpool_question_fillinparagraph_answer_instructions .form-type-select {display: inline-block;}
+#multistep_form .questionpool_question_fillinparagraph_answer_instructions .questionpool_question_narrative label {
+  display:inline !important;
+} /*#2220 Added for single question display format*/
+
+
+/* *********grid question********* */
+
+/* hide element labels */
+.grid_question .other_element label.option {
+  visibility: hidden;
+}
+
+.grid_question.questionpool_question_type_grid {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.grid_question .form-item.form-type-radio label {
+  margin: 0;
+  width: auto;
+  float: none;
+  display: flex;
+  flex-direction: column-reverse;
+  text-align: center;
+  align-items: center;
+}
+
+/* .grid_question .form-item.form-type-radio label p {
+  width: 120%;
+} */
+
+.grid_question .answer_radio_wrapper.grid-asmnt-hld {
+  margin-right: 44%;
+}
+
+.grid_question .form-item.form-type-radio {
+  padding: 6% 5% 0 5%;
+  margin: 0;
+}
+
+.grid_question .answer_radio_wrapper .form-type-radio label {
+  float: left;
+  width: 100%;
+  margin-top: -38px;
+  white-space: nowrap;
+}
+.grid_question .answer_radio_wrapper .form-type-radio label p {
+  width: 120%;
+}
+.grid_question .first_element.form-radio,
+.grid_question .other_element.form-radio {
+  width: auto;
+  float: left;
+  margin: 0;
+  width: 120%;
+}
+
+.grid_question .form-wrapper.first_element legend,
+.grid_question .form-wrapper.other_element legend{
+  border: none;
+  float: left;
+  width: auto;
+  margin: 0 0 0 27px;
+}
+.grid_question .form-radios.first_element,
+.grid_question .form-radios.other_element,
+.grid_question .form-wrapper.first_element .fieldset-wrapper > div,
+.grid_question .form-wrapper.other_element .fieldset-wrapper > div{
+  float: right;
+  display: inline-flex;
+}
+.grid_question .other_element .fieldset-wrapper .form-type-radio label{
+  float: right;
+  display: inline-flex;
+}
+
+
+/* Sequence Question */
+.sequence_question .sequence_answer_wrapper {
+  margin: 0;
+  width: 100%;
+  float: left;
+}
+
+.sequence_question .sequence_text {
+  float: left;
+}
+
+/* .calculative_question .questionpool_question_narrative{
+  float: left;
+  width: 100%;
+  margin: 0 0 10px 5px;
+} */
+.calculated_quesiton_answer {
+  float: left;
+  /* padding-left:10px; */
+  clear: both;
+  width: 100%;
+  margin: 0 0 2% 0;
+}
+
+.questionpool_question_calculated_answer .calculated_quesiton_answer label {
+  display: inline;
+}
+
+.questionpool_question_calculated_answer .calculated_quesiton_answer label p {
+  width: auto;
+}
+
+.questionpool_question_calculated_answer .calculated_quesiton_answer input.calculated_answer {
+  width: 25%;
+  line-height: normal;
+}
+
+.calculated_unit_display {
+  display: inline-block;
+}
+
+.calculated_quesiton_answer .form-item.form-type-textfield {
+  display: inline;
+}
+
+input.fill_in_the_blanks.fillblank_answer {
+  width: 30%;
+}
+
+select.truefalse_answer.form-select {
+  margin: 10px 0 0 10px;
+}
+
+.questionpool_question_type_grid .answer_radio_wrapper label {
+  margin: 0 0 0 27px;
+}
+
+.questionpool_question_essay .form-textarea-wrapper textarea {
+  width: 85%;
+}
+
+/********* Question Pool END *********/
+
+h2.assignment_due_date {
+  font-size: 17px;
+}
+
+h2.assignment_start_date {
+  font-size: 17px;
+}
+
+
+
+
+/************ Assessment START ************/
+
+.question_link_wrapper input {
+  color: #fff;
+  display: block;
+  font-size: 13px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  border: 0px;
+  border-radius: 5px;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, .3);
+  background: #2a2a2a;
+  line-height: 24px;
+  text-align: center;
+}
+
+/* assessment buttons inline */
+#multistep_form #buttons #i_am_finished,
+#multistep_form #buttons #skip_question_button,
+#multistep_form #buttons #save_answer_button {
+  display: inline-block
+}
+
+/* Count down timer */
+.hasCountdown {
+  border: 1px solid #ccc;
+  background-color: #eee;
+}
+
+#time_remaining {
+  width: 240px;
+  height: 45px;
+}
+
+.countdown_row {
+  clear: both;
+  width: 100%;
+  padding: 0px 2px;
+  text-align: center;
+}
+
+.countdown_section {
+  display: block;
+  float: left;
+  font-size: 75%;
+  text-align: center;
+}
+
+.countdown_show3 .countdown_section {
+  width: 32.5%;
+}
+
+.countdown_amount {
+  font-size: 200%;
+  width: 100%;
+  display: block;
+}
+
+#assessment_timer {
+  clear: both;
+  padding: 0px 20px 1% 20px;
+}
+
+#time_left_cont2 {
+  padding: 0 20px 15px 0;
+}
+
+#time_limit_label strong {
+  display: block;
+  padding: 10px 20px 5px 0;
+}
+
+#time_limit_label #time_left_cont2 {
+  padding: 10px 20px 5px 0;
+}
+
+#multistep_form #buttons input {
+  margin: 5px 5px;
+}
+
+.out_of_number {
+  padding: 10px 20px 5px 0;
+  width: 100%;
+  float: left;
+}
+
+#assessment_question_bubbles ol {
+  list-style-type: none;
+  width: 80%;
+  padding: 0px;
+  margin: 10px auto;
+}
+
+#assessment_question_bubbles li {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background: #ccc;
+  margin: 0px 0px 5px 5px;
+  padding: 0px;
+  border-radius: 6px;
+  line-height: 30px;
+  text-align: center;
+}
+
+#assessment_question_bubbles li a {
+  color: #fff;
+  display: block;
+  font-size: 13px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  border: 0px;
+  text-decoration: none;
+  border-radius: 5px;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, .3);
+
+}
+
+#assessment_question_bubbles li.a a {
+  background: #eea337;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #eea337 0%, #e58e37 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eea337), color-stop(100%, #e58e37));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #eea337 0%, #e58e37 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #eea337 0%, #e58e37 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #eea337 0%, #e58e37 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #eea337 0%, #e58e37 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eea337', endColorstr='#e58e37', GradientType=0);
+  /* IE6-9 */
+}
+
+#assessment_question_bubbles li.correct a{
+  background: #299a0b;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #299a0b 0%, #6cb50e 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eea337), color-stop(100%, #e58e37));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #299a0b 0%, #6cb50e 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #299a0b 0%, #6cb50e 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #299a0b 0%, #6cb50e 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #299a0b 0%, #6cb50e 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#299a0b', endColorstr='#6cb50e', GradientType=0);
+  /* IE6-9 */
+}
+
+#assessment_question_bubbles li.incorrect a{
+  background: #e06100;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #cc0000 0%, #e06100 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #cc0000), color-stop(100%, #e06100));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #cc0000 0%, #e06100 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #cc0000 0%, #e06100 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #cc0000 0%, #e06100 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #cc0000 0%, #e06100 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cc0000', endColorstr='#e06100', GradientType=0);
+  /* IE6-9 */
+}
+
+#assessment_question_bubbles li.a a:hover {
+  background: #e58e37;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, .2);
+  -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, .2);
+  -ms-box-shadow: 0px 1px 1px rgba(0, 0, 0, .2);
+  -o-box-shadow: 0px 1px 1px rgba(0, 0, 0, .2);
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, .2);
+}
+
+
+#assessment_question_bubbles li.s a {
+  background: #ccc;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #d8d8d8 6%, #cccccc 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(6%, #d8d8d8), color-stop(100%, #cccccc));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #d8d8d8 6%, #cccccc 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #d8d8d8 6%, #cccccc 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #d8d8d8 6%, #cccccc 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #d8d8d8 6%, #cccccc 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d8d8d8', endColorstr='#cccccc', GradientType=0);
+  /* IE6-9 */
+}
+
+#assessment_question_bubbles li.s a:hover {
+  background: #C1C1C1;
+}
+
+#assessment_question_bubbles li.u a {
+  background: #2a2a2a;
+}
+
+#assessment_question_bubbles li.u a:hover {
+  border-bottom: 1px solid #eea337;
+  background: rgba(0, 0, 0, .9)
+}
+
+#return_to_site {
+  margin: 30px 0;
+  clear: both;
+}
+
+#assessment_question_area {
+  margin: 5px 20px 5px;
+}
+
+#assessment_info #time_limit_label {
+  padding: 10px 20px 5px 0;
+}
+
+#assessment_question_bubbles legend {
+  margin: 0;
+  border: none;
+  padding-left: 1.2%;
+}
+
+#question_bubble_order_list {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+form#assessment-question-form .question_begin.questionpool_question {
+  clear: both;
+}
+
+div#button_note {
+  margin-top: 2%;
+  margin-left: 5px;
+}
+
+#assessment-question-form input.form-submit,
+#assessment-question-pool-multiple-question input.form-submit:not(.question_link_wrapper input) {
+  margin: 10px 5px;
+}
+
+#assessment-question-form .form-actions,
+#assessment-question-pool-multiple-question .form-actions {
+  margin: 5px 0 10px;
+}
+
+/* assessment question numbering */
+.assessment_component .question_begin .indexq {
+  display: inline;
+  margin-right: .5%;
+  vertical-align: top;
+}
+
+.assessment_component .question_begin .indexq+div.questionpool_question_narrative {
+  display: inline-block;
+  width: calc(100% - 30px);
+}
+
+.assessment_component .question_begin .indexq+div.questionpool_question_narrative:first-of-type p:first-child {
+  display: inline;
+}
+
+.assessment_component .question_begin {
+  padding: 20px 0 0px 10px;
+  clear: both;
+}
+
+.questionpool_question_narrative label,
+.questionpool_question_narrative p {
+  display: block;
+}
+
+/* user answer save message */
+#assessment_answers_submitted {
+  position: fixed;
+  top: 45px;
+  left: 5px;
+  background-color: #ffff99;
+  border: #aaa solid 1px;
+  padding: 1px 3px;
+  font-size: .8em;
+  color: #666;
+  z-index: 1;
+}
+
+/* fix position of block ui submission message */
+div.blockUI.blockMsg.blockElement {
+  position: fixed !important;
+  top: 50% !important;
+  left: 35% !important;
+}
+
+/************ Assessment END ************/
+
+/************ Image Component Display START ************/
+.component_image .component_image_layout_gallery .component_image_asset {
+  width: auto;
+}
+
+div[class*="component_image_layout"] a {
+  text-decoration: none;
+  border: none;
+}
+
+.component_image_layout_gallery a {
+  display: block;
+  float: left;
+}
+
+/************ Image Component Display END ************/
+
+/************ Poll Component Display START ************/
+/* override course specific stlying of poll graph display */
+#cboxContent #cboxLoadedContent div {
+  font-size: 14px;
+  color: inherit !important;
+  margin: 0;
+  padding: 0;
+  line-height: 100%;
+  font-family: inherit;
+  font-weight: normal;
+  letter-spacing: normal;
+  border-bottom: none;
+}
+
+#poll_form_container .view_result_link {
+  padding-left: 4px;
+}
+
+#poll_form_container .view_result_link p a.use-ajax {
+  padding-right: 6px;
+}
+
+
+/************ Poll Component Display END ************/
+
+/************ Form Component Display START ************/
+
+.component_form .radio-horizontal .form-item {
+  float: left;
+  padding-right: 20px;
+}
+.component_form .radio-horizontal .radio+.radio,
+.component_form .radio-horizontal .checkbox+.checkbox{
+  margin-top:0;
+}
+
+.uniForm .form-managed-file .icon-before {
+  display: block;
+}
+
+.cbox_messagebox_warning {
+  background: #ffbfbf;
+  margin-top: 5px;
+  position: relative;
+  z-index: 1;
+}
+
+.cbox_messagebox {
+  font-size: 13px;
+  font-weight: bold;
+  border: 1px solid #999;
+  margin: 0 0 10px 0;
+  padding: 10px 15px 10px 35px;
+}
+
+/************ Form Component Display END ************/
+
+/************ Forum Component Display START ************/
+.forum_icon_view {
+  background-image: url(../images/page_search.png);
+}
+
+.forum_icon_reply {
+  background-image: url(../images/page_previous.png);
+}
+
+.forum_icon_delete {
+  background-image: url(../images/page_delete.png);
+}
+
+.forum_icon_attachment {
+  background-image: url(../images/attachment.png);
+}
+
+.forum_icon {
+  width: 24px;
+  height: 24px;
+  text-indent: -9999px;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+
+.forum_list ul.nav li {
+  list-style-type: none;
+  float: left;
+  border-right: #ccc solid 1px;
+  padding-right: 5px;
+  margin-right: 5px;
+  padding-left: 5px;
+}
+
+.forum_list ul.nav li:last-child {
+  border-right: none;
+  padding-right: 0;
+  margin-right: 0;
+}
+
+#cke_Message {
+  width: 64.5% !important;
+  overflow: hidden;
+}
+
+#forum_message_form .uniForm .buttonHolder .primaryAction,
+#forum_message_preview .uniForm .buttonHolder .primaryAction {
+  background-color: #aaa;
+}
+
+#forum_message_preview table {
+  margin: 10px;
+}
+
+#forum_message_preview .form_labels,
+#forum_message_display .form_labels {
+  font-weight: bold;
+  text-align: right;
+  padding: 5px;
+  background-color: #eee;
+}
+
+#webcom_forum_wrapper table td {
+  vertical-align: top;
+  text-align: left;
+
+}
+
+.report_listing #forum_message_list_header_view,
+.report_listing #forum_message_list_header_reply,
+.report_listing #forum_message_list_header_delete {
+  width: 7%;
+}
+
+#forum_subject_list table.report_listing {
+  width: 100%;
+}
+
+.forum_icon.forum_icon_attachment {
+  text-indent: 0;
+}
+
+#attachment_file_name {
+  text-align: center;
+}
+
+/* removed for tiecket #3283 where course tables were colored white when they should be transparent */
+/* .forum_table_display tr:nth-child(even),
+.forum_table_display tbody tr:nth-child(even) {
+  background-color: #f7f7f7;
+}
+
+.forum_table_display tr:nth-child(odd),
+.forum_table_display tbody tr:nth-child(odd) {
+  background-color: #fff;
+} */
+
+.forum_table_display {
+  width: 100%;
+}
+
+.forum_message_read {
+  color: #C0C0C0;
+}
+
+/************ Forum Component Display END ************/
+
+
+
+/*SOME GLOBAL STUFF*/
+a:hover,
+a:focus {
+  color: #fff;
+  text-decoration: initial;
+}
+
+/* copied from uni-form.css in WC2 */
+/* #############################   GENERALS   ################################### */
+/* ------------------------------------------------------------------------------ */
+
+.uniForm {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* reset stuff */
+
+/* Some generals and more resets */
+.uniForm fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.uniForm fieldset legend {
+  margin: 0;
+  padding: 0;
+}
+
+/* This are the main units that contain form elements */
+.uniForm .ctrlHolder,
+.uniForm .buttonHolder {
+  /* margin: 0;  */
+  /* padding: 0;  */
+  clear: both;
+}
+
+/* Clear all floats */
+.uniForm:after,
+.uniForm .buttonHolder:after,
+.uniForm .ctrlHolder:after,
+.uniForm .ctrlHolder .multiField:after,
+.uniForm .inlineLabel:after {
+  content: ".";
+  display: block;
+  height: 0;
+  line-height: 0;
+  font-size: 0;
+  clear: both;
+  min-height: 0;
+  visibility: hidden;
+}
+
+.uniForm label,
+.uniForm button {
+  cursor: pointer;
+}
+
+/* ------------------------------------------------------------------------------ */
+/* ##########################   DEFAULT LAYOUT   ################################ */
+/* ------------------------------------------------------------------------------ */
+/*       Styles for form controls where labels are above the input elements       */
+/* ------------------------------------------------------------------------------ */
+
+.uniForm label,
+.uniForm .label {
+  display: block;
+  float: none;
+  margin: 0 0 0 0;
+  padding: 0;
+  line-height: 100%;
+  width: auto;
+}
+
+/* Float the input elements */
+.uniForm .textInput,
+.uniForm .fileUpload,
+.uniForm .form-file,
+.uniForm .selectInput,
+.uniForm select,
+.uniForm textarea {
+  float: left;
+  width: 53%;
+  margin: 0;
+}
+
+/* Postition the hints */
+.uniForm .formHint {
+  float: right;
+  width: 43%;
+  margin: 0;
+  clear: none;
+}
+
+/* Position the elements inside combo boxes (multiple inputs/selects/checkboxes/radio buttons per unit) */
+.uniForm .ctrlHolder ul {
+  float: left;
+  width: 53%;
+  margin: 0;
+  padding: 0;
+}
+
+.uniForm .ctrlHolder ul li {
+  margin: 0 0 .5em 0;
+  list-style: none;
+}
+
+.uniForm .ctrlHolder ul li label {
+  margin: 0;
+  float: none;
+  display: block;
+  overflow: visible;
+}
+
+/* Alternate layout */
+.uniForm .ctrlHolder ul.alternate li {
+  float: left;
+  width: 30%;
+  margin-right: 3%;
+}
+
+.uniForm .ctrlHolder ul.alternate li label {
+  float: none;
+  display: block;
+  width: 98%;
+}
+
+.uniForm .ctrlHolder ul .textInput,
+.uniForm .ctrlHolder ul .selectInput,
+.uniForm .ctrlHolder ul select,
+.uniForm .ctrlHolder ul.alternate .textInput,
+.uniForm .ctrlHolder ul.alternate .selectInput,
+.uniForm .ctrlHolder ul.alternate select {
+  width: 98%;
+  margin-top: .5em;
+  display: block;
+  float: none;
+}
+
+/* Required fields asterisk styling */
+.uniForm label em.required,
+.uniForm .label em.required {
+  float: left;
+  width: 1em;
+  margin: 0 0 0 -1em;
+}
+
+.uniForm .inlineLabels label p.label {
+  float: none;
+}
+
+/* ------------------------------------------------------------------------------ */
+/* #########################   ALTERNATE LAYOUT   ############################### */
+/* ------------------------------------------------------------------------------ */
+/*    Styles for form controls where labels are in line with the input elements   */
+/*    Set the class of the parent (preferably to a fieldset) to .inlineLabels     */
+/* ------------------------------------------------------------------------------ */
+
+.uniForm .inlineLabels label,
+.uniForm .inlineLabels .label {
+  float: left;
+  margin: .3em 2% 0 0;
+  padding: 0;
+  line-height: 1;
+  position: relative;
+  /* width is needed for site universal styling, if you need to adjust this please do so with greater speificity specific to your use needs */
+  width: 32%;
+}
+
+/* Float the input elements */
+.uniForm .inlineLabels .textInput,
+.uniForm .inlineLabels .fileUpload,
+.uniForm .inlineLabels .form-file,
+.uniForm .inlineLabels .selectInput,
+.uniForm .inlineLabels select,
+.uniForm .inlineLabels textarea {
+  float: left;
+  width: 64%;
+}
+
+span.file-size {
+  margin-inline: .5em;
+  font-size: .9rem;
+}
+
+/* Postition the hints */
+.uniForm .inlineLabels .formHint {
+  clear: both;
+  float: none;
+  width: auto;
+  margin-left: 34%;
+  position: static;
+}
+
+/* Position the elements inside combo boxes (multiple inputs/selects/checkboxes/radio buttons per unit) */
+.uniForm .inlineLabels ul {
+  float: left;
+  width: 66%;
+}
+
+.uniForm .inlineLabels ul li {
+  margin: .5em 0;
+}
+
+.uniForm .inlineLabels ul li label {
+  float: none;
+  display: block;
+  width: 100%;
+}
+
+/* Alternate layout */
+.uniForm .inlineLabels ul.alternate li {
+  margin-right: 3%;
+  margin-top: .25em;
+}
+
+.uniForm .inlineLabels ul li label .textInput,
+.uniForm .inlineLabels ul li label textarea,
+.uniForm .inlineLabels ul li label select {
+  float: none;
+  display: block;
+  width: 98%;
+}
+
+/* Required fields asterisk styling */
+.uniForm .inlineLabels label em.required,
+.uniForm .inlineLabels .label em.required {
+  display: block;
+  float: none;
+  margin: 0;
+  position: absolute;
+  right: 0;
+}
+
+/* ----------------------------------------------------------------------------- */
+/* ########################### Additional Stuff ################################ */
+/* ----------------------------------------------------------------------------- */
+
+/* Generals */
+.uniForm legend {
+  color: inherit;
+}
+
+.uniForm .secondaryAction {
+  float: left;
+}
+
+/* .inlineLabel is used for inputs within labels - checkboxes and radio buttons */
+.uniForm .inlineLabel input,
+.uniForm .inlineLabels .inlineLabel input,
+.uniForm .blockLabels .inlineLabel input,
+/* class .inlineLabel is depreciated */
+.uniForm label input {
+  float: none;
+  display: inline;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.uniForm .buttonHolder .inlineLabel,
+.uniForm .buttonHolder label {
+  float: left;
+  margin: .5em 0 0 0;
+  width: auto;
+  max-width: 60%;
+  text-align: left;
+}
+
+/* When you don't want to use a label */
+.uniForm .inlineLabels .noLabel ul {
+  margin-left: 34%;
+  /* Match to width of label + gap to field */
+}
+
+/* Classes for control of the widths of the fields */
+.uniForm .small {
+  width: 30% !important;
+}
+
+.uniForm .medium {
+  width: 45% !important;
+}
+
+.uniForm .large {}
+
+/* Large is default and should match the value you set for .textInput, textarea or select */
+.uniForm .auto {
+  width: auto !important;
+}
+
+.uniForm .small,
+.uniForm .medium,
+.uniForm .auto {
+  margin-right: 4px;
+}
+
+/* Columns */
+.uniForm .col {
+  float: left;
+}
+
+.uniForm .col {
+  width: 50%;
+}
+
+/* ----------------------------------------------------------------------------- */
+/* ########################### cfUniForm Stuff ################################ */
+/* ----------------------------------------------------------------------------- */
+.uniForm input.hasDatePicker,
+.uniForm input.hasTimePicker {
+  width: 9em !important;
+}
+
+.uniForm .inlineLabels label.checkboxLabel em.required {
+  float: none;
+  position: absolute;
+  left: -2em;
+  top: 0;
+}
+
+.scroll_auto {
+  width: 100%;
+}
+
+.able-status-bar {
+  height: 36px !important;
+}
+
+.able-transcript-area {
+  position: relative !important;
+  width: auto !important;
+  top: auto !important;
+  left: auto !important;
+}
+
+.navbar-nav .dropdown.open .caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 5px solid;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+}
+
+.navbar-nav .dropdown .caret {
+  border-bottom: 5px solid transparent;
+  border-top: 5px solid transparent;
+  border-left: 5px solid;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+}
+
+/* ################### Mobile dropdown course navigation ################### */
+.navbar-header {
+  background-color: transparent;
+  font-family: 'Open Sans', sans-serif;
+  font-size: .9em;
+}
+
+.navbar-nav {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: .9em;
+}
+
+.mobile_nav_open {
+  background-color: #000000
+}
+
+#bs-example-navbar-collapse-1 ul li.root_nav_item a,
+#bs-example-navbar-collapse-1 ul #system_btn_switch {
+  padding: 5px 0 5px 25px;
+}
+
+#bs-example-navbar-collapse-1 li.root_nav_item {
+  border-bottom: #e9e9e9 solid 1px;
+}
+
+/* system dropdown */
+.nav.navbar-nav ul.dropdown-menu {
+  /* margin-left: 25px; */
+  border-left: #e9e9e9 solid 1px;
+}
+
+.nav.navbar-nav ul.dropdown-menu a {
+  padding-left: 13px;
+}
+
+.nav.navbar-nav ul.dropdown-menu li {
+  border-bottom: none;
+}
+
+/* menu button */
+.navbar-header button#mobile_menu_btn {
+  margin-left: 9px;
+  padding: 7px 18px;
+  text-transform: uppercase;
+  border-radius: 0;
+  font-weight: 700;
+}
+
+#mobile_menu_btn.navbar-toggle.collapsed {
+  color: #fff;
+  background-color: #000000;
+}
+
+#mobile_menu_btn:not(.collapsed) {
+  color: #fff;
+}
+
+.navbar-header button#mobile_menu_btn:focus,
+.navbar-header button#mobile_menu_btn:hover {
+  outline: #000000 solid 1px;
+  color: #000000;
+  background-color: #fff;
+  font-weight: 700;
+}
+
+div[class*="navbar"] button {
+  border-color: transparent;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------
+LTI Grade Book Sync
+------------------------------------------------------------------------------------------------------------------------------------------------------ */
+.lti-grade-book-sync {
+  margin-bottom: 20px;
+}
+
+.lti-sync-date-time {
+  font-style: italic;
+  font-size: .8em;
+}
+
+.lti-grade-book-sync-status {
+  background-color: #eee;
+  padding: 10px;
+  margin-top: 20px;
+  font-size: .8em;
+}
+
+.lti-grade-book-info {
+  margin-left: 20px;
+}
+
+.lti-grade-book-sync-status h3 {
+  margin-top: 5px;
+}
+
+.lti-grade-book-sync-results {
+  font-size: .8em;
+  margin-bottom: 10px;
+}
+
+.lti-grade-book-sync-results td {
+  padding: 0 5px;
+}
+
+.lti-grade-book-link {
+  cursor: pointer;
+}
+
+.lti_pairing_status_div {
+  margin-top: .9%;
+}
+
+.lti_pairing_status_div img {
+  width: 5%;
+  float: left;
+  margin-right: 1%;
+}
+
+.lti_pairing_status_div .gbcomponent_note {
+  margin-top: .75%;
+}
+
+#lti_instructions_link {
+  border-bottom: 1px solid;
+}
+
+#lti_instructions_link:focus,
+#lti_instructions_link:hover {
+  color: black;
+}
+
+button.lti_instructions_button {
+    margin: 1% 5% 1% 0%;
+    line-height: 100%;
+    padding: 10px;
+    background: white;
+    color: black;
+    transition: all 140ms linear;
+    border-radius: 6px
+}
+
+button.lti_instructions_button:focus,
+button.lti_instructions_button:hover {
+    background: black;
+    border-color: black;
+    color: white;
+}
+
+.lti_pairing_status_div {
+  --red:#b70e0e;
+  --yellow:#ffd11b;
+  --margin-inline-start:calc(5% + 10px);
+  font-size: min(15px, .95em);
+  width: 100%;
+}
+
+.lti_pairing_status_div:has(img[src*="/syncalert"]) p > strong {
+  color: var(--red);
+  display: block;
+}
+
+.lti_pairing_status_div .gbcomponent_note {
+  font-size: min(14px, .85em);
+  color: #555;
+  margin-inline: var(--margin-inline-start);
+}
+
+#lti_instructions_link,
+button#pair_account_button{
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-weight: 700;
+  display: flex;
+  width: fit-content;
+  justify-content: space-between;
+  gap: 0 10px;
+  border: 1px solid #ffffff;
+  transition: all 180ms ease-in;
+  animation: pulse-animation 3s infinite;
+  background: linear-gradient(to bottom, #fafafa, var(--yellow));
+  text-shadow: 1px 1px 0 white;
+  margin-block: 4px;
+  align-items: center;
+  font-size: max(1em, 15px);
+}
+
+#lti_instructions_link:focus,
+#lti_instructions_link:hover,
+button#pair_account_button:focus,
+button#pair_account_button:hover{
+  color: black;
+  background: #2a2a2a;
+  color: white;
+  border-color: #2a2a2a;
+  animation:none;
+  text-shadow: 1px 2px 2px black;
+}
+
+div#lti_pairing_instructions a {
+  display: block;
+}
+
+button.lti_instructions_button,
+button#pair_account_button{
+  margin-block: 5px;
+  margin-inline-start: var(--margin-inline-start);
+}
+
+div#lti_pairing_instructions {
+  margin-inline-start: var(--margin-inline-start);
+}
+
+.lti_pairing_status_div > p {
+  width: 95%;
+  max-width: 70ch;
+  margin-inline-start: var(--margin-inline-start);
+}
+
+a#lti_update_email_link {
+  text-decoration: none !important;
+  color: #000;
+  color: var(--primary-color-dark);
+  border-bottom: 1px solid currentColor;
+  font-weight: 700;
+  transition: all 180ms ease-in;
+}
+
+a#lti_update_email_link:focus,
+a#lti_update_email_link:hover {
+  border-bottom-width: 3px;
+  border-color: var(--primary-color);
+}
+
+@keyframes pulse-animation {
+  0% {
+      box-shadow: 0 0 0 0px var(--yellow);
+  }
+  100% {
+      box-shadow: 0 0 0 6px rgba(0,0,0,0);
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .lti_instructions_link,
+  button.lti_instructions_button{
+      animation: none;
+  }
+}
+
+/* ********** mobile menu and search bar ********** */
+#course_search_wrapper {
+  color: #525252;
+}
+
+#course_search_wrapper #course-search-input label {
+  display: none;
+}
+
+#course_search_wrapper #course-search-input input {
+  font-size: 13px;
+  max-width: 100%;
+}
+
+#course-search-input input#search {
+  text-indent: 5px;
+  display: inline-block;
+  padding-top: 0;
+  padding-bottom: 0;
+  /* border: #525252 1px solid; */
+  border-right: none;
+  margin-right: 0;
+  height: 28px;
+}
+
+#course-search-block #course-search-input {
+  display: inline-block;
+  /*  width: 100%;*/
+}
+
+#course-search-block #course-search-submit {
+  display: inline-block;
+  width: auto;
+}
+
+#course-search-block #course-search-submit input {
+  padding: 0;
+  margin: 0;
+  background-image: url("../images/search-button.png");
+  background-position: 100% 91%;
+  background-repeat: no-repeat;
+  background-color: #f4f4f4;
+  width: 33px;
+  color: transparent;
+  font-size: 13px;
+  border: #525252 1px solid;
+  border-left: none;
+}
+
+/* added to remove spacing between text input box and search button */
+#course-search-block {
+  font-size: 0;
+}
+
+.navbar-nav .dropdown #menu_btn_switch:focus {
+  outline: #000000 1px solid;
+}
+
+.textOffset {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  /* added line */
+  border: 0;
+}
+
+.tooltip-container {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 9px;
+  width: auto;
+  border-radius: 0;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.tooltip-container a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+  nav#top_menu_navigation {
+    display: block;
+    height: 55px;
+    width: 100%;
+    z-index: 100;
+  }
+}
+
+.chart .data-point-label {
+  text-overflow: ellipsis;
+  height: 25px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+body,
+html {
+  font-size: 16px !important;
+}
+
+#top_menu_navigation .container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.system_bar ul.nav {
+  width: 100%;
+}
+
+.system_bar ul.touched #course-search-block #course-search-input {
+  width: 100%;
+  padding-right: 0;
+}
+
+#top_menu_navigation #course-search-input {
+  float: right;
+  padding-right: 8px;
+}
+
+@media only screen and (min-width: 767px) {
+  #top_menu_navigation #course_search_wrapper {
+    padding-top: 0;
+  }
+
+  .system_bar ul.touched li.dropdown {
+    display: none;
+  }
+}
+
+#top_menu_navigation.system_bar ul.touched #course_search_wrapper {
+  padding-top: 2px;
+}
+
+@media only screen and (min-width: 767px) {
+  #top_menu_navigation #course-search-input {
+    float: none;
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .nav.navbar-nav ul.dropdown-menu {
+    width: calc(100% - 50px);
+  }
+}
+
+#course-search-block #course-search-input {
+  padding: 0;
+}
+
+.system_bar .collapse ul li.root_nav_item {
+  display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .system_bar .collapse ul.touched li.root_nav_item {
+    display: block;
+  }
+
+  .system_bar .collapse ul li.root_nav_item {
+    display: block;
+  }
+
+  #course-search-block #course-search-input {
+    float: left;
+    margin-left: 12px;
+  }
+
+  .system_bar ul.touched {
+    width: 100% !important;
+    padding-top: 40px !important;
+  }
+
+  .system_bar ul.touched ul {
+    padding: 0 !important;
+  }
+
+  .nav.navbar-nav ul.dropdown-menu {
+    margin-left: 0;
+  }
+
+  .system_bar ul ul.touched:after {
+    display: none;
+  }
+}
+
+.system_bar .collapse ul li.dropdown {
+  display: block;
+}
+
+.system_bar ul.dropdown-menu:before {
+  display: none;
+}
+
+ul.nav.navbar-nav.mobile-menu-dropdown.touched {
+  padding: 0;
+}
+
+/* #top_menu_navigation{
+  width:100%;
+} */
+
+.system_bar ul:before {
+  display: none;
+}
+
+.uniForm .ajaxBTN {
+  float: left !important;
+  clear: right !important;
+}
+
+.uniForm .inlineLabels .form-textarea-wrapper textarea {
+  width: 100%;
+}
+
+#cboxContent #main-content {
+  display: none;
+}
+
+#cboxContent #main {
+  border: none;
+}
+
+#cboxContent #page,
+#cboxContent #content,
+#cboxContent #content .ui-dialog,
+#cboxContent #main {
+  width: 100% !important;
+}
+
+#cboxContent #content .ui-dialog {
+  height: 50vh;
+}
+
+#cboxContent .content a {
+  background: none;
+  border: none;
+}
+
+#cboxContent #cboxLoadedContent .content .messages.error {
+  padding: 7px 7px 7px 45px;
+}
+
+.system_bar .collapse ul div.form-item input,
+ul.nav.navbar-nav.mobile-menu-dropdown,
+ul.nav.navbar-nav.mobile-menu-dropdown #menu_btn_switch,
+.system_bar .collapse ul div.form-item {
+  /* transition: none; */
+}
+
+.system_bar .collapse ul {
+  margin-top: 0;
+  /* padding-right: 0; */
+}
+
+.component_text_layout_container {
+  -webkit-box-sizing: content-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: content-box;
+  /* Firefox, other Gecko */
+  box-sizing: content-box;
+  /* Opera/IE 8+ */
+}
+
+.page_component_header h1 {
+  color: inherit;
+  font-size: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+img.img100,
+.component_form_display label[for^="edit-form-element"] img.img100 {
+    max-width: 100px;
+}
+
+img.img200,
+.component_form_display label[for^="edit-form-element"] img.img200 {
+    max-width: 200px;
+}
+
+img.img300,
+.component_form_display label[for^="edit-form-element"] img.img300 {
+    max-width: 300px;
+}
+
+img.img400,
+.component_form_display label[for^="edit-form-element"] img.img400 {
+    max-width: 400px;
+}
+
+img.img500,
+.component_form_display label[for^="edit-form-element"] img.img500 {
+    max-width: 500px;
+}
+
+img.img600,
+.component_form_display label[for^="edit-form-element"] img.img600 {
+    max-width: 600px;
+}
+
+img.img700,
+.component_form_display label[for^="edit-form-element"] img.img700 {
+    max-width: 700px;
+}
+
+img.img800,
+.component_form_display label[for^="edit-form-element"] img.img800 {
+    max-width: 800px;
+}
+
+img.img900,
+.component_form_display label[for^="edit-form-element"] img.img900 {
+    max-width: 900px;
+}
+
+img.img1000,
+.component_form_display label[for^="edit-form-element"] img.img1000 {
+    max-width: 1000px;
+}
+
+img.img1100,
+.component_form_display label[for^="edit-form-element"] img.img1100 {
+    max-width: 1100px;
+}
+
+img.img1200,
+.component_form_display label[for^="edit-form-element"] img.img1200 {
+    max-width: 1200px;
+}
+
+img.nomaxwidth,
+img.img100vw,
+.component_form_display label[for^="edit-form-element"] img.nomaxwidth,
+.component_form_display label[for^="edit-form-element"] img.img100vw {
+    max-width: none;
+}
+
+img.img50vw,
+.component_form_display label[for^="edit-form-element"] img.img50vw {
+    max-width: 50%;
+}
+
+img.img33vw,
+.component_form_display label[for^="edit-form-element"] img.img33vw {
+    max-width: calc((100% * 1) / 3);
+}
+
+img.img25vw,
+.component_form_display label[for^="edit-form-element"] img.img25vw {
+    max-width:25%;
+}
+
+img.float-right,
+.component_form_display label[for^="edit-form-element"] img.float-right {
+    float: right;
+    margin: 0 0 20px 20px;
+}
+
+img.float-left,
+.component_form_display label[for^="edit-form-element"] img.float-left{
+    float: left;
+    margin: 0 20px 20px 0;
+}
+
+#breadcrumbs ul li#context_navigation {
+  margin-left: 7px;
+  padding-left: 15px;
+}
+
+#breadcrumbs ul li#context_navigation select {
+  min-height: 19px;
+}
+
+.grade_book .ui-widget-content .inside_comp_details li a {
+  color: #222;
+}
+
+table[cellspacing] {
+  border-collapse: separate;
+}
+
+.highlight {
+  background-color: yellow;
+}
+
+.component_form_display input.form-check {
+  min-width: 25px;
+}
+
+span.tooltip-click,
+span.tooltip-default {
+  position: initial !important;
+}
+
+span.tooltip-container {
+  position: absolute;
+  display: block;
+  max-width: 50vw;
+  z-index: 10;
+}
+
+@media only screen and (max-width: 767px) {
+  span.tooltip-container {
+    max-width: 100vw;
+  }
+}
+
+.uniForm .inlineLabels div.ctrlHolder .form-type-textarea .form-textarea-wrapper {
+  float: left;
+  width: 64%;
+}
+
+.uniForm .inlineLabels div.ctrlHolder .form-type-textarea .form-textarea-wrapper textarea {
+  width: 100%;
+}
+
+.uniForm .inlineLabels div.ctrlHolder .form-type-textarea label,
+.uniForm .inlineLabels div.ctrlHolder .form-type-textarea .label {
+  float: left !important;
+}
+
+.d-none {
+  display: none;
+}
+
+/*z-index is causing Menu to be hidden*/
+div#alerts {
+  background: white;
+  font-size: .9em;
+  padding: 20px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 99;
+}
+
+.questionpool_question_matching_answer_match span p {
+  display: inline;
+}
+
+.questionpool_question_answers.questionpool_question_matching_answers {
+	margin: 10px 0 0 0;
+}
+
+div.questionpool_question_matching_answer_text {
+    width: calc(100% - 40px);
+    margin: 0 0 0 auto;
+    float: none;
+}
+
+select.matching_answer.form-select {
+	min-width: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+	.questionpool_question_answers.questionpool_question_matching_answers {display: grid;grid-template-columns: 2fr 1fr;}
+	.question_pool_matching_answer_key {grid-column-start: 2;}
+	.question_pool_matching_question_div {grid-row-start: 1;margin: 0 3% 0 0;}
+}
+
+.public_view_image {
+  clear: both;
+}
+
+.uniForm fieldset.blockLabels{
+  clear:both;
+}
+
+.assessment_question_result_correct,
+.assessment_question_result_incorrect,
+.assessment_question_result_isnotscored {
+  border-width: 1px 0;
+  padding-left: 35px;
+}
+
+.assessment_question_result_correct {
+  background: #c8ffbf url(../images/correct.png) no-repeat scroll .5em .5em;
+  border: 1px solid #a2ef95;
+}
+
+.assessment_question_result_incorrect {
+  background: #ffdfdf url(../images/delete.png) no-repeat scroll .5em .5em;
+  border: 1px solid #df7d7d;
+}
+
+.uniForm fieldset.blockLabels {
+  clear: both;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 900px) {
+  #gbsglView tr,
+  .report_listing :not(td)>tr {
+    font-size: 0.8em;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* #gbsglVi {
+    font-size: .8em;
+  } */
+
+  #gbsglView thead,
+  .report_listing :not(td)>thead {
+    display: none !important;
+  }
+
+  #gbsglView tr,
+  .report_listing :not(td)>tr {
+    display: block;
+    position: relative;
+    padding: 1.2em 0;
+  }
+
+  #gbsglView tr:first-of-type,
+  .report_listing :not(td)>tr:first-of-type {
+    border-top: 1px solid #ccc;
+  }
+
+  #gbsglView td,
+  .report_listing :not(td)>td {
+    display: table-row;
+  }
+
+  #gbsglView td:before,
+  .report_listing :not(td)>td:before {
+    content: attr(data-label);
+    display: table-cell;
+    font-weight: bold;
+    padding: 0.6em 0.6em 0.6em 10px;
+    text-align: right;
+    font-size: 14px;
+    position: relative;
+  }
+
+  #gbsglView td:last-child:after,
+  .report_listing :not(td)>td:last-child:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .report_listing {
+    font-size: 14px;
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, Sans-Serif;
+  }
+
+  #gbsglView tr,
+  .report_listing :not(td)>tr {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  #gbsglView tr td,
+  .report_listing :not(td)>tr td {
+    width: 100%;
+    font-size: 14px;
+    border: none;
+    text-align: left;
+    padding: 3px 0;
+  }
+
+  #gbsglView tr td a,
+  #gbsglView tr td h3,
+  .report_listing :not(td)>tr td a,
+  .report_listing :not(td)>tr td h3 {
+    font-size: 14px;
+  }
+}
+
+/* Format line numbers in code blocks. Ticket #4590. */
+.hljs-ln-numbers {
+  color: #ccc;
+}
+.hljs-ln-line.hljs-ln-code {
+  padding-left: 10px;
+}
+table.hljs-ln tbody {
+  border: none;
+}
+
+/* Format lists. Ticket #4610. */
+ol.upper-alpha {
+  list-style-type: upper-alpha;
+}
+
+ol.upper-roman {
+  list-style-type: upper-roman;
+}
+
+ol.lower-alpha {
+  list-style-type: lower-alpha;
+}
+
+ol.lower-roman {
+  list-style-type: lower-roman;
+}
+
+.trial_access_notification {width: 100%; display:none; z-index: 9999999999; position: fixed; padding: 10px; text-align: center; margin-bottom: 15px;}
+.trial_access_notification p {display: inline-block;}
+.trial_access_notification p a {text-decoration: underline;}
+.trial_access_notification span.close {display: inline-block; opacity: 0.5; float: right;}
+.trial_access_notification span.close:hover {opacity: 0.7;}
+.trial_access_notification.green {background-color: #45ca45;}
+.trial_access_notification.yellow {background-color: #f3f34a;}
+.trial_access_notification.red {background-color: red;}
+
+/*#4692 Style for Images in poll answers*/
+.poll-img{
+  width: 100% !important;
+  max-width: 135px !important;
+  height: 100% !important;
+  margin: 10px !important;
+  max-height: 135px !important;
+}
+
+/*4692 Ends */
+
+/*CON-4858 Survey Answer Image styling*/
+.survey_img{
+  width: 100% !important;
+  max-width: 125px !important;
+  height: 100% !important;
+  margin: 10px !important;
+  max-height: 110px !important;
+}
+
+/* #4751 user answer autosave message */
+#student_response_submitted {
+  position: fixed;
+  top: 45px;
+  left: 5px;
+  background-color: #ffff99;
+  border: #aaa solid 1px;
+  padding: 1px 3px;
+  font-size: .8em;
+  color: #666;
+  z-index: 20;
+  margin:20px;
+}
+
+/*#4751 Ends*/
+
+/*.radio input[type="radio"],
+.checkbox input[type="checkbox"]{
+  position: relative;
+}*/
+table {
+  border-collapse: collapse;
+}
+th {
+  border-bottom: 3px solid #ccc;
+  padding-right: 1em; /* LTR */
+  text-align: left; /* LTR */
+}
+tbody {
+  border-top: 1px solid #ccc;
+}
+tr.even,
+tr.odd {
+  background-color: #eee;
+  border-bottom: 1px solid #ccc;
+  padding: 0.1em 0.6em;
+}
+
+/**
+ * Markup generated by theme_tablesort_indicator().
+ */
+th.active img {
+  display: inline;
+}
+td.active {
+  background-color: #ddd;
+}
+
+html.js fieldset.collapsed {
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+  height: 1em;
+}
+html.js fieldset.collapsed .fieldset-wrapper {
+  display: none;
+}
+fieldset.collapsible {
+  position: relative;
+}
+fieldset.collapsible .fieldset-legend {
+  display: block;
+}
+.form-textarea-wrapper textarea {
+  display: block;
+  margin: 0;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.resizable-textarea .grippie {
+  background: #eee url(../images/grippie.png) no-repeat center 2px;
+  border: 1px solid #ddd;
+  border-top-width: 0;
+  cursor: s-resize;
+  height: 9px;
+  overflow: hidden;
+}
+.container-inline div,
+.container-inline label {
+  display: inline;
+}
+.container-inline .fieldset-wrapper {
+  display: block;
+}
+.nowrap {
+  white-space: nowrap;
+}
+html.js .js-hide {
+  display: none;
+}
+.element-hidden {
+  display: none;
+}
+.element-invisible {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+}
+.element-invisible.element-focusable:active,
+.element-invisible.element-focusable:focus {
+  position: static !important;
+  clip: auto;
+  overflow: visible;
+  height: auto;
+}
+.toolbar-tray-open.toolbar-vertical.toolbar-fixed {
+  margin-left: 0;
+}
+
+fieldset.filter-wrapper.form-wrapper {
+  display: none;
+}
+
+.component_container_edit_mode {
+  border: 2px dashed;
+  margin: 5px 0px 5px 0px;
+}
+
+#page_edit_mode {
+  margin-left: 5px;
+}
+
+.page_component_edit_link {
+  text-decoration: none;
+  padding: 1px 5px;
+  border-radius: 2px;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  transition: all 200ms linear;
+  line-height: 120%;
+  border-bottom: 0px;
+}
+
+div[class*="public_view_"] .page_component_edit_link,
+a.page_component_edit_dates_button.use-ajax {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+#content div.page_component_edit_link,
+#content div.page_component_edit_link:hover,
+#content div.page_component_edit_link::after,
+#content div.page_component_edit_link:hover:after{
+    background: #eee;
+    color:black;
+}
+
+/* Source Sans Pro 300/i, 400/i, 700/i */
+@import url("https://use.typekit.net/iuu8zbw.css");
+
+:root {
+    --clr-text-comp: #55b7f2;
+    --clr-form-comp: #8cdee9;
+    --clr-formbite-comp: #ee7b42;
+    --clr-poll-comp: #42d339;
+    --clr-survey-comp: #eed32a;
+    --clr-assessment-comp: #e84977;
+    --clr-glossary-comp: #b676d4;
+    --clr-discussion-comp: #a59074;
+    --clr-faq-comp: #6ce2c5;
+    --clr-learnosity-comp: #99a6e3;
+    --clr-image-comp: #ffa8a8;
+    --admin-font: 'source-sans-pro', sans-serif;
+}
+
+/* Admin Bar - show components styling */
+div[class*="public_view_"].outlined {
+    outline: 2px dashed var(--clr-text-comp);
+    position: relative;
+}
+
+div.public_view_form.outlined {
+    outline-color: var(--clr-form-comp);
+}
+
+div.public_view_formbite.outlined,
+div.public_view_form_bite.outlined {
+    outline-color: var(--clr-formbite-comp);
+}
+
+div.public_view_poll.outlined {
+    outline-color: var(--clr-poll-comp);
+}
+
+div.public_view_survey.outlined {
+    outline-color: var(--clr-survey-comp);
+}
+
+div.public_view_assessment.outlined {
+    outline-color: var(--clr-assessment-comp);
+}
+
+div.public_view_glossary.outlined {
+    outline-color: var(--clr-glossary-comp);
+}
+
+div.public_view_discussion.outlined {
+    outline-color: var(--clr-discussion-comp);
+}
+
+div.public_view_faq .outlined {
+    outline-color: var(--clr-faq-comp);
+}
+
+div.public_view_faq .outlined {
+    outline-color: var(--clr-faq-comp);
+}
+
+div.public_view_learnosity .outlined {
+    outline-color: var(--clr-learnosity-comp);
+}
+
+div.public_view_image .outlined {
+    outline-color: var(--clr-image-comp);
+}
+
+div[class*="public_view_"] .page_component_edit_link {
+    color: black;
+    font-family: var(--admin-font);
+    font-size: min(14px, .9rem);
+    padding: 3px 10px;
+    z-index: 10;
+    min-width: 150px;
+    text-align: center;
+    font-weight: 700;
+    transition: none;
+}
+
+.page_component_edit_dates_button,
+.page_component_edit_dates_button:hover,
+.page_component_edit_dates_button:focus {
+  padding-left: 5px;
+  color: black;
+}
+
+.page-component-dates-modal {
+  border-radius: 7px;
+}
+
+.page-component-dates-modal .ui-dialog-titlebar {
+  border-radius: 7px 7px 0px 0px;
+  padding: 2px;
+}
+
+.edit-page-component-dates-form {
+  padding: 5px 30px;
+}
+
+.edit-page-component-dates-form .form-item {
+  padding-top: 30px;
+}
+
+.edit-page-component-dates-form input.form-date {
+  width: 50%;
+  font-size: .8em;
+}
+
+.edit-page-component-dates-form .ui-datepicker-trigger {
+  padding-left: 5px;
+}
+
+.edit-page-component-dates-form label {
+  width: 45%;
+  font-size: .85em;
+}
+
+.page_component_edit_dates_form_header {
+  margin-top: 10px;
+  margin-bottom: 2px;
+}
+
+.edit-page-component-dates-form .form-submit {
+  float: right;
+  border-radius: 3px;
+  margin: 20px 0px;
+}
+
+div.public_view_text .page_component_edit_link {
+    background: var(--clr-text-comp);
+    border-color: var(--clr-text-comp);
+}
+
+div.public_view_text.component_container_edit_mode {
+    border-color: var(--clr-text-comp);
+}
+
+div.public_view_text .page_component_edit_link::after {
+    content: "Text Component";
+    padding-inline: 3px;
+    background: var(--clr-text-comp);
+}
+
+div.public_view_lti_tool .page_component_edit_link {
+  background: var(--clr-text-comp);
+}
+
+div.public_view_lti_tool.component_container_edit_mode {
+  border-color: var(--clr-text-comp);
+}
+
+div.public_view_lti_tool .page_component_edit_link::after {
+  content: "LTI Tool Component";
+  padding-inline: 3px;
+  background: var(--clr-text-comp);
+}
+
+div.public_view_form .page_component_edit_link {
+    background: var(--clr-form-comp);
+}
+
+div.public_view_form.component_container_edit_mode {
+    border-color: var(--clr-form-comp);
+}
+
+div.public_view_form .page_component_edit_link::after {
+    content: "Form Component";
+    padding-inline: 3px;
+    background: var(--clr-form-comp);
+}
+
+div.public_view_formbite .page_component_edit_link {
+    background: var(--clr-formbite-comp);
+}
+
+div.public_view_formbite.component_container_edit_mode {
+    border-color: var(--clr-formbite-comp);
+}
+
+div.public_view_formbite .page_component_edit_link::after {
+    content: "Formbite Component";
+    padding-inline: 3px;
+    background: var(--clr-formbite-comp);
+}
+
+div.public_view_poll .page_component_edit_link {
+    background: var(--clr-poll-comp);
+}
+
+div.public_view_poll.component_container_edit_mode {
+    border-color: var(--clr-poll-comp);
+}
+
+div.public_view_poll .page_component_edit_link::after {
+    content: "Poll Component";
+    padding-inline: 3px;
+    background: var(--clr-poll-comp);
+}
+
+div.public_view_survey .page_component_edit_link {
+    background: var(--clr-survey-comp);
+}
+
+div.public_view_survey.component_container_edit_mode {
+    border-color: var(--clr-survey-comp);
+}
+
+div.public_view_survey .page_component_edit_link::after {
+    content: "Survey Component";
+    padding-inline: 3px;
+    background: var(--clr-survey-comp);
+}
+
+div.public_view_assessment .page_component_edit_link {
+    background: var(--clr-assessment-comp);
+}
+
+div.public_view_assessment.component_container_edit_mode {
+    border-color: var(--clr-assessment-comp);
+}
+
+div.public_view_assessment .page_component_edit_link::after {
+    content: "Assessment Component";
+    padding-inline: 3px;
+    background: var(--clr-assessment-comp);
+}
+
+div.public_view_glossary .page_component_edit_link {
+    background: var(--clr-glossary-comp);
+}
+
+div.public_view_glossary.component_container_edit_mode {
+    border-color: var(--clr-glossary-comp);
+}
+
+div.public_view_glossary .page_component_edit_link::after {
+    content: "Glossary Component";
+    padding-inline: 3px;
+    background: var(--clr-glossary-comp);
+}
+
+div.public_view_discussion .page_component_edit_link {
+    background: var(--clr-discussion-comp);
+}
+
+div.public_view_discussion.component_container_edit_mode {
+    border-color: var(--clr-discussion-comp);
+}
+
+div.public_view_discussion .page_component_edit_link::after {
+    content: "Discussion Component";
+    padding-inline: 3px;
+    background: var(--clr-discussion-comp);
+}
+
+div.public_view_faq .page_component_edit_link {
+    background: var(--clr-faq-comp);
+}
+
+div.public_view_faq.component_container_edit_mode {
+    border-color: var(--clr-faq-comp);
+}
+
+div.public_view_faq .page_component_edit_link::after {
+    content: "FAQ Component";
+    padding-inline: 3px;
+    background: var(--clr-faq-comp);
+}
+
+
+div.public_view_learnosity .page_component_edit_link {
+    background: var(--clr-learnosity-comp);
+}
+
+div.public_view_learnosity.component_container_edit_mode {
+    border-color: var(--clr-learnosity-comp);
+}
+
+div.public_view_learnosity .page_component_edit_link::after {
+    content: "Learnosity Component";
+    padding-inline: 3px;
+    background: var(--clr-learnosity-comp);
+}
+
+
+div.public_view_image .page_component_edit_link {
+    background: var(--clr-image-comp);
+}
+
+div.public_view_image.component_container_edit_mode {
+    border-color: var(--clr-image-comp);
+}
+
+div.public_view_image .page_component_edit_link::after {
+    content: "Image Component";
+    padding-inline: 3px;
+    background: var(--clr-image-comp);
+}
+
+div[class*="public_view_"] .page_component_edit_link:focus,
+div[class*="public_view_"] .page_component_edit_link:hover,
+div[class*="public_view_"] .page_component_edit_link:hover:after,
+div[class*="public_view_"] .page_component_edit_link:focus:after {
+    background: black;
+    color: white;
+}
+
+div[class*="public_view_"].component_container_edit_mode:hover {
+    border-color: black;
+}
+
+/* Edit container*/
+.edit_mode_container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  min-width: fit-content;
+  z-index: 11;
+  padding: 0;
+}
+
+.edit_mode_container fieldset {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.edit_mode_container fieldset > div {
+  display: flex;
+  gap: 7px;
+  padding: 8px 10px;
+  align-items: center;
+  border-right: 2px solid #ccc;
+  background: #ccc;
+  transition: all 180ms linear;
+  box-shadow: 0 3px 7px -3px #ccc inset;
+}
+
+.edit_mode_container fieldset > div:hover,
+.edit_mode_container fieldset > div:has(input:checked){
+  background: #d7d7d7;
+}
+
+.edit_mode_container label {
+  font-weight: 700;
+  font-family: var(--admin-font);
+  line-height: 100%;
+  font-size: max(13px, .9rem);
+  margin: 0;
+  display: inline-block;
+  cursor: pointer;
+  padding-left: 50px;
+  height: 40px;
+  line-height: 40px;
+  user-select: none;
+  position: relative;
+}
+
+.edit_mode_container input {
+  width: 15px;
+  height: 15px;
+  box-shadow: 2px 7px 14px -7px #222;
+  cursor: pointer;
+  vertical-align: top;
+  display: none;
+}
+
+.switcher__indicator::after {
+content: "";
+position: absolute;
+top: 12px;
+left: 3px;
+height: 16px;
+width: 16px;
+background-color: #7b7b7b;
+border-radius: 50%;
+transition: all 0.3s ease;
+}
+
+.switcher__indicator::before {
+content: "";
+position: absolute;
+top: 10px;
+left: 0px;
+width: 42px;
+height: 22px;
+background-color: #b4b4b4;
+border-radius: 10px;
+transition: all 0.3s ease;
+box-shadow: 0 -2px 1px 1px rgb(255 255 255 / 39%) inset, 0 1px 2px 0 rgb(0 0 0 / 50%) inset;
+}
+
+input:checked + label .switcher__indicator::after {
+background-color: #20ae79;
+transform: translateX(18px);
+box-shadow: 0 2px 1px 0px rgb(155 239 182 / 36%) inset, -1px -2px 3px 1px rgb(10 98 38 / 52%) inset;
+}
+
+input:checked + label .switcher__indicator::before {
+background-color: #8ceac7;
+}
+
+input:disabled + label .switcher__indicator::after, 
+input:disabled + label .switcher__indicator::before {
+background-color: #e5e5e5;
+}
+
+#student_view_message {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #085ac8;
+  color: white;
+  text-align: center;
+  padding: 8px 0;
+  font-weight: bold;
+  font-size: 1.1em;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  height: 3em;
+  align-content: center;
+}
+
+@media only screen and (max-width: 975px) {
+  #student_view_message {
+    text-align: right;
+    padding-right: 6em;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #student_view_message {
+    display: none;
+  }
+}
+
+html:has(#student_view_message)::before {
+  content: '';
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  border: 3px solid #085ac8;
+  box-sizing: border-box;
+  z-index: 9998;
+  pointer-events: none;
+}
+
+.page_component_title_save {
+  border-radius: 6px;
+  float: right;
+  margin-top: 4px;
+
+  z-index: 2;
+  position: relative;
+  font-size: 1rem;
+  font-family: var(--primary-font), sans-serif;
+  max-height: 3rem;
+}
+
+.page_component_title_save.saved {
+  background-color: #256925;
+  color: white;
+}
+
+.page_component_title_save.not_saved {
+  background-color: #a31919;
+  color: white;
+}
+
+#gridpagerlistmanage_gradebook_view_jqxgrid {
+  width: 3.5% !important;
+}
+
+/*Pre-emptive removal of publication styling that might affect the appearance of the clock icon*/
+a.page_component_edit_dates_button.use-ajax {
+  padding: 0 5px;
+  background: white;
+  margin:0;
+  margin-inline-start: 3px;
+  font-size: 18px;
+  border-radius: 4px;
+  border: none;
+  background-size: 4px 100%;
+  text-decoration: none;
+  box-shadow:none;
+}
+
+/*Forum/Discussion Board*/
+div.public_view_forum .page_component_edit_link {
+  background: var(--clr-discussion-comp);
+}
+
+div.public_view_forum .component_container_edit_mode {
+  border-color: var(--clr-discussion-comp);
+}
+
+div.public_view_forum  .page_component_edit_link::after {
+  content: "Forum / Discussion Component";
+  padding-inline: 3px;
+  background: var(--clr-discussion-comp);
+}
+
+/*Gradebook, intentionally using forum/discussion board color variable*/
+div.public_view_grade_book .page_component_edit_link {
+  background: var(--clr-discussion-comp);
+}
+
+div.public_view_grade_book .component_container_edit_mode {
+  border-color: var(--clr-discussion-comp);
+}
+
+div.public_view_grade_book .page_component_edit_link::after {
+  content: "Gradebook Component";
+  padding-inline: 3px;
+  background: var(--clr-discussion-comp);
+}
+
+/*Styling content in date window*/
+.edit-page-component-dates-form {
+  text-shadow: none;
+  color:black;
+}
+
+h2.page_component_edit_dates_form_header,
+h5.page_component_edit_dates_form_header {
+  background: transparent;
+  color: black;
+  text-shadow: none;
+  font-size: 1.25rem;
+  border: none;
+  padding: 0;
+  margin: 10px 0 0;
+}
+
+h2.page_component_edit_dates_form_header::before,
+h5.page_component_edit_dates_form_header::before,
+h2.page_component_edit_dates_form_header::after,
+h5.page_component_edit_dates_form_header::after{
+  display:none;
+}
+
+.edit-page-component-dates-form .form-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.edit-page-component-dates-form label {
+  color: black;
+}
+
+.edit-page-component-dates-form input.form-date {
+  width: calc(50% - 25px);
+  background: white;
+  border: 1px solid black;
+  padding: 2px;
+  color: black;
+}
+
+.edit-page-component-dates-form .ui-datepicker-trigger {
+  box-shadow: none;
+  border: none;
+  width:auto;
+  height: 16px;
+  cursor: pointer;
+  background: transparent;
+}
+
+/*Forum/Discussion Board*/
+div.public_view_forum .page_component_edit_link {
+  background: var(--clr-discussion-comp);
+}
+
+div.public_view_forum .component_container_edit_mode {
+  border-color: var(--clr-discussion-comp);
+}
+
+div.public_view_forum  .page_component_edit_link::after {
+  content: "Forum / Discussion Component";
+  padding-inline: 3px;
+  background: var(--clr-discussion-comp);
+}
+
+/*Gradebook, intentionally using forum/discussion board color variable*/
+div.public_view_grade_book .page_component_edit_link {
+  background: var(--clr-discussion-comp);
+}
+
+div.public_view_grade_book .component_container_edit_mode {
+  border-color: var(--clr-discussion-comp);
+}
+
+div.public_view_grade_book .page_component_edit_link::after {
+  content: "Gradebook Component";
+  padding-inline: 3px;
+  background: var(--clr-discussion-comp);
+}
+
+/*Styling content in date window*/
+.edit-page-component-dates-form {
+  text-shadow: none;
+  color:black;
+}
+
+h2.page_component_edit_dates_form_header,
+h5.page_component_edit_dates_form_header {
+  background: transparent;
+  color: black;
+  text-shadow: none;
+  font-size: 1.25rem;
+  border: none;
+  padding: 0;
+  margin: 10px 0 0;
+}
+
+h2.page_component_edit_dates_form_header::before,
+h5.page_component_edit_dates_form_header::before,
+h2.page_component_edit_dates_form_header::after,
+h5.page_component_edit_dates_form_header::after{
+  display:none;
+}
+
+.edit-page-component-dates-form .form-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.edit-page-component-dates-form label {
+  color: black;
+}
+
+.edit-page-component-dates-form input.form-date {
+  width: calc(50% - 25px);
+  background: white;
+  border: 1px solid black;
+  padding: 2px;
+  color: black;
+}
+
+.edit-page-component-dates-form .ui-datepicker-trigger {
+  box-shadow: none;
+  border: none;
+  width:auto;
+  height: 16px;
+  cursor: pointer;
+  background: transparent;
+}
+
+.lrn-assess .lrn-start-page {
+  z-index: 100 !important;
+}
+
+
+.grid_retake_msg {
+  background-color: #cfc;
+  color: #234600;
+  padding: 1px 1em;
+  border: 1px solid #e1e1e1;
+  border-radius: 10px;
+  float: right;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+}
+
+.grid_retake_msg .stu_grid_retake_notif {
+  vertical-align: middle;
+  margin-right: 4px;
+  font-size: 1.1em;
+}
+
+.grid_retake_msg .stu_grid_retake_msg {
+  font-size: 0.85em;
+  vertical-align: middle;
+}
+
+.gb_page_component_link {
+  display: inline !important;
+}
+
+/* Added a css for text align classes */
+.text-align-left {
+  text-align: left;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-align-justify {
+  text-align: justify;
+}
+
+/**
+ * Alignment classes for block level elements (images, videos, blockquotes, etc.)
+ */
+.align-left {
+  float: left;
+}
+
+.align-right {
+  float: right;
+}
+
+.align-center {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#user_email_copy_grid {
+  float: right;
+}
+
+.jqx-fill-state-pressed-classic:has(#user_email_copy_grid),
+.jqx-fill-state-hover:has(#user_email_copy_grid) {
+  background-color: transparent !important;
+  color: inherit !important;
+  background-image: linear-gradient(#e5e5e5, #e5e5e5) !important;
+  text-shadow: none !important;
+}
+
+.component_glossary_definition table .tooltip-container table {
+  background-color: transparent;
+}
+
+/*Adjusts display of Checkbox questions in Learnosity with partial scoring when the Check Answer button is hit.*/
+.lrn_widget.lrn_mcq .lrn_incorrect:not(.lrn-response-validate-wrapper):has(input[type="checkbox"]),
+.lrn_widget.lrn_mcq .lrn_correct:not(.lrn-response-validate-wrapper):has(input[type="checkbox"])
+{
+    /* remove the individual red or green background from them when the checkanswer button is pressed */
+    background-color: inherit !important;
+    border-left-color: transparent !important;
+    /* and remove the individual x mark or checkmark that shows next to each option */
+    label::before {
+        content: none !important;
+    }
+}

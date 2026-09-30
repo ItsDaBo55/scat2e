@@ -1,0 +1,2796 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+/* Proxima Nova Typeface, 300, 400, 400i, 500, 700, 700i, 800, 900 */
+@import url("https://use.typekit.net/hcy8gbp.css");
+
+/* Futura */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+
+/* CSS Variables, colors and fonts and global box shadow (box-light) */
+:root {
+    --paradigm-blue: #0082b5;
+    --primary-color: #007CAD;
+    --primary-color-dark: #000;
+    --primary-color-semilight: #d5eaee;
+    --primary-color-light: #e6f5f8;
+  --border-color:#fff; /* Sets typical border color around major ids (branding, html). Use as you like */
+  --primary-font: 'Rubik', sans-serif;
+  --secondary-font:'proxima-nova', sans-serif;
+  --navigation-font:'proxima-nova', sans-serif;
+  --header-font:'proxima-nova', sans-serif;
+  --serif-font:'adobe-garamond-pro', serif; /* Not used in template but can be called if needed */
+  --box-light: -2px 8px 23px -11px rgb(44 78 121 / 39%); /* Used in most box-shadows across the template. Change the alpha percentage from 30% to 0 to remove box-shadows across most of the template */
+}
+
+
+html {
+    overflow-x: hidden; /* Prevents global horizontal scroll bar on older browsers */
+    background: transparent;
+    box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html body {
+    font-family: "Open Sans", sans-serif;
+    font-family: var(--primary-font);
+    font-weight:400;
+    font-size: 1rem;
+    width: 100%;
+    margin-inline: auto;
+    box-sizing: border-box;
+}
+
+
+a {
+    color: initial;
+    color: var(--primary-color-dark);
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 1px solid;
+    transition: all 180ms linear;
+    box-sizing: border-box;
+    background: linear-gradient(to bottom, var(--primary-color-light) 0%,var(--primary-color-light) 100%);
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 4px 0px;
+    text-decoration: none;
+    transition: background-size .2s;
+}
+
+a:focus,
+a:hover {
+    background-size: 4px 100%;
+    color: var(--primary-color-dark);
+    font-weight: 700;
+}
+
+/* ---Prevents subponents from alterning paragraph line height--- */
+sup,
+sub {
+    vertical-align: baseline;
+    position: relative;
+    top: -0.55em;
+    font-size: .75em;
+}
+
+sub {
+    top: 0.55em;
+}
+
+:focus {
+    outline-color: var(--primary-color-dark); /* ---general outline color for elements on focus--- */
+}
+
+a.navSkip:focus, a.navSkip:active {
+    color: white;
+    max-width: 200px;
+    font-size: 1rem;
+    line-height: 120%;
+    border: 2px solid white;
+    box-shadow: 0 20px 40px -12px rgb(0 0 0 / 52%);
+}
+
+
+/* ---skip-link - appears when navigated through site with tab key --- */
+#skip-link {
+    font-family: var(--secondary-font);
+
+    position: absolute;
+    top: 50px;
+    left: 0;
+    z-index: 10;
+}
+
+#skip-link a:hover,
+#skip-link a:active,
+#skip-link a:focus {
+    background: var(--primary-color);
+    color: white;
+}
+
+#skip-link a,
+#skip-link a:link,
+#skip-link a:visited {
+    padding: 10px 15px;
+    box-shadow: 2px 4px 3px -2px black;
+}
+
+
+/* ---Page--- */
+:root {
+    --padding:4vw;
+}
+
+#page {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    color: rgba(42, 42, 42, 1);
+    background-color: transparent;
+    width: 100%;
+}
+
+#main {
+    /* padding-inline: var(--padding); */
+}
+
+/* Branding */
+#branding {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    margin: 0 auto;
+    padding-inline: var(--padding);
+    background: url('https://s3.amazonaws.com/streaming.greatrivertech.net/paradigm/usernavigation/PES-Cirrus_Logo.svg') no-repeat center, var(--primary-color-light);
+    background-size: 300px;
+    background-position: top 55px center;
+}
+
+#branding h1 {
+    text-indent: -9999px; /* Keeps text readable via screen reader but hidden visually*/
+    border: none;
+    margin: 0;
+    padding: 0;
+    position:absolute;
+    background: transparent;
+    top: 0;
+}
+
+#branding h2, #branding_grt h3 {
+    display: none;
+}
+
+/* ---Navigation--- */
+.page_layout_vertical ul.root_nav_items {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: flex-end;
+    padding-inline: calc(var(--padding)/2);
+    padding-block: 20px;
+}
+
+.root_nav_items li {
+    width: auto;
+    position: relative;
+}
+
+#root_nav_container > .root_nav_items > .root_nav_item a, .ui-tabs .ui-tabs-nav li a,button#sort_selection_button {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    margin: 0;
+    padding: .5em;
+    font-size: max(1rem, 18px);
+    font-weight: 400;
+    line-height: 120%;
+    text-align: center;
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 4px 0;
+    background: linear-gradient(to left, rgb(255 255 255 / 0%) 50%, var(--primary-color)  51%) right;
+    background-size: 200%;
+    /* color: var(--primary-color-dark); */
+    transition: .5s ease-out;
+    letter-spacing: -.15px;
+}
+
+button#sort_selection_button{
+
+}
+
+#root_nav_container>.root_nav_items>.root_nav_item a:focus,
+#root_nav_container>.root_nav_items>.root_nav_item a:hover {
+    text-shadow: none;
+    color: white;
+
+    background-position: left;
+}
+
+/* ---Global--- */
+a[name=main_content],
+a[name=top] {
+    position: absolute;
+    top:0;
+    left:0;
+    text-indent:-9999px;
+    background:none;
+}
+
+#main,
+#navigation,
+#supplement {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#navigation{
+    background: var(--primary-color-light);
+}
+
+
+/* Breadcrumbs */
+#secondary_navigation {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding: 8px var(--padding);
+    margin: 0;
+    background: var(--primary-color-light);
+    font-family: var(--secondary-font);
+    font-size: max(12px, .8em);
+    border-top: 1px solid var(--border-color);
+    width: 100%;
+}
+
+div#breadcrumbs {
+    width: auto;
+}
+
+#breadcrumbs ul li,
+#breadcrumbs ul li#context_navigation {
+    display: inline-block;
+    margin: 2px;
+    padding: 0;
+
+    background: transparent; /* Hides default arrows*/
+}
+
+#breadcrumbs ul li#context_navigation{
+    margin-inline-start: 10px;
+}
+
+#secondary_navigation a {
+    padding: 5px;
+    /* margin: 0 1px 0 10px; */
+    transition: all 180ms linear;
+    position: relative;
+    background-size: 4px 0;
+    font-weight: 400;
+    border: none;
+    background: linear-gradient(to bottom, var(--primary-color) 0%,var(--primary-color) 100%);
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 4px 0px;
+}
+
+#secondary_navigation a:before {
+    content:"\00BB"; /* Double Arrow*/
+    position:absolute;
+    right: -10px;
+    top: 2px;
+    font-size: 18px;
+    font-style:normal;
+    font-weight: 700;
+    opacity: 1;
+    color: var(--primary-color-dark);
+}
+
+#secondary_navigation li:last-of-type a:before {
+    display:none; /* Hides last arrow*/
+}
+
+#secondary_navigation a:focus,
+#secondary_navigation a:hover {
+    color: white;
+    background-size: 4px 100%;
+}
+
+#context_navigation select {
+    max-width: 160px;
+    padding: 3px;
+    margin-top: 1px;
+    font-size:inherit;
+    font-family:inherit;
+    color:inherit;
+    border-color: var(--primary-color-light);
+    padding: 4px;
+    margin-inline: 7px;
+}
+
+/* ---Component--- */
+#main {
+    background: transparent;
+    font-size: 1.05rem;
+    color: #5d5d5d;
+}
+
+.page_component {
+    padding: 0;
+}
+
+/* ---All major component types + page component title. Paddings percentages changed at multiple breakpoints in course_resolution file--- */
+:root{
+    --padding:8vw;
+}
+
+div[class*="public_view_"] .page_component_body, div[class*="public_view_"] .page_component + *, .assessment_component{
+    padding-inline: 8%;
+    padding-inline: var(--padding);
+    padding-block-end: 30px;
+    box-sizing: border-box;
+}
+
+/* Text component */
+.component_text_layout_container {
+    overflow: ;
+    box-sizing: border-box;
+    padding-block-start: 20px;
+}
+
+/* Adds margin to block end/bottom of all li tags in the content area */
+div[id^="component_container"] li {
+    margin: 0;
+    margin-block-end: 5px;
+}
+
+.page_component_body {
+    line-height: 155%;
+    padding-bottom: 0;
+    padding-block-end:0;
+}
+
+
+.page_component_header,
+.search_results h1 {
+    margin: 0 auto 8px;
+    padding: 0;
+    padding-block-start:40px;
+    box-sizing: border-box;
+    border: 4px solid transparent;
+    background: var(--primary-color);
+    padding: 20px calc(var(--padding)/4);
+}
+
+h1.page_component_title {
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    border: none;
+    padding-bottom: 0;
+    color: var(--primary-color-dark);
+    background: transparent;
+    font-size: 2rem;
+    color: white;
+    text-transform: none;
+    font-weight: 700;
+}
+
+
+h1.page_component_title strong {
+    margin: 0 auto 10px;
+    padding: 10px;
+    font-family: var(--secondary-font);
+    font-size: 1.25em;
+    font-weight: 400;
+    text-shadow: 0px 1px 2px var(--primary-color-light);
+    text-transform: none;
+}
+
+
+
+/* Page component header for first component on a page. Delete if not needed. */
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    display: flow-root;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 10px auto;
+    font-family: var(--secondary-font);
+    font-weight: 700;
+    letter-spacing: -.5px;
+    line-height: 100%;
+}
+
+h1 {
+    margin: 20px 0;
+    padding-block-start:30px;
+    padding-block-end:5px;
+    position: relative;
+    width: auto;
+    color: var(--primary-color-dark);
+    font-family: var(--header-font);
+    font-size: 2em;
+    font-weight: 700;
+}
+
+h1 strong {
+    display: table;
+    margin-bottom: 2px;
+    padding-bottom: 5px;
+    font-size: 1.5em;
+    font-weight: 400;
+    background: linear-gradient(to bottom, transparent 88%, var(--primary-color-light) 65%);
+}
+
+
+h2 {
+    margin: 20px 0 10px;
+    box-sizing: border-box;
+    color: var(--primary-color);
+    font-size: 1.53em;
+}
+
+h2+h2 {
+    margin-top: 25px;
+}
+
+.component_text_layout_container h2 strong {
+    display: table;
+    font-family: var(--header-font);
+    font-size: 2rem;
+    color: var(--primary-color-dark);
+    margin-block-end: 8px;
+}
+
+
+/* Removes large margin top when h2 immediately follows an h1*/
+ h1 + h2 {
+    margin-top: 0;
+    border:none;
+    padding-top: 0;
+}
+
+h3 {
+    font-size: 1.563em;
+    font-weight: 700;
+    line-height: 130%;
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+
+h4 {
+    text-transform: none;
+    font-size: 1.25em;
+    color: var(--primary-color-dark);
+}
+
+h4 b {
+    font-style: normal;
+}
+
+h5 {
+    font-size: 1em;
+    padding: 10px 0;
+}
+
+h6 {
+    font-size: 1em;
+}
+
+
+/* ---Next-Prev--- */
+#next_prev_nav {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    margin-block-start: 0;
+    padding: 8px 0;
+    box-sizing: border-box;
+    border-top: 1px dashed var(--primary-color-light);
+    background: white;
+}
+
+#next_prev_nav ul li {
+    display: inline;
+    padding: 3px;
+    background: none;
+}
+
+/* Buttons and next/prev links */
+#next_prev_nav a,
+.uniForm .buttonHolder input.primaryAction,
+.uniForm .buttonHolder button.primaryAction,
+#multistep_form #buttons input,
+input#edit-submit-answer,
+input#edit-skip-question,
+input#i_am_finished,
+input[type="button"],
+input[type="submit"],
+button#context_nav_go {
+    height: inherit;
+    width: 100%;
+    padding: 10px 18px 8px !important;
+    margin: 1px 2px;
+    cursor: pointer;
+    box-sizing: border-box;
+    display: block;
+    font-family: var(--secondary-font);
+    font-size: 15px;
+    font-weight: 700;
+    color: white;
+    line-height: 100%;
+    text-decoration: none;
+    transition: all 250ms ease-in;
+    background: var(--primary-color);
+    border-radius: 0;
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 2px 3px -1px rgb(0 0 0 / 31%);
+}
+
+#next_prev_nav a {
+}
+
+/* Overriding styles above*/
+button#context_nav_go {
+    padding: 6px 6px 5px !important;
+    display: inline-block;
+    width: auto;
+    box-shadow: none;
+    font-size: 13px;
+}
+
+#next_prev_nav a:focus,
+#next_prev_nav a:hover,
+.uniForm .buttonHolder input.primaryAction:focus,
+.uniForm .buttonHolder button.primaryAction:focus,
+.uniForm .buttonHolder input.primaryAction:hover,
+.uniForm .buttonHolder button.primaryAction:hover,
+#multistep_form #buttons input:focus, input#edit-submit-answer:focus, input#edit-skip-question:focus, input#i_am_finished:focus,
+#multistep_form #buttons input:hover, input#edit-submit-answer:hover, input#edit-skip-question:hover, input#i_am_finished:hover,
+input#submit_btn:focus,
+input#submit_btn:hover,
+input[type="submit"]:focus,
+input[type="submit"]:hover,
+input[type="button"]:focus,
+input[type="button"]:hover,
+button#context_nav_go:focus,
+button#context_nav_go:hover {
+    color: var(--primary-color);
+    background: white;
+    border-color: var(--primary-color);
+}
+
+
+
+/* ---Supplement--- */
+#supplement {
+    position:relative;
+    padding: 20px 0;
+    background: white;
+    width: 100%;
+    box-shadow: 3px 10px 30px 5px rgb(92 103 111 / 27%);
+    margin-block: 20px 0;
+    z-index: 1;
+}
+
+
+#supplement p {
+    font-size: 0;
+    padding: 10px 0;
+    box-sizing: border-box;
+    align-self: center;
+    display: contents;
+}
+
+#supplement > div > div {
+  display: flex;
+  justify-content: center;
+}
+
+#supplement p:nth-child(3) {
+    font-size: 13px;
+    padding: 0 10px;
+}
+
+#supplement a {
+    font-size: 13px;
+    border-radius: 2px;
+    margin: 4px 12px;
+    padding: 2px 4px;
+    font-family: var(--header-font);
+    text-transform: uppercase;
+    background-size: 4px 1px;
+    font-weight: 900;
+    line-height: 100%;
+    color: var(--primary-color);
+}
+
+#supplement a:focus,
+#supplement a:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+footer #supplement > div.row.clearfix {
+    text-align: center;
+}
+
+
+/* --- STYLES --- */
+/* --- Caption --- */
+.caption,
+div#button_note {
+    margin-block-start: 8px;
+    color: var(--primary-color);
+    font-family: var(--secondary-font);
+    font-size: .85rem;
+    line-height: 130%;
+}
+
+.caption {
+    width: 100%;
+    max-width: 700px;
+    margin-block-start: 5px;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+
+    text-align: center;
+}
+
+.source {
+    display: block;
+    margin-block-start: 10px;
+    margin-block-end: 10px;
+
+    color: #676767;
+    font-family: initial;
+    font-size: .7rem;
+    line-height: 130%;
+}
+
+.signature, .cursive {
+    font-family: var(--cursive-font);
+    font-size: 1.5em;
+}
+
+.serif {
+    font-family: var(--serif-font);
+}
+
+.type{
+    color:#b00d5b;
+}
+
+
+/* --- Side by Side  --- */
+.sidebyside {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(10px,1fr));
+
+    width: 100%;
+    padding: 20px 0%;
+    box-sizing: border-box;
+}
+
+.sidebyside > div {
+    box-sizing: border-box;
+}
+
+
+
+/*CALLOUT - very basic*/
+/*.callout {
+    color: var(--primary-color);
+    font-family: var(--serif-font);
+    font-size: 1.25rem;
+    font-style: italic;
+    font-weight: 300;
+    letter-spacing: .2px;
+
+    width: 90%;
+    margin: 10px auto;
+}*/
+
+.callout{
+    background:var(--primary-color-semilight);
+    padding: 15px 20px;
+  margin: 10px auto;
+    display:flow-root
+}
+
+.callout .flex, .uniForm .ctrlHolder .flex{
+    display:flex;
+    justify-content: center;
+    gap: 2vw;
+}
+
+.callout .inset{
+    box-sizing:border-box;
+    margin-right: 0;
+    max-width: 300px;
+}
+
+.tip{
+    border-top:#a105a1 solid 3px;
+    margin: 5px 0;
+}
+
+.tip header{
+    color:#a105a1;
+    font-weight:700;
+    text-transform: uppercase;
+}
+
+ol.objectives {
+    counter-set: section;
+    list-style: none;
+    margin: 0;
+    padding-block: 10px;
+}
+
+ol.objectives > li {
+    width: 100%;
+    padding: 3%;
+    box-sizing: border-box;
+    position: relative;
+    margin: 5px 0;
+    padding: 3px 15px 3px 40px;
+    box-sizing: border-box;
+}
+
+ol.objectives > li:before {
+    counter-increment: section;
+    content: counters(section,".") " ";
+    font-size: 18px;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    transition: all 180ms ease-in;
+    z-index: 1;
+    border-radius: 100%;
+    box-sizing: border-box;
+    color: var(--primary-color);
+    font-weight: 700;
+    padding-block-start: 2px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-family: var(--primary-font);
+}
+
+.uniForm .ctrlHolder .flex{justify-content:flex-start;}
+
+
+/* Aside */
+
+aside.tutorial p {
+    margin-bottom: 10px;
+    line-height: 130%;
+}
+
+
+aside.hint header {
+    color: #666;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: var(--header-font);
+    border: none;
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+aside.hint header:after {
+    display: none;
+}
+
+aside.hint header:before {
+    content: "";
+    background: url('../images/1x/lightbulb.png') no-repeat center;
+    background-size: 15px;
+    position: absolute;
+    top: -5px;
+    left: -20px;
+    width: 15px;
+    height: 30px;
+}
+
+aside.hint {
+    border-top: 4px solid;
+    border-image-slice: 1;
+    border-width: 5px;
+    border-image-source: linear-gradient(to right, var(--secondary-color), #fff);
+    padding-block-start: 7px;
+}
+
+aside.quicksteps header {
+    color: var(--secondary-color);
+    border: none;
+    font-family: var(--header-font);
+    padding: 0;
+    font-style: italic;
+    font-family: var(--condensed-font);
+    font-size: 1.75em;
+    display: block;
+    margin-bottom: 5px;
+}
+
+aside.quicksteps ol, aside.quicksteps ul {
+    margin-inline: 15px 0;
+}
+
+aside.quicksteps li {
+    margin-block: 5px;
+}
+
+aside ol {
+    margin-block: 5px;
+}
+
+aside,
+span.aside,
+h2.aside, aside.tip {
+    font-size: .95rem;
+    line-height: 120%;
+    width: 160px;
+    padding-right: 5%;
+    box-sizing: border-box;
+    font-family: var(--condensed-font);
+    letter-spacing: -.25px;
+    float: left;
+    margin-left: -170px;
+    position: relative;
+    clear: left;
+    margin-block-end: 10px;
+}
+
+aside.tip {
+    padding-right: 0%;
+    margin-left: -175px;
+    width:150px;
+}
+
+aside:not(.sticky-video) {
+    max-width: 180px;
+}
+
+
+aside.sticky-video {
+    position: sticky;
+    z-index: 10;
+    width: max(8vw, 350px);
+    padding-right: 3%;
+    padding-bottom: 20px;
+    background: transparent;
+    top: initial;
+    left: 0;
+    margin-left: 0;
+}
+
+details.video[open] summary {
+   font-size: 0;
+   position:absolute;
+   /* left: -16px; */
+   background: transparent;
+}
+
+details.video summary::before {
+    content: "\2717";
+    font-size: 18px;
+    cursor: pointer;
+    opacity: .8;
+    background: #e8f2f4;
+    border-radius: 4px;
+    font-family: var(--sans-serif-font);
+    padding: 2px 5px;
+    box-shadow: var(--box-light);
+    border: 2px solid white;
+}
+
+
+details.video:not([open]) summary::before {
+    content: "Open Video";
+}
+
+
+details.video summary {
+    font-weight: 700;
+    font-family: var(--secondary-font);
+    text-transform: uppercase;
+    font-size: 0;
+    /* width: fit-content; */
+    /* text-align: left; */
+    /* margin-left: auto; */
+    left: -31px;
+}
+
+
+
+.inset img,
+aside img {
+    width: 100%;
+}
+
+.inset a,
+aside a {
+    word-break:break-word;
+}
+
+
+aside .caption, .inset .caption {
+    border: none;
+}
+
+aside .caption .source,
+.inset .caption .source,
+span.source.rotate {
+    display: block;
+    width: 100%;
+}
+
+aside.tutorial header {
+    background: url('../images/clouds-warm2x.png') no-repeat top left;
+    background-size: 22px;
+    background-position: top 7px left 7px;
+    padding-left: 35px;
+    font-weight: 700;
+    font-family: var(--condensed-font);
+    font-size: 1rem;
+}
+
+aside.tutorial header::before {
+    content: "";
+    background: url('../images/1x/clouds-warm.png') no-repeat;
+    width: 20px;
+    height: 20px;
+    background-size: 100%;
+    position: absolute;
+    top: 3px;
+    left: 8px;
+}
+span.aside,
+h2.aside {
+    font-size: 1.4rem;
+    text-align: center;
+    color: #195285;
+    line-height: 120%;
+}
+
+span.aside strong,
+h2.aside strong {
+    display: block;
+    font-size: 3em;
+    padding-block: 10px;
+}
+
+
+/*Generic video player styles*/
+.wistia_responsive_padding {
+    margin: 30px auto;
+}
+
+video,
+.wistia_embed iframe {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+
+    border: 2px solid var(--primary-color-light);
+    box-shadow: var(--box-light);
+}
+
+
+.inset {
+    width: 40%;
+    max-width: 320px;
+    float: right;
+    margin: 20px 0 20px 4%;
+    clear: right;
+}
+
+.inset.nomargin {
+    margin-right: 0;
+}
+
+
+/* --- Table Data  --- */
+table.data {
+    margin: 10px auto 25px;
+    border-spacing: 5px;
+    position: relative;
+}
+
+table.data caption {
+    font-weight: 700;
+    font-size: 1.15em;
+    text-align: center;
+    position: relative;
+    color: var(--primary-color-dark);
+    font-family: var(--secondary-font);
+}
+
+table.data tr th,
+.forum_list th {
+    background: linear-gradient(to bottom, #014d6b, var(--primary-color));
+    text-shadow: 1px 0px 1px black;
+    color: white;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: var(--secondary-font);
+    padding:10px 6px;
+    font-weight: 700;
+    font-size: .9rem;
+}
+
+table.data tr th a,
+.forum_list th a {
+    color: var(--box-light);
+    font-weight: 700;
+}
+
+table.data tr th[scope="col"] {
+}
+
+table.data tr th[scope="row"],
+.forum_list th {
+    background: linear-gradient(to bottom, var(--primary-color-light), var(--primary-color-light));
+    color: var(--primary-color-dark);
+    text-shadow: 0 1px 1px white;
+    font-size: .87rem;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+table.data tr td {
+    padding: 10px;
+    font-size: .9rem;
+    color: #07678d;
+    line-height: 140%;
+    border: 1px solid;
+    border-color:var(--primary-color-light);
+    background:var(--primary-color-light);
+}
+
+table.data tr:nth-child(even) td {
+    border: 1px solid black;
+    border-color: var(--primary-color-light);
+    background:#d2e8ec;
+}
+
+table.data caption:before,
+table.data:after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+}
+
+table.data caption:before {
+    top: 17px;
+    left: 0;
+
+    background: linear-gradient(45deg, var(--primary-color), transparent 10%, transparent 90%, var(--primary-color));
+}
+
+table.data:after {
+    content:"";
+    width: 110%;
+    height: 2px;
+    left: -5%;
+    bottom: -10px;
+    position: absolute;
+
+    background: linear-gradient(to right, transparent, var(--primary-color), transparent);
+}
+
+table.data tr th.notvisible {
+    visibility: hidden;
+}
+
+
+/* COMPONENT TYPES */
+/*--Assessment Component--*/
+.assessment_component {
+}
+
+.assessment_terse_container {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    font-size: 1em;
+    box-sizing: border-box;
+    padding-top: 30px;
+}
+
+.assessment_terse_list {
+    list-style: none;
+    margin: 0px 0 22px;
+    background: hsla(0, 0%, 100%, 0.12);
+    display: inline-block;
+}
+
+.assessment_terse_list div {
+    margin: 0;
+}
+
+.page_component_body ul.assessment_terse_list:last-child li {
+    font-size: 1.15em;
+    font-weight: 400;
+}
+
+.page_component_body ul.assessment_terse_list:last-child li a {
+    word-break: break-word;
+    padding: 4px 8px;
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+    display: inline-block;
+    cursor: pointer;
+    margin-bottom: 3px;
+    background: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    font-weight: 700;
+    color: white;
+    border-radius: 5px;
+ }
+
+
+.page_component_body ul.assessment_terse_list:last-child li a:focus,
+.page_component_body ul.assessment_terse_list:last-child li a:hover {
+    background-size: 4px 100%;
+    color: var(--primary-color);
+    background: white;
+}
+
+
+/* Within Assessment Component*/
+.component_assessment {
+    margin: 0 auto;
+    width: 100%;
+    padding-block-end: 40px;
+    box-sizing: border-box;
+}
+
+.component_assessment .assessment_component {
+    background: white;
+}
+
+/* Assessment Header*/
+.component_assessment .page_component_header {
+}
+
+.page_component_title_supplement {
+    float: none;
+    display: block;
+    margin-start-block: 0;
+
+    font-weight: 400;
+    font-family: var(--primary-font);
+    font-size: .8rem;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+
+/* Assessment Info*/
+#assessment_info {
+    position: relative;
+    left: inherit;
+    right: 0;
+    top: inherit;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#time_limit_label {
+    margin-top: 20px;
+}
+
+
+.hasCountdown {
+    border: 1px solid #e6e4e4;
+    background-color: #fff;
+    padding: 10px;
+}
+
+div#return_to_site {
+    margin: 0;
+}
+
+#return_to_site a {
+    display: block;
+    padding: 6px 20px;
+    box-sizing: border-box;
+    max-width: 160px;
+    margin: 10px 0 2px;
+    text-align: center;
+    font-size: .9rem;
+    border: 1px solid;
+    border-color: var(--primary-color);
+    font-weight: 700;
+}
+
+
+
+/* Assessment Legend and Bubbles */
+#assessment_question_bubbles legend {
+    padding: 0;
+    padding-block-end: 5px;
+
+    font-family: var(--secondary-font);
+}
+
+#assessment_question_bubbles>ol {
+    margin: 0 auto;
+    padding: 10px 0 5px;
+    box-sizing: border-box;
+}
+
+#assessment_question_bubbles li a {
+    border-radius:0;
+}
+
+#assessment_question_bubbles li a:focus,
+#assessment_question_bubbles li a:hover {
+    outline: 2px solid #ffa624;
+    border-radius: 0;
+}
+
+
+/* Assessment Form*/
+.component_assessment form {
+    position:relative;
+}
+
+.component_assessment .form-item {
+    padding: 10px 0;
+    box-sizing: border-box;
+    /* background: rgb(223 228 238 / 34%); */
+}
+
+#assessment_form,
+#assessment_question_area {
+    padding: 10px 0;
+    box-sizing: border-box;
+    margin: 0 auto;
+    position: relative;
+}
+
+.questionpool_question_narrative {
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+.assessment_component .questionpool_question_narrative {
+    margin-top:0;
+}
+
+.questionpool_question_answers {
+    margin: 0;
+    border-bottom: 1px solid rgb(210 210 210 / 30%);
+    padding-block-end: 40px;
+    box-shadow: 0 8px 7px -9px #ccc;
+}
+
+.questionpool_question_answer {
+    margin: 0 0 10px;
+    border: none;
+}
+
+/* Assessment Buttons */
+#buttons {
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px 7% 10px;
+    margin: 0 auto;
+
+    box-sizing: border-box;
+}
+
+div#button_note {
+    font-size: .9rem;
+    box-sizing: border-box;
+    padding: 2px 10px;
+    width: auto;
+    display: block;
+    margin: 39px auto -5px;
+    font-family: var(--secondary-font);
+    text-align: center;
+}
+
+
+
+.assessment_component .question_begin {
+    padding-block: 0;
+}
+
+.assessment_component .question_begin .indexq {
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+div.questionpool_question_matching_answer_select {
+    min-width: 151px;
+}
+
+div.questionpool_question_matching_answer_text {
+    width: calc(100% - 160px);
+    line-height: 120%;
+}
+
+div.questionpool_question_matching_answer {
+    border-bottom: 1px solid var(--primary-color-light);
+    padding-block-end: 6px;
+}
+
+div.questionpool_question_matching_answer:last-child {
+    border: none;
+    padding-block: 0;
+}
+
+.question_pool_matching_answer_key {
+    font-size: .9rem;
+    color: black;
+    text-transform: uppercase;
+}
+
+div.question_pool_matching_answer_key li {
+    line-height: 100%;
+    margin-block: 8px;
+    display: flex;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+div.question_pool_matching_answer_key li p {
+    font-weight: 400;
+    color: var(--primary-color-dark);
+}
+
+.question_pool_matching_answer_key ol {
+    margin: 0 0 0 30px;
+    background: linear-gradient(to bottom, #fafafa, rgb(243 243 243));
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+/*--------Search Results Page---------*/
+.search_results h1 {
+    text-align: center;
+}
+
+ol#search_result_set {
+    padding-bottom: 0;
+
+    font-size: 1.05rem;
+}
+
+.search_results li {
+    padding: 20px 25px;
+    margin: 15px 0;
+    box-sizing: border-box;
+
+    font-size: .95em;
+}
+
+span.match_highlight {
+    padding: 0 4px;
+    margin: 0 2px;
+
+    font-weight: 700;
+
+    background: var(--primary-color-light) !important;
+}
+
+.search_results h3 {
+    font-size: 1.25em;
+}
+
+.search_results h3 em {
+    display: table;
+    margin: 0 auto;
+
+    text-align:center;
+}
+
+.search_results h4 {
+    margin: 10px 0 20px;
+    color: var(--primary-color);
+}
+
+
+/*--------Gradebook---------*/
+#tabs {
+    margin: 30px auto;
+    box-sizing: border-box;
+    width: 98%;
+    line-height: 150%;
+    font-size: .9em;
+    font-family: var(--primary-font);
+    background: #efefef;
+    border: none;
+}
+
+.ui-tabs .ui-tabs-nav li {
+    border: none;
+}
+
+div.grade_book .ui-tabs .ui-widget-header {
+    padding-bottom: 0;
+}
+
+div.grade_book .ui-tabs .ui-widget-header {
+    background: rgb(0 124 173 / 19%);
+    border: none;
+    padding: 15px;
+}
+
+.ui-widget-content {
+    line-height: 130%;
+}
+
+div.ui-tabs .ui-tabs-nav li a {
+    margin:0 ;
+    border-radius:0;
+}
+
+button#sort_selection_button,
+input#go_button {
+    display: inline-block;
+    padding: 4px 10px !important;
+    border-radius: 4px;
+}
+
+input#go_button{
+
+}
+
+/*Form and Poll and Survey Components*/
+.component_form_directions,
+.component_poll_question,
+.survey_instructions {
+    font-weight: 400;
+    border: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 20px;
+    background: var(--primary-color-light);
+    color: var(--primary-color-dark);
+}
+
+
+.component_form .uniForm,
+.survey_form {
+    background: transparent;
+}
+
+.component_form,
+.component_form_response,
+.component_poll {
+    padding-block-start: 50px;
+    padding-block-end: 50px;
+    position: relative;
+
+    border-bottom: 2px solid rgb(255 255 255 / 30%);
+}
+
+.component_poll_display {
+    display: block;
+    width: 100%;
+    padding: 5px 20px 20px;
+    box-sizing: border-box;
+
+    background: white;
+    box-shadow: var(--box-light);
+}
+
+form.uniForm label,
+form.uniForm .label {
+    padding: 8px 0;
+    font-weight: 400;
+    line-height: 150%;
+    box-shadow: none;
+    position: relative;
+}
+
+label.option {
+    font-size: .95em;
+    /* color: var(--primary-color); */
+    margin-left: 10px;
+}
+
+.uniForm .blockLabels .textInput, .uniForm .blockLabels .fileUpload, .uniForm .blockLabels .selectInput, .uniForm .blockLabels select, .uniForm .blockLabels textarea, .forum input#edit-message-title, input[type="file"] {
+    float: none;
+    width: 100%;
+    padding: 5px;
+
+    color: black;
+    font-family: initial;
+    font-weight: 400;
+    font-size: .9em;
+
+    box-sizing: border-box;
+    border: 1px solid var(--primary-color);
+}
+
+.uniForm .blockLabels .fileUpload {
+    background:white;
+}
+
+.uniForm div.ctrlHolder,
+div.ctrlHolder form,
+.form-item-poll-options,
+.survey .question_begin,
+.survey_results_question {
+    padding: 10px 4%;
+    box-sizing: border-box;
+    margin: 5px auto;
+}
+
+.uniForm div.ctrlHolder.focus {
+    outline: 2px solid var(--primary-color);
+    background:white;
+}
+
+
+span.form-required {
+    position: absolute;
+    top: 10px;
+    left: -14px;
+}
+
+.uniForm div.buttonHolder {
+    margin: 10px 0 0;
+    padding: 5px;
+}
+
+.textareaWordCounter {
+    margin-block-start: 5px;
+    display: block;
+    clear: both;
+    float: none;
+
+    color: var(--primary-color);
+    font-size: 12px;
+}
+
+.form-checkboxes .form-item,
+.form-radios .form-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2px 5px;
+    margin-inline-start:5vw;
+    gap: .5vw;
+}
+
+.component_form_display .radio-horizontal.form-radios{margin: auto;}
+
+.component_form_display input.form-radio {
+    margin: 0;
+}
+
+div.ctrlHolder.unstyleButtons,
+.survey_form_buttons {
+    border: none;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    background: transparent;
+    box-shadow: none;
+}
+
+
+.uniForm .ctrlHolder.displayHorizontally {
+    font-size: .9rem;
+    border: none;
+    padding-bottom: 10px;
+}
+
+.ctrlHolder.displayHorizontally .form-type-radio {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    border: none;
+}
+
+.ctrlHolder.displayHorizontally .form_radios {
+    display: flex;
+}
+
+.ctrlHolder.displayHorizontally .form-type-radio label{
+    padding-block-end: 0;
+    padding-block-end: 0;
+}
+
+.displayHorizontally .form-radios {
+    display: flex;
+    padding-block-start: 0;
+}
+
+.ctrlHolder .form-type-radios .description {
+    color: var(--primary-color);
+    padding-inline-start: 10px;
+}
+
+
+/* Form response*/
+.component_form_response {
+    color: white;
+    text-align: center;
+
+    background: var(--primary-color-dark);
+    box-shadow: var(--box-light);
+}
+
+.component_form_response.no-attempts {
+    background: white;
+}
+
+/* Survey specific */
+.survey {
+    font-size:1em;
+}
+
+h3.survey_instructions_label {
+    display: none; /* Instructions label intentionally hidden; restore by deleting this line */
+}
+
+.survey .questionpool_question_narrative > label {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.survey .questionpool_question_narrative > label p {
+    width: 96%;
+}
+
+
+/* Survey results links */
+.survey_form_buttons {
+    padding-left: 40px;
+    box-sizing: border-box;
+}
+
+input[value="View result"] {
+    background: var(--primary-color-light) !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    margin-top: 10px;
+    color: black !important;
+}
+
+input[value="View result"]:focus, input[value="View result"]:hover {
+    color: white !important;
+    background: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+}
+
+
+/* Survey results */
+.survey > div > div[class^="survey_results_"] {
+    border: none;
+    margin-bottom: 40px;
+}
+
+div[class^="survey_results_"] h3 {
+    font-size: 1.25em;
+    background: var(--primary-color-light);
+    padding: 6px;
+    box-sizing: border-box;
+    letter-spacing: 0;
+}
+
+div[class^="survey_results_"] h4 {
+    border: none;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.survey_results_question_narrative {
+    margin-bottom: 20px;
+}
+
+.survey_results_question.odd {
+    margin: 0 0 6px;
+    background: #f3f7ff;
+}
+
+
+/* Poll specific*/
+p.cbox_messagebox {
+    margin: 20px 0 0;
+    margin-block-start: 20px;
+
+    color: white;
+    text-align: center;
+
+    background: var(--primary-color);
+
+    border: none;
+}
+
+.component_poll_answers {
+    margin-block-start: 10px;
+    margin-block-end: 20px;
+}
+
+.form-item-poll-options{
+    padding: 5px;
+    margin: 4px 0;
+}
+
+.view_result_link a {
+    display: inline-block;
+    padding: 2px 8px;
+    margin: 3px;
+
+    color: var(--primary-color);
+    font-size: .8rem;
+    text-align: center;
+
+    border: 1px solid;
+    border-radius: 2px;
+}
+
+.view_result_link {
+    margin: 0;
+    margin-block-start: 10px;
+}
+
+.view_result_link a:focus,
+.view_result_link a:hover {
+}
+
+#content select {
+    color: black;
+    padding: 1px 6px;
+    font-size: .9rem;
+    border-radius: 3px;
+    border: 2px solid var(--primary-color);
+    box-shadow: var(--box-light);
+    margin: -2px 10px 0px 0;
+    color: var(--primary-color);
+    font-weight: 700;
+    font-family: var(--navigation-font);
+}
+
+#content select.form-select {
+    margin-inline: 10px;
+}
+
+#content select.matching_answer.form-select {
+    margin-inline-start: 0;
+}
+
+.questionpool_question_answers.questionpool_question_truefalse_answers {
+    padding-top: 0;
+}
+
+
+/*Video Link*/
+
+.exlink,
+.video {
+    padding: 5px 20px 15px;
+    border-color: var(--primary-color-light);
+    background: linear-gradient(to bottom, var(--primary-color-light), transparent);
+    margin: 20px auto;
+    display: flow-root;
+    background-size: 100%;
+}
+
+.video a,
+.exlink a,
+.canvas a,
+.discussion a {
+    display: block;
+    margin: 0 auto 5px;
+    position: relative;
+    padding: 11px 10px 9px 54px;
+    box-sizing: border-box;
+
+    color: var(--primary-color-dark);
+    font-family: var(--secondary-font);
+    font-size: 1em;
+    line-height: 120%;
+    text-align: -webkit-auto;
+
+    background: white;
+
+    border: 2px solid transparent;
+    border-color: var(--primary-color);
+    box-shadow: var(--box-light);
+    transition: all 200ms linear;
+
+}
+
+.canvas a,
+.discussion a {
+    padding: 15px 50px;
+    text-align: center;
+    background: linear-gradient(to bottom, var(--primary-color-light), #f2f5fc);
+    position: relative;
+}
+
+.canvas strong, .discussion strong {
+    font-size: 1.125em;
+    color: var(--primary-color-dark);
+    background: #b5daf2;
+    padding: 1px 5px;
+    text-transform: uppercase;
+}
+
+
+.video a:before,
+.exlink a:before {
+    content:"";
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    left: -1px;
+    opacity: .8;
+    transition: all 200ms linear;
+    height: 100%;
+}
+
+.video h3,
+.exlink h3 {
+    margin-bottom: 0;
+    font-size: .8em;
+    display: table;
+    width: auto;
+    padding: 10px 0;
+    letter-spacing: 5px;
+}
+
+
+.video a:before {
+    background: url('https://s3.amazonaws.com/streaming.greatrivertech.net/design/Paradigm/link-white.png') no-repeat center, var(--primary-color);
+    background-size: 30px;
+}
+
+.exlink a:before {
+    background: url('https://s3.amazonaws.com/streaming.greatrivertech.net/design/Paradigm/link-white.png') no-repeat center, var(--primary-color);
+    background-size: 26px;
+}
+
+.video a:focus,
+.video a:hover,
+.exlink a:focus,
+.exlink a:hover,
+.canvas a:focus,
+.canvas a:hover,
+.discussion a:focus,
+.discussion a:hover {
+    background: white;
+    box-shadow: var(--box-light);
+}
+
+.video a:focus:before,
+.video a:hover:before {
+    opacity: 1;
+}
+
+span.filetype, .filetype {
+    font-size: .8em;
+    opacity: .9;
+    font-weight: 400;
+}
+
+
+@media only screen and (min-width: 1025px) {
+    body[class*="welcome"]  .component_text_layout_container {
+        padding-left: 12%;
+        padding-right: 12%;
+    }
+}
+
+#content_area_2 .component_form,
+#content_area_2 .component_form_response,
+#content_area_2 .component_poll {
+    padding-left: 6%;
+    padding-right: 6%;
+    padding-block-start: 40px;
+    padding-block-end: 40px;
+}
+
+
+/*---Notes style---*/
+.note {
+    font-size: .95em;
+    position: relative;
+    color: var(--primary-color-dark);
+    padding-left: 30px;
+    line-height: 140%;
+    box-sizing: border-box;
+    font-weight: 400;
+}
+
+.note:before {
+    content:"!";
+    font-size: 40px;
+    font-weight:700;
+    font-family:var(--secondary-font);
+    position:absolute;
+    left: 0;
+    top: 0;
+}
+
+
+/* --- General/Global forum styles ---*/
+/*Forum topics button hidden at au request*/
+
+.forum {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.forum_list {
+    padding: 10px 0;
+    line-height: 160%;
+    background: white;
+    box-sizing: border-box;
+}
+
+.forum_list table,
+#forum_message_preview table {
+    font-family: var(--secondary-font);
+    margin: 15px 0 0px;
+    width: 100%;
+}
+
+#forum_message_preview table {
+    background: var(--primary-color-light);
+}
+.forum_list th {
+    font-weight:700;
+}
+
+.forum_list td {
+    padding: 10px 0;
+    box-sizing: border-box;
+    line-height: 160%;
+    vertical-align: top;
+    font-family: var(--primary-font);
+    font-size: .85rem;
+    text-align: center;
+}
+
+td.forum_message_read {color: initial;}
+
+td.forum_topic_list_name a {
+    font-size: 1.05em;
+    background: var(--primary-color-light);
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: var(--secondary-font);
+    font-weight: 700;
+    border-radius: 2px;
+}
+
+.forum_list td a {
+    border-radius: 4px;
+    color: var(--primary-color);
+    padding: 6px 8px;
+    border: 1px solid transparent;
+    background: linear-gradient(to bottom, var(--primary-color-dark) 0%,var(--primary-color-dark) 100%);
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 4px 1px;
+    background-size: 4px 2px;
+}
+
+.forum_list td a:focus,
+.forum_list td a:hover {background-size: 4px 100%;color: floralwhite;}
+
+td.forum_topic_list_name a:focus,
+td.forum_topic_list_name a:hover {background: var(--primary-color-light);color: black;text-shadow: none;border-color: var(--primary-color-light);}
+
+td.forum_topic_list_creation_date {
+    font-size: .8em;
+    border-top: 2px solid;
+    border-color: #f1f0f1;
+    margin-top: 14px;
+    font-family: var(--secondary-font);
+    color: #5d1816;
+}
+
+/* --- Navigation below table (topics, post subject, export to excel) ---*/
+.forum_list ul.nav {
+    display: flex;
+    width: auto;
+    padding: 10px 0;
+    box-sizing: border-box;
+    padding: 5px !important;
+    width: 100%;
+    float: none !important;
+    margin: 40px 0 10px !important;
+    font-size: .9em;
+    justify-content: center;
+}
+
+.forum_list ul.nav a {
+    font-size: .95em;
+    padding: 5px;
+    margin: 0;
+    display: block;
+    text-align: center;
+    line-height: 120%;
+    background: linear-gradient(to bottom, #e7e7e7, rgb(218 205 205 / 46%));
+}
+
+/* --- SCREEN 1: Topic screen (lists topics) ---*/
+/* --- ID specific to first screen; allows the use of grid to group a topic, topic description,
+and topic creation date as a block item instead of as a table row ---*/
+#forum_topic_list table tbody {width: 96%;max-width: 1000px;display: block;margin: 0 auto;border-top: none;}
+
+#forum_topic_list table tbody tr {
+    border-color: var(--gray-color);
+}
+
+#forum_topic_list table tbody tr:last-child {
+    border:none;
+}
+
+#forum_subject_list td {
+    border-bottom: 1px solid #efebec;
+}
+
+#forum_subject_list td:not([class]) {
+    text-align: left;
+}
+
+td a.forum_message_read:before {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 5px;
+    left: -30px;
+    content: "";
+}
+
+td a.forum_message_read {
+    position: relative;
+}
+
+
+/* --- The styles below will be applied only if the broswer supports the grid display.
+Older versions of Safari may not fully support intrinsic sizing; IE needs -ms prefix---*/
+@supports (display: -ms-grid) or (display: grid) {
+    #forum_topic_list table tbody tr {
+        display:-ms-grid;
+        display: grid;
+        -ms-grid-auto-rows: min-content;
+        grid-auto-rows: min-content;
+        padding: 25px 30px;
+        box-sizing: border-box;
+        border-color: var(--gray-color);
+        margin: 10px 0;
+        position: relative;
+        background-color: #ffffff;
+        /* box-shadow: var(--box-light-dark); */
+    }
+
+            #forum_topic_list table tbody tr:before {
+                content: "";
+                /* background:  no-repeat; */
+                padding: 40px;
+                background-size: 70px;
+                position: absolute;
+                top: 25px;
+                left: -110px;
+            }
+
+    /* --- Header row of initial  ---*/
+    #forum_topic_list thead,
+    #forum_subject_message_list thead {
+        display: none;
+    }
+}
+
+#forum_topic_list tfoot {
+    border: none;
+}
+
+/* --- SCREEN 2: Forum subject list (subjects within a topic) ---*/
+div#forum_subject_list {
+    width: 100%;
+    background: white;
+    padding: 70px 10%;
+    box-sizing: border-box;
+}
+
+/* --- SCREEN 3: Post subject form ---*/
+div#forum_message_form,
+form#forum-view-add-subject {
+    width: 100%;
+    background: white;
+    padding: 70px 10%;
+    box-sizing: border-box;
+}
+
+.form-item .description, .required_information {
+    color: var(--primary-color);
+    margin-top: 10px;
+    font-family: var(--secondary-font);
+    font-size:.85rem;
+}
+
+div#forum_subject_message_list table tbody {
+    border: none;
+}
+
+/* --- SCREEN 4: Preview Message screen ---*/
+/* --- Additional improvements could be made to this screen --- */
+div#forum_message_preview {
+    width: 100%;
+    background: white;
+    padding: 70px 10%;
+    box-sizing: border-box;
+}
+
+#forum_message_preview tr {
+    display:-ms-grid;
+    display: grid;
+    -ms-grid-auto-rows: min-content;
+    grid-auto-rows: min-content;
+    box-sizing: border-box;
+    margin: 20px;
+}
+
+#forum_message_preview .form_labels,
+#forum_message_display .form_labels {
+    background: transparent;
+    vertical-align: top;
+    padding: 10px 0;
+    text-align: left;
+    font-size: 1.1em;
+}
+
+form#forum-view-add-subject .ctrlHolder.ctrlHolder-1 + .ctrlHolder {
+    /* display: none; */
+}
+
+form#forum-view-add-subject .ctrlHolder.ctrlHolder-1 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: -30px;
+}
+
+    input[type="file"] {
+    width: 100%;
+    padding: 5px;
+};
+
+.forum .required_information {
+    font-size: .8rem;
+}
+
+
+/* --- If grid displays are not supported the content will be displayed as a table (current view)--- */
+@supports not (display: -ms-grid) or (display: grid) {
+    #forum_message_preview .form_labels,
+    #forum_message_display .form_labels {
+        padding: 20px;
+    }
+}
+
+
+/* --- Subject title---*/
+.subject_view_page > div strong:first-of-type {
+    color: var(--primary-color);
+    font-family: var(--secondary-font);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.forum_subject_preview {
+    font-size: 1.5em;
+}
+
+/* --- Message area ---*/
+.forum_message_preview {
+    margin: 30px 0 40px;
+    line-height: 155%;
+    box-sizing: border-box;
+    font-family: var(--primary-font);
+}
+
+/* --- SCREEN 5: Message board posts and discussion ---*/
+/* --- Completely restructured to look less like a table and provide more message space.
+Name, date, and icons on the left with subject title, message, and attachments on right ---*/
+
+#forum_subject_message_list table {
+    margin: 40px 0;
+    border: none;
+}
+
+div#forum_subject_message_list h2 {
+    text-align: center;
+    /* border: none; */
+}
+
+div#forum_subject_message_list table {
+    width: 98%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Grid split into 4  areas: 3 small on left and 1 large on right; ---*/
+#forum_subject_message_list tbody tr {
+    display:-ms-grid;
+    display: grid;
+    -ms-grid-template-columns: repeat(3, 1fr) 13fr;
+    grid-template-columns: repeat(3, 70px) 13fr;
+    width: 100%;
+    padding: 30px 0;
+    box-sizing: border-box;
+    border-bottom: 2px solid #efebea;
+}
+
+/* --- The styles below will be applied only if the broswer supports the grid display.
+Older versions of Safari may not fully support intrinsic sizing; IE needs -ms prefix---*/
+@supports (display: -ms-grid) or (display: grid) {
+    #forum_subject_message_list td {
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 0;
+    }
+
+    /* --- Grid area names not needed but I found them helpful for quick reference---*/
+    /* --- Left side ---*/
+    td.forum_message_list_owner {
+        grid-area: owner;
+        grid-column: 1/4;
+        grid-row: 1;
+        text-align: center;
+        font-weight: 700;
+    }
+
+    td.forum_message_list_creation_date {
+        grid-area: date;
+        grid-column: 1/4;
+        grid-row: 2;
+        text-align: center;
+        color: #747474;
+        font-size: .85rem;
+    }
+
+    td.forum_message_list_view {
+        grid-area: view;
+        grid-column: 1;
+        grid-row: 3;
+        margin-left: 20px;
+    }
+
+    td.forum_message_list_reply {
+        grid-area: reply;
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    td.forum_message_list_delete {
+        grid-area: delete;
+        grid-column: 3;
+        grid-row: 3;
+        margin-right: 20px;
+    }
+
+    /* --- Right side ---*/
+    td.forum_message_list_subject {
+        grid-area: subject;
+        grid-column: 4;
+        grid-row: 1;
+        vertical-align: bottom;
+        font-size: 1.25em;
+    }
+
+
+    /* ---attachment link cell; no unique class given ---*/
+    #forum_subject_message_list tbody tr td:last-of-type,
+    td.forum_message_list_ attachment {
+        grid-area: attachment;
+        grid-column: 4;
+        grid-row: 3;
+    }
+
+    .forum_icon.forum_icon_attachment {
+        display: block;
+        text-align: left;
+        margin: 0;
+        text-indent: 0;
+        padding-left: 31px;
+    }
+
+    td.forum_message_list_attachment a {
+        background: transparent;
+    }
+
+    td.forum_message_list_attachment a:focus,
+    td.forum_message_list_attachment a:hover {
+        color: var(--primary-color);
+    }
+
+    /* ---Message <td> is the last listed when no attachment provided ---*/
+    #forum_subject_message_list tbody tr td.forum_message_list_message {
+        grid-area: message;
+        grid-column: 4;
+        grid-row: 2;
+        max-width: none;
+        font-family: var(--primary-font);
+        font-size: .95em;
+        text-align: left;
+    }
+
+    td.forum_message_list_message {
+        word-break: break-word;
+    }
+
+    /* Message details page */
+    .subject_view_page {
+        padding: 3em;
+        box-sizing: border-box;
+    }
+
+    /* --- Adding left border and padding to content on right ---*/
+    #forum_subject_message_list td.forum_message_list_subject,
+    #forum_subject_message_list td.forum_message_list_message,
+    #forum_subject_message_list tbody tr td:last-of-type {
+        border-left: 10px solid black;
+        border-color: var(--primary-color-light);
+        padding-left: 40px;
+        padding-right:4%;
+        text-align: left;
+    }
+}
+
+.forum_icon.forum_icon_reply {
+    text-indent: 0;
+    background: var(--primary-color);
+    width: auto;
+    height: auto;
+    text-align: center;
+    border-radius: 3px;
+    font-family: var(--secondary-font);
+    left: 1px;
+    text-transform: uppercase;
+    transition: all 180ms linear;
+    font-size: 1rem;
+    padding: 5px;
+    margin-top: -5px;
+    color: white;
+}
+
+.forum_icon.forum_icon_reply:focus, .forum_icon.forum_icon_reply:hover {
+    background: var(--primary-color-dark);
+    color: white;
+}
+
+.forum_list ul.nav a[href*="add-subject"] {
+    background: var(--primary-color);
+    position:relative;
+    box-shadow: 0 2px 5px -3px rgb(0 0 0 / 20%);
+    color: white;
+    padding-left: 28px;
+    padding-right: 10px;
+    transition: all 200ms linear;
+}
+
+
+.forum_list ul.nav a[href*="add-subject"]:before {
+    content:"+";
+    border-radius: 100%;
+    color: white;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    left: 5px;
+    background: black;
+    top: 4px;
+}
+
+.forum_list ul.nav a:focus,
+.forum_list ul.nav a:hover {
+    background: black;
+    color: white;
+}
+
+.forum_list ul.nav a[href*="add-subject"]:focus,
+.forum_list ul.nav a[href*="add-subject"]:hover {
+    background: black;
+}
+
+.pagination123 {
+    width: 100%;
+    text-align: ce;
+}
+
+span.page-status {
+    float: none !important;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+td.forum_message_list_view a,
+td.forum_message_list_reply a,
+td.forum_message_list_delete a,
+td.forum_message_list_view a:hover,
+td.forum_message_list_reply a:hover,
+td.forum_message_list_delete a:hover {
+    padding: 0;
+    background: transparent;
+    border: none;
+}
+
+.forum .ctrlHolder {
+    border: none;
+}
+
+.forum label,
+#webcom_forum_wrapper label[for="edit-message-title"],
+#webcom_forum_wrapper label[for="edit-file"] {
+    padding: 0 0 8px;
+}
+.forum input#edit-message-title {
+    width: 100%;
+}
+
+.forum h2 {
+    font-size: 1.25em;
+    font-family: var(--secondary-font);
+}
+
+
+/* ---Make iFrames Responsive--- */
+.iframe-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+    min-height: 80vh;
+}
+
+.iframe-container iframe,
+.iframe-container object,
+.iframe-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+iframe.wistia_embed {
+    box-shadow: var(--box-light);
+}
+
+
+
+.menu li {
+    color: #ddd;
+    font-family: var(--secondary-font);
+}
+
+.menu li a strong {
+    font-family: var(--cursive-font);
+    font-size: 20px;
+    color: var(--primary-color);
+}
+
+.menu li a {
+    display: block;
+    box-shadow: var(--box-light);
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid var(--primary-color-light);
+}
+
+/*LTI*/
+.component_LTITool form {
+    padding-block: 10px;
+}
+
+.component_LTITool input[id*="edit-submit"] {
+    margin: 4px auto;
+    display: table;
+    padding: 15px 20px !important;
+    opacity: 1;
+    color: white;
+}
+
+.component_LTITool div {
+    width: 100%;
+}
+
+.component_LTITool input[id*="edit-submit"]:focus, .component_LTITool input[id*="edit-submit"]:hover {
+    opacity: 1;
+    background: var(--primary-color-light);
+    color: var(--primary-color-dark);
+    border-color: var(--primary-color-light);
+}
+
+/*Glossary*/
+.ln-letters {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-block: 20px;
+    border-bottom: 6px solid var(--primary-color-light);
+    padding-block: 20px;
+}
+
+div.ln-letters a {
+    border: none;
+    border-bottom: 2px solid;
+    color: var(--primary-color-dark);
+    padding: 2px;
+    float: none;
+    display: table;
+    line-height: 100%;
+}
+
+div.ln-letters a.ln-last {
+    border-right: none;
+}
+
+.ln-letters a.ln-disabled, .ln-letters a.ln-disabled:focus, .ln-letters a.ln-disabled:hover {
+    border: none;
+    color: #CCC;
+    cursor: no-drop;
+}
+
+ul.myList {
+    display: grid;
+    grid-gap: 1vw;
+    grid-template-columns: repeat(auto-fill, minmax(15vw, 1fr) );
+    list-style: none;
+    margin: 0;
+}
+
+ul.myList li {
+    background: var(--primary-color-light);
+}
+
+ul.myList li a[role="button"] {
+    color: var(--primary-color-dark);
+    display: block;
+    padding: 15px 20px;
+}
+
+div.ln-letters a:focus, div.ln-letters a:hover {
+    background: transparent;
+    color: var(--primary-color);
+}
+
+div.ln-letters a.ln-selected {
+    background: transparent;
+}
+
+li .definition {
+    padding: 0 20px 20px;
+}
+
+ul.myList li a[role="button"]:focus, ul.myList li a[role="button"]:hover {
+    color: white;
+}
+
+/* Unit Menu */
+
+ul.unit-menu {
+    list-style: none;
+    margin-inline: 0;
+    font-weight: 600;
+    font-size: 1.1em;
+    margin-block: 20px;
+}
+
+ul.unit-menu li {
+    margin-block: 15px;
+}
+
+ul.unit-menu li strong:first-of-type {
+    margin-inline-end: 4px;
+}
+
+ul.unit-menu li ul {
+    font-size: max(.9em, 15px);
+    list-style: none;
+    margin-inline: 0;
+    margin-block: 0;
+}
+
+ul.unit-menu a {
+    display: block;
+}
+
+
+details.primary {
+    position: relative;
+}
+
+        details.primary summary {
+            color: #fff;
+            cursor: pointer;
+        }
+
+        details.primary > summary {
+            font-size: 0.8em;
+            top: 0;
+            left: 0;
+            color: black;
+            background-color: #c3edfe;
+            border-radius: 2px;
+            padding: 0.3em 0.5em 0.25em;
+            border: solid 2px var(--primary-color-dark);
+            display: table;
+            width: fit-content;
+            margin: 10px auto;
+        }
+
+        details.primary > summary:focus {
+            /* Ideally these values would be system user variables. Looking at you, CSS WG. ;-) */
+            outline: 0;
+            border-color: #fff;
+            border-color: rgba(94, 158, 214, 0.7);
+        }
+
+        details.primary > .detailsbody {
+            padding: 20px;
+            color: #000;
+            background-color: var(--primary-color-light);
+            overflow: auto;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: .95em;
+            font-family: var(--header-font);
+            font-size: 14px;
+            text-align: center;
+        }
+
+
+        /* Show/hide additional labels based on open/closed state. */
+        details > summary > .open,
+        details[open] > summary > .closed {
+            display: none;
+        }
+        details[open] > summary > .open {
+            display: inline;
+        }
+
+        /* These last two rules are part of the polyfill for challenged browsers. */
+        details > .detailsbody {
+            display: none;
+        }
+        details[open] > .detailsbody {
+            display: block;
+            font-size: 0.9;
+        }
+
+
+details.combo-menu summary, ul.unit-menu li > a {
+    background: #e5f3fe;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 200ms ease-in;
+    position: relative;
+    font-weight: 400;
+    border: none;
+    color: var(--primary-color-dark);
+}
+
+details.combo-menu summary a strong {
+    color: var(--guidelines-primary-color);
+}
+
+
+details.combo-menu summary:focus, details.combo-menu summary:hover,  ul.unit-menu li > a:focus,  ul.unit-menu li > a:hover {
+    background: rgb(234 238 242);
+    color: var(--secondary-color-dark);
+}
+
+details.combo-menu .details-text ul {
+    margin: 0 25px;
+    list-style: none;
+}
+
+details.combo-menu .details-text ul a {
+    display: block;
+    padding: 15px;
+}
+
+details.combo-menu summary:focus a, details.combo-menu summary:hover a {
+    color: var(--secondary-color-dark);
+}
+
+
+details.combo-menu summary:after {
+ content: "";
+ font-weight: 700;
+ position: absolute;
+ right: 10px;
+ top: 12px;
+ background: url('https://s3.amazonaws.com/indigo.greatrivertech.net/components/9234547/images/down-arrow.png') no-repeat center, white;
+ line-height: 100%;
+ padding: 18px;
+ background-size: 20px;
+ border-radius: 100%;
+ box-shadow: var(--box-light);
+ transition: all 180ms linear;
+}
+
+details.combo-menu[open] summary:after {transform: rotate(180deg);}
+
+
+span.blankspace {
+    color: transparent;
+    border-bottom: 2px solid black;
+}
+
+.text_component div[id*="page_component_body_"]:has(aside) {
+    padding-inline: calc(var(--padding) / 1.5);
+}
+
+.text_component div[id*="page_component_body_"]:has(aside) aside {
+    width: calc(var(--padding) * 1.4);
+    padding: 0;
+    margin-inline-start: calc((var(--padding) / .65) * -1);
+}
+
+/* Form Extras */
+
+.uniForm .inlineLabels .textInput{
+    background: #fff;
+    border: var(--primary-color) solid 1px;
+}
+
+.uniForm .ajaxBTN:nth-child(2){display: none;}
+
+.uniForm .ctrlHolder:last-child{display:table;}
+
+
+div#component_container_11842794 .component_form, #component_container_11842854 .grid tr:nth-child(2), #component_container_12017859 .component_form_display,  #component_container_11842906 .uniForm div.ctrlHolder:nth-child(1),#component_container_11842906 .uniForm div.ctrlHolder:nth-child(2),#component_container_12139907 .grid tr:nth-child(2),#component_container_12139909 .component_form_display,#component_container_12140007 .uniForm div.ctrlHolder:nth-child(1),#component_container_12140007 .uniForm div.ctrlHolder:nth-child(2){
+    background:var(--primary-color-light);
+}
+
+div#component_container_12017821 .component_form, #component_container_11842854 .grid tr:nth-child(3), #component_container_12017864 .component_form_display, #component_container_11842906 .uniForm div.ctrlHolder:nth-child(3),#component_container_11842906 .uniForm div.ctrlHolder:nth-child(4),#component_container_12139907 .grid tr:nth-child(3),#component_container_12139910 .component_form_display,#component_container_12140007 .uniForm div.ctrlHolder:nth-child(3),#component_container_12140007 .uniForm div.ctrlHolder:nth-child(4){
+    background:#fdfaf3;
+}
+
+div#component_container_12017824 .component_form, #component_container_11842854 .grid tr:nth-child(4), #component_container_12017865 .component_form_display, #component_container_11842906 .uniForm div.ctrlHolder:nth-child(5),#component_container_11842906 .uniForm div.ctrlHolder:nth-child(6),#component_container_12139907 .grid tr:nth-child(4),#component_container_12139912 .component_form_display,#component_container_12140007 .uniForm div.ctrlHolder:nth-child(5),#component_container_12140007 .uniForm div.ctrlHolder:nth-child(6){
+    background:#e6f7e8;
+}
+
+div#component_container_12017827 .component_form, #component_container_11842854 .grid tr:nth-child(5), #component_container_12017866 .component_form_display, #component_container_11842906 .uniForm div.ctrlHolder:nth-child(7), #component_container_11842906 .uniForm div.ctrlHolder:nth-child(8),#component_container_12139907 .grid tr:nth-child(5),#component_container_12139913 .component_form_display,#component_container_12140007 .uniForm div.ctrlHolder:nth-child(7),#component_container_12140007 .uniForm div.ctrlHolder:nth-child(8){
+    background:#faeaea;
+}
+
+div#component_container_12017832 .component_form, #component_container_11842854 .grid tr:nth-child(6), #component_container_12017867 .component_form_display, #component_container_11842906 .uniForm div.ctrlHolder:nth-child(9), #component_container_11842906 .uniForm div.ctrlHolder:nth-child(10),#component_container_12139907 .grid tr:nth-child(6),#component_container_12139914 .component_form_display,#component_container_12140007 .uniForm div.ctrlHolder:nth-child(9),#component_container_12140007 .uniForm div.ctrlHolder:nth-child(10){
+    background:#f3f2f2;
+}
+
+dt.component_glossary_term {
+    font-style: normal;
+}
+
+dd.component_glossary_definition {
+    font-style: normal;
+}

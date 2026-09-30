@@ -1,0 +1,19 @@
+.ui-pg-table tbody{border:0;}
+.ui-pg-table tr td, tr th{border:0;}
+.ui-pg-table tr td, tr th{border:0;}
+.ui-pg-input {padding:0px !important;border-radius: 0px !important;}
+table.scroll thead th{
+  padding: 0px 4px 0 0px !important;
+}
+.gt-hd-split, #enrollment-list-form .add-publications{
+  display:none;
+}
+input.form-checkbox, input.form-radio {
+  margin-left: calc(36% - 18px);
+  margin-top: 6px;
+}
+@media only screen and (max-width: 576px){
+  input.form-checkbox, input.form-radio{
+    margin-left: 0;
+  }
+}
